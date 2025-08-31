@@ -19,6 +19,9 @@ SET time_zone = "+00:00";
 
 --
 -- Database: `gandiv`
+DROP DATABASE IF EXISTS `gandiv`;
+CREATE DATABASE `gandiv`;
+USE `gandiv`;
 --
 
 -- --------------------------------------------------------
