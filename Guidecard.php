@@ -1,6 +1,7 @@
 <?php
   session_start();
   require_once 'includes/scripts/connection.php';
+  
 
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -94,6 +95,9 @@
 </head>
 
 <body>
+    <div id="header-container">
+
+    </div>
     <div class="container">
         <h1 class="title font-bold text-gray-700 mb-2 text-6xl mt-5">
             Discover & Connect: Your Best Local Guides
@@ -170,5 +174,28 @@
     </div>
     </div>
 </body>
+<script>
+      function loadHeader() {
+        fetch("userhome/userheader.php")
+          .then((response) => response.text())
+          .then((data) => {
+            const headerContainer = document.getElementById("header-container");
+            headerContainer.insertAdjacentHTML("afterbegin", data);
+            const scripts = headerContainer.querySelectorAll("script");
+            scripts.forEach((script) => {
+              const newScript = document.createElement("script");
+              if (script.src) {
+                newScript.src = script.src;
+              } else {
+                newScript.textContent = script.textContent;
+              }
+              document.body.appendChild(newScript);
+            });
+          })
+          .catch((error) => console.error("Error loading header:", error));
+      }
+
+      loadHeader();
+    </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </html>

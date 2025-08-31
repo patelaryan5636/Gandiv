@@ -247,7 +247,7 @@
 
     <script>
       function loadHeader() {
-        fetch("userhome/userheader.html")
+        fetch("userhome/userheader.php")
           .then((response) => response.text())
           .then((data) => {
             const headerContainer = document.getElementById("header-container");
