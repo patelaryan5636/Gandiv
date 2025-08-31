@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Animated Food Slider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/samarkan");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      h2 {
+        font-family: "Samarkan";
+        text-align: center;
+      }
+
+      body {
+        background-color: #f8f6f4;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='20' viewBox='0 0 24 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 18c0-1.105.887-2 1.998-2 1.104 0 2-.895 2.002-1.994V14v6h-4v-2zM0 13.998C0 12.895.888 12 2 12c1.105 0 2 .888 2 2 0 1.105.888 2 2 2 1.105 0 2 .888 2 2v2H0v-6.002zm16 4.004A1.994 1.994 0 0 1 14 20c-1.105 0-2-.887-2-1.998v-4.004A1.994 1.994 0 0 0 10 12c-1.105 0-2-.888-2-2 0-1.105-.888-2-2-2-1.105 0-2-.887-2-1.998V1.998A1.994 1.994 0 0 0 2 0a2 2 0 0 0-2 2V0h8v2c0 1.105.888 2 2 2 1.105 0 2 .888 2 2 0 1.105.888 2 2 2 1.105 0 2-.888 2-2 0-1.105.888-2 2-2 1.105 0 2-.888 2-2V0h4v6.002A1.994 1.994 0 0 1 22 8c-1.105 0-2 .888-2 2 0 1.105-.888 2-2 2-1.105 0-2 .887-2 1.998v4.004z' fill='%23c4dfdf' fill-opacity='0.31' fill-rule='evenodd'/%3E%3C/svg%3E");
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .swiper {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        perspective: 1000px;
+        width: 300px;
+        height: 400px;
+      }
+
+      .card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s ease;
+      }
+
+      .swiper-slide:hover .card {
+        transform: rotateY(180deg);
+      }
+
+      .card-front,
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+
+      .card-back {
+        transform: rotateY(180deg);
+        background: rgba(248, 246, 244, 0.9);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .place-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .place-description {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      .main-content {
+        width: 100%;
+        max-width: 1270px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-content">
+      <h2 class="text-gray-800 text-6xl font-bold mb-4">
+        Pick Your Trail See Narmada As Per Your Interest
+      </h2>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-front">
+                <img
+                  src="img1.jpg"
+                  alt="Narmada View 1"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="card-back">
+                <h3 class="place-title">Marble Rocks</h3>
+                <p class="place-description">
+                  Experience the stunning marble cliffs rising to a height of
+                  100 feet on either side of Narmada River. This spectacular
+                  natural wonder creates a magical gorge that gleams in
+                  moonlight.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-front">
+                <img
+                  src="img2.jpg"
+                  alt="Narmada View 2"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="card-back">
+                <h3 class="place-title">Dhuandhar Falls</h3>
+                <p class="place-description">
+                  Witness the smoky cascade of water falling from a height of 98
+                  feet. The misty appearance created by the fine water particles
+                  gives it the name 'Dhuandhar'.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="card-front">
+                <img
+                  src="img3.jpg"
+                  alt="Narmada View 3"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="card-back">
+                <h3 class="place-title">Chausath Yogini Temple</h3>
+                <p class="place-description">
+                  Explore this ancient temple dedicated to 64 Yoginis, built in
+                  circular fashion on a hilltop. Experience the architectural
+                  marvel dating back to the 10th century.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next text-[#116A7B] mr-10"></div>
+        <div class="swiper-button-prev text-[#116A7B] ml-10"></div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 0,
+          depth: 500,
+          modifier: 1,
+          slideShadows: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>
