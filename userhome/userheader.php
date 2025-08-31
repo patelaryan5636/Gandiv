@@ -115,7 +115,7 @@
             <li class="relative group hover-underline">
               <a href="#" class="px-2 py-2">Gallery</a>
             </li>
-            <li class="relative group hover-underline">x`
+            <li class="relative group hover-underline">
               <a href="#" class="px-2 py-2">History</a>
             </li>
             <li class="relative group hover-underline">
