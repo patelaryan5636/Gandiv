@@ -64,7 +64,7 @@
           Yatra by Gandiv – Where History Meets Innovation!
         </h1>
         <div class="flex items-center gap-4">
-          <img src="gjrt.png" alt="Logo 4" class="h-14" />
+          <img src="userhome/gujrat.png" alt="Logo 4" class="h-14" />
           <img src="ssiplogo.png" alt="Logo 3" class="h-14" />
         </div>
       </div>
@@ -127,7 +127,7 @@
           </ul>
           <div class="relative group mx-10">
             <img
-              src="krish.jpg"
+              src="userhome/krish.jpg"
               alt="Avatar"
               class="h-10 w-10 rounded-lg cursor-pointer border-2 border-white border-gray-300"
             />

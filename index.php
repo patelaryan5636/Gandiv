@@ -25,7 +25,7 @@
       .hello {
         margin: 0;
         padding: 0;
-        background: url("img/rajpipla.jpg") no-repeat center center fixed;
+        background: url("userhome/img/rajpipla.jpg") no-repeat center center fixed;
         background-size: cover;
       }
 
@@ -60,7 +60,13 @@
     </style>
   </head>
   <body>
-    <div id="header-container"></div>
+    <div id="header-container">
+      
+
+    </div>
+
+    <div id="header"></div>
+
 
     <iframe
       src="userhome/userhero.html"
@@ -163,7 +169,7 @@
       >
         <div class="relative">
           <img
-            src="img/tripplaner.jpg"
+            src="userhome/img/tripplaner.jpg"
             alt="City"
             class="h-80 w-auto rounded-2xl shadow-2xl"
           />
@@ -247,7 +253,7 @@
 
     <script>
       function loadHeader() {
-        fetch("userhome/userheader.php")
+        fetch("userhome/userheader")
           .then((response) => response.text())
           .then((data) => {
             const headerContainer = document.getElementById("header-container");
