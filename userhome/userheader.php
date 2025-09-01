@@ -241,7 +241,14 @@
 
           <!-- Desktop User Avatar -->
           <div class="relative group">
-            <img
+            <li class="relative group hover-underline list-none">
+              <a
+                href="#"
+                class="px-2 py-2 hover:text-gray-800 transition-colors flex items-center justify-center gap-2"
+                ><img style="height:18px;" src="userhome/img/login.svg" alt="Login">Login</a
+              >
+            </li>
+            <!-- <img
               src="userhome/krish.jpg"
               alt="Avatar"
               class="h-10 w-10 rounded-lg cursor-pointer border-2 border-white hover:border-gray-300 transition-colors"
@@ -280,7 +287,7 @@
                   >Logout →</a
                 >
               </li>
-            </ul>
+            </ul> -->
           </div>
         </div>
       </nav>
