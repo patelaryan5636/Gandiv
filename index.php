@@ -44,6 +44,10 @@
         transition: background 0.3s;
       }
 
+      iframe{
+        max-width: 100%;
+      }
+
       body {
         scrollbar-width: thin;
         scrollbar-color: #8ebebe #c4dfdf;
@@ -60,14 +64,9 @@
     </style>
   </head>
   <body>
-    <div id="header-container">
-      
-
-    </div>
-
-    <div id="header"></div>
-
-
+    <?php
+      include("includes/header.php");
+    ?>
     <iframe
       src="userhome/userhero.html"
       width="100%"
@@ -205,35 +204,35 @@
       src="userhome/jobslider.html"
       width="100%"
       height="600px"
-      style="border: none; display: block; max-width: 1270px; margin: 0 auto"
+      style="border: none; display: block; margin: 0 auto"
     ></iframe>
 
     <iframe
       src="userhome/routehome.html"
       width="100%"
       height="630px"
-      style="border: none; display: block; max-width: 1270px; margin: 0 auto"
+      style="border: none; display: block; margin: 0 auto"
     ></iframe>
 
     <iframe
       src="userhome/homestats.html"
       width="100%"
       height="630px"
-      style="border: none; display: block; max-width: 1270px; margin: 0 auto"
+      style="border: none; display: block; margin: 0 auto"
     ></iframe>
 
     <iframe
       src="userhome/officer.html"
       width="100%"
       height="550px"
-      style="border: none; display: block; max-width: 1270px; margin: 0 auto"
+      style="border: none; display: block; margin: 0 auto"
     ></iframe>
 
     <iframe
       src="userhome/CTAhomepage.html"
       width="100%"
       height="400px"
-      style="border: none; display: block; max-width: 1270px; margin: 0 auto"
+      style="border: none; display: block; margin: 0 auto"
     ></iframe>
 
     <iframe
@@ -241,39 +240,12 @@
       width="100%"
       height="520px"
       class="bg-gray-50"
-      style="border: none; display: block; max-width: 1270px; margin: 0 auto"
+      style="border: none; display: block; margin: 0 auto"
     ></iframe>
 
-    <iframe
-      src="userhome/userfooter.html"
-      width="100%"
-      height="446px"
-      style="border: none; display: block; max-width: 1270px; margin: 0 auto"
-    ></iframe>
-
-    <script>
-      function loadHeader() {
-        fetch("userhome/userheader")
-          .then((response) => response.text())
-          .then((data) => {
-            const headerContainer = document.getElementById("header-container");
-            headerContainer.insertAdjacentHTML("afterbegin", data);
-            const scripts = headerContainer.querySelectorAll("script");
-            scripts.forEach((script) => {
-              const newScript = document.createElement("script");
-              if (script.src) {
-                newScript.src = script.src;
-              } else {
-                newScript.textContent = script.textContent;
-              }
-              document.body.appendChild(newScript);
-            });
-          })
-          .catch((error) => console.error("Error loading header:", error));
-      }
-
-      loadHeader();
-    </script>
+    <?php 
+      include("includes/footer.php");
+    ?>
 
     <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2025/04/05/12/20250405123314-RQA8V1B2.js"></script>

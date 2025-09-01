@@ -406,6 +406,9 @@
 </style>
 
 <body>
+    <?php
+        include("includes/header.php");
+    ?>
     <div class="main-container">
         <div class="main-head">
             <h1 class="main-title">
@@ -510,6 +513,9 @@
             </div>
         </div>
     </div>
+    <?php
+        include("includes/footer.php");
+    ?>
 </body>
 <script>
     const searchInput = document.getElementById('searchInput');
