@@ -103,7 +103,7 @@
         <!-- Right Logos -->
         <div class="flex items-center gap-2 sm:gap-4 logo-container">
           <img src="userhome/gujrat.png" alt="Logo 4" class="h-10 sm:h-12 md:h-14" />
-          <img src="ssiplogo.png" alt="Logo 3" class="h-10 sm:h-12 md:h-14" />
+          <img src="userhome/sih-logo.png" alt="SIH" class="h-10 sm:h-12 md:h-14" />
         </div>
 
         <!-- Mobile Menu Button -->
@@ -245,7 +245,7 @@
               <a
                 href="#"
                 class="px-2 py-2 hover:text-gray-800 transition-colors flex items-center justify-center gap-2"
-                ><img style="height:18px;" src="userhome/img/login.svg" alt="Login">Login</a
+                >Login<img style="height:21px;" src="userhome/img/login.svg" alt="Login"></a
               >
             </li>
             <!-- <img
