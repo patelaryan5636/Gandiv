@@ -51,10 +51,11 @@ function generateUniqueRoomNumbers($numberOfRooms, $max, $booked_rooms) {
 $allowPayment = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_SERVER['HTTP_REFERER'])) {
+    // $allowPayment = true;
     $referrer = basename(parse_url($_SERVER['HTTP_REFERER'], PHP_URL_PATH));
 
     if ($referrer === 'hotelbookform.php') {
-        $allowPayment = true;
+        // $allowPayment = true;
 
         $roomType = $_POST['room_type'] ?? null;
         $numberOfRooms = $_POST['number_of_rooms'] ?? null;
@@ -138,7 +139,7 @@ window.onload = function () {
     let paymentAmount = totalAmount * numRooms * 100; // Convert to paise
 
     var options = {
-        "key": "rzp_test_rv4pDcdZOwyhIS", // Replace with your Test Key ID
+        "key": "rzp_test_CgBpn0xsoJ6C79", // Replace with your Test Key ID
         "amount": paymentAmount,
         "currency": "INR",
         "name": "Hotel Booking",
