@@ -89,8 +89,15 @@
       >
         <!-- Left Logos -->
         <div class="flex items-center gap-2 sm:gap-4 logo-container">
+          
+        <a href="/gandiv">
+
           <img src="gandiv.png" alt="Logo 1" class="h-10 sm:h-12 md:h-14" />
+        </a>
+        <a href="/gandiv">
+          
           <img src="yatra.png" alt="Logo 2" class="h-10 sm:h-12 md:h-14" />
+        </a>
         </div>
 
         <!-- Center Slogan -->
@@ -167,21 +174,21 @@
               >
                 <li>
                   <a
-                    href="#"
+                    href="./Guidecard"
                     class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors"
                     >Guide Booking</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="./hotellist"
                     class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors"
                     >Hotel Booking</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="./stallcard"
                     class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors"
                     >Explore Other Business</a
                   >
@@ -232,7 +239,7 @@
             </li>
             <li class="relative group hover-underline">
               <a
-                href="#"
+                href="contact-us"
                 class="px-2 py-2 hover:text-gray-800 transition-colors"
                 >Contact Us</a
               >
@@ -243,7 +250,7 @@
           <div class="relative group">
             <li class="relative group hover-underline list-none">
               <a
-                href="#"
+                href="userregister"
                 class="px-2 py-2 hover:text-gray-800 transition-colors flex items-center justify-center gap-2"
                 >Login<img style="height:21px;" src="userhome/img/login.svg" alt="Login"></a
               >
@@ -384,7 +391,7 @@
                 >
                   <li>
                     <a
-                      href="#"
+                      href="../Guidecard"
                       class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
                       >Guide Booking</a
                     >

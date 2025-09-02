@@ -66,6 +66,9 @@
 </head>
 
 <body>
+  <?php
+    include("includes/header.php");
+  ?>
   <div class="container">
     <h1 class="title font-bold text-gray-700 mb-2 text-6xl">
       Discover & Connect: Best
@@ -148,6 +151,9 @@
 
   </div>
   </div>
+   <?php 
+      include("includes/footer.php");
+    ?>
 </body>
 
 </html>

@@ -35,17 +35,21 @@ $google_login_url = $client->createAuthUrl();
     </style>
   </head>
   <body class="bg-image flex items-center justify-center p-4">
+
     <div
       class="bg-[#F8F6F4] shadow-lg rounded-lg flex flex-col md:flex-row-reverse overflow-hidden w-full max-w-4xl"
     >
       <div
         class="hidden md:flex w-2/5 bg-[#D2E9E9] flex-col justify-center items-center p-6 md:p-10"
       >
-        <img
-          src="yatra.png"
-          alt="Illustration"
-          class="w-32 md:w-48 h-32 md:h-48"
-        />
+        <a href="index">
+
+          <img
+            src="yatra.png"
+            alt="Illustration"
+            class="w-32 md:w-48 h-32 md:h-48"
+          />
+        </a>
         <h2 class="text-black font-bold text-lg md:text-xl mt-4 text-center">
           Discover Jharkhand’s Hidden Treasures
         </h2>
