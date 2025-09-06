@@ -59,14 +59,14 @@ session_start();
           Sign in to your account to continue your journey
         </p>
 
-        <div class="flex space-x-2 mt-2 justify-center">
+        <div class="flex space-x-2 mt-2 text-center justify-center">
           <span class="bg-[#E3F4F4] px-2 py-1 rounded text-xs md:text-sm"
             >🏰 Heritage Sites</span
           >
-          <span class="bg-[#E3F4F4] px-2 py-1 rounded text-xs md:text-sm"
+          <span class="bg-[#E3F4F4] px-2 text-center py-1 rounded text-xs md:text-sm"
             >🚆 Travel & Connectivity</span
           >
-          <span class="bg-[#E3F4F4] px-2 py-1 rounded text-xs md:text-sm"
+          <span class="bg-[#E3F4F4] px-2 text-center py-1 rounded text-xs md:text-sm"
             >🛕 Cultural Landmarks</span
           >
         </div>

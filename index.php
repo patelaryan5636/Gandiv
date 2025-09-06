@@ -68,37 +68,41 @@
       include("includes/header.php");
     ?>
     <iframe
-      src="userhome/userhero.html"
+      src="userhome/userhero.php"
       width="100%"
       height="670px"
       style="border: none"
     ></iframe>
 
     <iframe
-      src="userhome/Map.html"
+      src="userhome/Map.php"
       width="100%"
       height="670px"
       style="border: none"
     ></iframe>
 
     <iframe
-      src="userhome/imgslider.html"
+      src="userhome/imgslider.php"
       width="100%"
       height="670px"
       style="border: none; display: block"
       padding="0"
     ></iframe>
 
-    <iframe
+    <!-- <iframe
       src="userhome/fest.html"
       width="100%"
       height="670px"
       style="border: none; display: block"
       padding="0"
-    ></iframe>
+    ></iframe> -->
+
+    <?php
+      include("userhome/mostvisited.php");
+    ?>
 
     <iframe
-      src="userhome/homecard.html"
+      src="userhome/homecard.php"
       width="100%"
       height="670px"
       style="border: none; display: block"
@@ -106,10 +110,10 @@
     ></iframe>
 
     <iframe
-      src="userhome/newsslider.html"
+      src="userhome/newsslider.php"
       width="100%"
       height="670px"
-      style="border: none; display: block; max-width: 1270px; margin: 0 auto"
+      style="border: none; display: block; margin: 0 auto"
     ></iframe>
 
     <div class="hello flex flex-col md:flex-row mt-1">
@@ -201,42 +205,42 @@
     </div>
 
     <iframe
-      src="userhome/jobslider.html"
+      src="userhome/jobslider.php"
       width="100%"
       height="600px"
       style="border: none; display: block; margin: 0 auto"
     ></iframe>
 
     <iframe
-      src="userhome/routehome.html"
+      src="userhome/routehome.php"
       width="100%"
       height="630px"
       style="border: none; display: block; margin: 0 auto"
     ></iframe>
 
     <iframe
-      src="userhome/homestats.html"
+      src="userhome/homestats.php"
       width="100%"
       height="630px"
       style="border: none; display: block; margin: 0 auto"
     ></iframe>
 
     <iframe
-      src="userhome/officer.html"
+      src="userhome/officer.php"
       width="100%"
       height="550px"
       style="border: none; display: block; margin: 0 auto"
     ></iframe>
 
     <iframe
-      src="userhome/CTAhomepage.html"
+      src="userhome/CTAhomepage.php"
       width="100%"
       height="400px"
       style="border: none; display: block; margin: 0 auto"
     ></iframe>
 
     <iframe
-      src="userhome/CTAforai.html"
+      src="userhome/CTAforai.php"
       width="100%"
       height="520px"
       class="bg-gray-50"

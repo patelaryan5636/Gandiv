@@ -101,7 +101,7 @@
   <body>
     <div class="main-content">
       <h2 class="text-gray-800 text-6xl font-bold mb-4">
-        Pick Your Trail See Narmada As Per Your Interest
+        Pick Your Trail Explore Jharkhand as per Your Interest
       </h2>
 
       <div class="swiper mySwiper">

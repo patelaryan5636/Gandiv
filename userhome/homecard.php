@@ -229,7 +229,7 @@
       </h1>
       <div class="card__container">
         <article class="card__article">
-          <img src="img/hotel.jpg" alt="image" class="card__img" />
+          <img src="img/place.png" alt="image" class="card__img" />
 
           <div class="card__data">
             <span class="card__description"
@@ -241,7 +241,7 @@
         </article>
 
         <article class="card__article">
-          <img src="img/guide.jpg" alt="image" class="card__img" />
+          <img src="img/place2.png" alt="image" class="card__img" />
           <div class="card__data">
             <span class="card__description">Rajpipla, Narmada</span>
             <h2 class="card__title">Discover Rajpipla with an Expert Guide</h2>
