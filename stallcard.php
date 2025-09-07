@@ -2,7 +2,7 @@
   session_start();
   require_once 'includes/scripts/connection.php';
 
-  $stmt = $conn->prepare("SELECT * FROM `store_master` where is_confirmed= 1");
+  $stmt = $conn->prepare("SELECT * FROM `store_master` where is_confirmed= 1 ");
   $stmt->execute();
   $result = $stmt->get_result();
 
@@ -130,11 +130,11 @@
             <i class="fas fa-user mr-2"></i>Owner
           </div>
           <div class="px-3 py-3 mt-3 bg-purple-100 h-6  text-gray-700 font-medium rounded-lg  flex items-center">
-            <i class="fas fa-map-marker-alt mr-2"></i>Rajpipla
+            <i class="fas fa-map-marker-alt mr-2"></i>JharKhand
           </div>
         </div>
         <div class=" font-serif mt-5">
-          <a href="stalldata?id=<?php echo $encrypted_id?>">
+          <a href="stalldata?id=<?php echo $encrypted_id;?>">
 
             <button
             class="px-4 py-2 bg-gradient-to-r from-[#76a3a3] to-[#5a8c8c] text-white text-lg rounded-lg shadow-md h-10 w-full mb-4 hover:shadow-lg transition-all duration-300 flex items-center justify-center">

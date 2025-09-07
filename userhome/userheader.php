@@ -186,13 +186,13 @@
             <a href="./chatbot.php" class="px-2 py-2 hover:text-gray-800 transition-colors">AI Guide</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Ai Trip-Planner</a>
+            <a href="./aitrip-planner" class="px-2 py-2 hover:text-gray-800 transition-colors">Ai Trip-Planner</a>
           </li>
           <li class="relative group hover-underline">
             <a href="tripplanercard" class="px-2 py-2 hover:text-gray-800 transition-colors">Tour & Packages</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="./map.html" class="px-2 py-2 hover:text-gray-800 transition-colors">Map</a>
+            <a href="./map" class="px-2 py-2 hover:text-gray-800 transition-colors">Map</a>
           </li>
           <li class="relative group hover-underline">
             <a href="./busdetails" class="px-2 py-2 hover:text-gray-800 transition-colors">Find Routes</a>
@@ -328,7 +328,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+              <a href="./aitrip-planner" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                 🎉 AI Trip-planner
               </a>
             </li>
@@ -338,7 +338,7 @@
               </a>
             </li>
             <li>
-              <a href="./map.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+              <a href="./map" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                 📚 map
               </a>
             </li>

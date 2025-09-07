@@ -29,7 +29,13 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <?php 
+        include("includes/header.php");
+    ?>
     <nav></nav>
     <div id="map"></div>
+    <?php
+    include("includes/footer.php");
+    ?>
   </body>
 </html>
