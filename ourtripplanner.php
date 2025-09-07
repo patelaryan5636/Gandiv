@@ -131,7 +131,7 @@
                   class="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg"
                 >
                   <img
-                    src="krish.jpg"
+                    src="assets/img/TP1.jpeg"
                     alt="Trip Planner"
                     class="w-full h-full object-cover"
                   />
@@ -294,7 +294,7 @@
                   class="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg"
                 >
                   <img
-                    src="krish.jpg"
+                    src="assets/img/TP2.jpeg"
                     alt="Trip Planner"
                     class="w-full h-full object-cover"
                   />

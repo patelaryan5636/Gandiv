@@ -118,7 +118,7 @@
 
         <a href="/gandiv">
 
-          <img src="gandiv.png" alt="Logo 1" class="h-10 sm:h-12 md:h-14" />
+          <img src="gandiv.png" alt="Logo 1" class="h-10 ml-[-10px] sm:h-12 md:h-14" />
         </a>
         <a href="/gandiv">
 
@@ -135,7 +135,7 @@
       <!-- Right Logos -->
       <div class="flex items-center gap-2 sm:gap-4 logo-container">
         <img src="userhome/Jharkhand_logo.png" alt="Logo 4" class="h-10 sm:h-12 md:h-14" />
-        <img src="userhome/sih-logo.png" alt="SIH" class="h-10 sm:h-12 md:h-14" />
+        <img src="userhome/sih-logo.png" alt="SIH" class="h-10 mr-[-10px] sm:h-12 md:h-14" />
       </div>
 
       <!-- Mobile Menu Button -->
