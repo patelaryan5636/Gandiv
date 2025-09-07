@@ -519,7 +519,7 @@ require 'includes/scripts/connection.php';
     }
 
     .tag {
-        padding: 0.3rem 0.75rem;
+        padding: 1rem 0.75rem;
         /* Equivalent to px-3 py-4 */
         margin-top: 0.75rem;
         /* Equivalent to mt-3 */
