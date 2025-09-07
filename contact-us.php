@@ -73,7 +73,7 @@
     <?php 
       include("includes/header.php");
     ?>
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-6xl mx-auto my-16">
       <!-- Header Section -->
       <div class="text-center mb-8">
         <h1 class="text-4xl md:text-5xl font-bold text-[#648383] mb-4">
@@ -455,11 +455,10 @@
           </div>
         </div>
       </div>
+    </div>
       <?php 
           include("includes/footer.php");
       ?>
-    </div>
-
     <script>
       document
         .getElementById("contactForm")
