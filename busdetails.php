@@ -909,10 +909,10 @@ require 'includes/scripts/connection.php';
                 </div>
             </div>
         </div>
+    </div>
         <?php
             include("includes/footer.php");
         ?>
-    </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
