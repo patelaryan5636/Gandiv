@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jharkhand TravelMate AI Guide</title>
+    <title>TravelMate AI Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
@@ -189,7 +189,7 @@
 
       .send-btn:hover {
         background: #2980b9;
-        transform: translateY(-50%) scale(1.1);
+        /* transform: translateY(-50%) scale(1.1); */
       }
 
       .time-display {
@@ -247,60 +247,28 @@
       .voice-output-btn.speaking {
         animation: speakingPulse 1.5s infinite;
       }
-
-      .quick-suggestions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin: 20px 0;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .suggestion-chip {
-        background: rgba(255, 255, 255, 0.8);
-        color: #075555;
-        padding: 8px 16px;
-        border-radius: 20px;
-        border: 2px solid rgba(7, 85, 85, 0.3);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 14px;
-        font-weight: 500;
-      }
-
-      .suggestion-chip:hover {
-        background: #075555;
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(7, 85, 85, 0.3);
-      }
     </style>
   </head>
 
   <body class="min-h-screen">
-    <?php 
+    <?php
       include("includes/header.php");
     ?>
     <div class="container mx-auto px-4 py-4">
       <div class="text-center mb-8">
         <div class="flex justify-center items-center gap-6">
-          <!-- First Logo -->
           <div class="logo-container">
             <img
               src="gandiv.png"
-              alt="Logo 1"
-              class="w-40 h-40 object-contain transform hover:scale-105 transition-transform duration-300"
+              alt="gandiv logo"
+              class="w-44 h-40 object-contain transform hover:scale-105 transition-transform duration-300"
             />
           </div>
 
-          <!-- Second Logo -->
           <div class="logo-container">
             <img
               src="yatra.png"
-              alt="Logo 2"
+              alt="yatra Logo"
               class="w-32 h-32 object-contain transform hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -310,68 +278,29 @@
           <span
             class="slogan bg-clip-text text-transparent bg-[#115d5d] drop-shadow-lg"
           >
-            JHARKHAND
+            Jharkhand
           </span>
         </h1>
+
         <p
           class="text-gray-800 text-xl px-18 py-2 max-w-4xl mx-auto leading-relaxed font-serif"
         >
-          Explore the Land of Forests and Waterfalls like never before with our
-          AI-Powered Guide! Get instant recommendations for tribal heritage
-          sites, magnificent waterfalls, wildlife sanctuaries, and cultural
-          treasures. Ask anything, from Hundru Falls to Betla National Park, and
-          let AI enhance your Jharkhand journey! ✨
+          Explore Jharkhand like never before with our AI-Powered Guide! Get
+          instant recommendations, historical insights, and personalized travel
+          tips all at your fingertips. Ask anything, from must-visit heritage
+          sites to the best local crafts, and let AI enhance your journey! ✨
         </p>
 
         <div class="flex space-x-2 mt-2 justify-center">
           <span class="bg-red-100 px-2 py-1 rounded text-xs md:text-sm"
-            >🏔️ Mountain Adventures</span
+            >🤖 Smart Suggestions</span
           >
           <span class="bg-yellow-100 px-2 py-1 rounded text-xs md:text-sm"
-            >🌊 Waterfall Tours</span
+            >🌍 Personalized Travel</span
           >
           <span class="bg-green-100 px-2 py-1 rounded text-xs md:text-sm"
-            >🎭 Tribal Heritage</span
+            >🗺️ AI-Powered Exploration</span
           >
-        </div>
-      </div>
-
-      <div class="quick-suggestions">
-        <div
-          class="suggestion-chip"
-          onclick="askQuestion('Best waterfalls in Jharkhand')"
-        >
-          🌊 Famous Waterfalls
-        </div>
-        <div
-          class="suggestion-chip"
-          onclick="askQuestion('Tribal culture and heritage sites in Jharkhand')"
-        >
-          🎭 Tribal Heritage
-        </div>
-        <div
-          class="suggestion-chip"
-          onclick="askQuestion('Ranchi tourist attractions')"
-        >
-          🏙️ Ranchi Tourism
-        </div>
-        <div
-          class="suggestion-chip"
-          onclick="askQuestion('Wildlife sanctuaries in Jharkhand')"
-        >
-          🐅 Wildlife Parks
-        </div>
-        <div
-          class="suggestion-chip"
-          onclick="askQuestion('Adventure activities in Jharkhand')"
-        >
-          🏔️ Adventure Sports
-        </div>
-        <div
-          class="suggestion-chip"
-          onclick="askQuestion('Traditional Jharkhand cuisine')"
-        >
-          🍛 Local Food
         </div>
       </div>
 
@@ -383,7 +312,7 @@
           type="text"
           class="search-input"
           id="searchInput"
-          placeholder="Ask me anything about Jharkhand travel..."
+          placeholder="Ask me anything about travel..."
         />
         <button class="send-btn" id="sendBtn">
           <i class="fas fa-paper-plane"></i>
@@ -395,16 +324,14 @@
       <div class="main-loader-container" id="mainLoader">
         <div class="fancy-loader"></div>
         <div class="text-white text-center mt-4">
-          <h3 class="text-xl font-bold">
-            Discovering Jharkhand's Treasures...
-          </h3>
-          <p class="mt-2">
-            Just a moment while I prepare your Jharkhand travel guide
-          </p>
+          <h3 class="text-xl font-bold">Finding Amazing Places...</h3>
+          <p class="mt-2">Just a moment while I prepare your travel guide</p>
         </div>
       </div>
     </div>
-
+    <?php
+      include("includes/footer.php");
+    ?>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
       const apiKey = "AIzaSyCaqqNhFuvZtAmfrKQ8ilsFi1VgZQ2eR4E";
@@ -416,6 +343,7 @@
       const sendBtn = document.getElementById("sendBtn");
       const mainLoader = document.getElementById("mainLoader");
       const responseBox = document.getElementById("responseBox");
+      const timeDisplay = document.getElementById("timeDisplay");
 
       const recognition = new (window.SpeechRecognition ||
         window.webkitSpeechRecognition)();
@@ -448,11 +376,6 @@
         voiceBtn.classList.remove("listening");
       };
 
-      function askQuestion(question) {
-        searchInput.value = question;
-        handleSearch();
-      }
-
       async function handleSearch() {
         const query = searchInput.value.trim();
         if (!query) return;
@@ -475,42 +398,31 @@
 
         const promptTemplate = `
                 Time: ${currentTime}
-                User: TravelExplorer
-                Location: Jharkhand, India
+                User: Krishprajapati15
                 Query: ${query}
 
-                Please provide a comprehensive Jharkhand travel guide with the following sections:
+                Please provide a comprehensive travel guide with the following sections:
                 📜 Historical Background
                 🏛️ Cultural Significance
                 🎉 Local Traditions and Festivals
-                🏰 Must-See Places in Jharkhand
+                🏰 Must-See Places
                 🌟 Nearby Attractions
-                🌟 Visitor Reviews and Experiences
+                🌟 Visitor Reviews
                 📅 Best Time to Visit
-                🍴 Traditional Jharkhand Cuisine
+                🍴 Local Cuisine
                 🛏️ Accommodation Options
                 🚌 Accessibility and Transportation
-                💡 Jharkhand Travel Tips
+                💡 Travel Tips
                 🛡️ Safety Tips
-                🌿 Environmental Impact and Conservation
-                🗣️ Language and Communication (Hindi, Santhali, Ho, Mundari)
-                💱 Currency and Local Markets
-                ⚖️ Local Laws and Tribal Etiquette
+                🌿 Environmental Impact
+                🗣️ Language and Communication
+                💱 Currency and Exchange Rates
+                ⚖️ Local Laws and Etiquette
                 📞 Emergency Contacts
                 🛎️ Tourist Services and Facilities
-                🗺️ Maps and Route Planning
+                🗺️ Interactive Maps and Guides
                 
-                Focus specifically on Jharkhand's unique attractions:
-                - Waterfalls: Hundru Falls, Dassam Falls, Jonha Falls, Hirni Falls
-                - Wildlife: Betla National Park, Palamau Tiger Reserve, Hazaribagh Wildlife Sanctuary
-                - Religious Sites: Baidyanath Dham (Deoghar), Rajrappa Temple, Parasnath Hills
-                - Tribal Heritage: Santhali culture, Ho tribe, Mundari traditions
-                - Cities: Ranchi, Jamshedpur, Dhanbad, Bokaro
-                - Adventure: Trekking, rock climbing, water sports
-                - Industrial Tourism: Tata Steel Plant, coal mines
-                - Handicrafts: Dokra art, tribal paintings, bamboo crafts
-
-                Keep the information concise, accurate, and well-structured for Jharkhand tourism.
+                Keep the information concise and well-structured.
             `;
 
         try {
@@ -531,9 +443,37 @@
           const data = await response.json();
           return data.candidates[0].content.parts[0].text;
         } catch (error) {
-          throw new Error("Failed to fetch Jharkhand travel information");
+          throw new Error("Failed to fetch travel information");
         }
       }
+
+      function displayResponse(text) {
+        responseBox.innerHTML = marked.parse(text);
+        responseBox.classList.remove("hidden");
+      }
+
+      function displayError(message) {
+        responseBox.innerHTML = `
+                <div class="bg-red-100 text-red-700 p-4 rounded-lg">
+                    <h3 class="font-bold">Error</h3>
+                    <p>${message}</p>
+                </div>
+            `;
+        responseBox.classList.remove("hidden");
+      }
+
+      function updateTime() {
+        const now = new Date();
+        const timeString = now.toISOString().replace("T", " ").substr(0, 19);
+        document.getElementById("currentTime").textContent = timeString;
+      }
+
+      setInterval(updateTime, 1000);
+
+      document.addEventListener("DOMContentLoaded", () => {
+        updateTime();
+        mainLoader.style.display = "none";
+      });
 
       function displayResponse(text) {
         responseBox.innerHTML = `
@@ -545,16 +485,6 @@
             ${marked.parse(text)}
         </div>
     `;
-        responseBox.classList.remove("hidden");
-      }
-
-      function displayError(message) {
-        responseBox.innerHTML = `
-                <div class="bg-red-100 text-red-700 p-4 rounded-lg">
-                    <h3 class="font-bold">Error</h3>
-                    <p>${message}</p>
-                </div>
-            `;
         responseBox.classList.remove("hidden");
       }
 
@@ -610,7 +540,6 @@
         if (!window.speechSynthesis) {
           console.warn("Speech synthesis not supported");
         }
-        mainLoader.style.display = "none";
       });
     </script>
   </body>
