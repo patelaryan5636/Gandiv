@@ -176,7 +176,7 @@
             <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Gallery</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">History</a>
+            <a href="./map.html" class="px-2 py-2 hover:text-gray-800 transition-colors">Map</a>
           </li>
           <li class="relative group hover-underline">
             <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Find Routes</a>
