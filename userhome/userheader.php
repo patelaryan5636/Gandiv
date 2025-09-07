@@ -420,15 +420,15 @@
         <div class="flex items-center space-x-4">
           <div class="relative">
             <img id="profileImage"
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop" alt="Profile"
+              src="userhome/krish.jpg" alt="Profile"
               class="w-24 h-24 rounded-full object-cover cursor-pointer border-4 border-[#57a1a1] shadow-md hover:opacity-80"
               onclick="triggerFileInput()">
             <input type="file" id="fileInput" class="hidden" accept="image/*" onchange="handleImageUpload(event)">
           </div>
           <div>
-            <h3 id="displayName" class="text-lg font-bold text-gray-800">John Doe</h3>
-            <p id="displayEmail" class="text-sm text-gray-500">john.doe@example.com</p>
-            <a href="#" class="text-sm text-blue-500">Change Password</a>
+            <h3 id="displayName" class="text-lg font-bold text-gray-800">Krish Prajapati</h3>
+            <p id="displayEmail" class="text-sm text-gray-500">krishprajapti@gmail.com</p>
+            <a href="forget_password" class="text-sm text-blue-500">Change Password</a>
           </div>
         </div>
 
@@ -436,8 +436,8 @@
         <div id="profileForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Name -->
           <div>
-            <label class="block text-sm font-medium text-gray-600 mb-1">Full Name</label>
-            <input id="fullName" value="John Doe"
+            <label class="block text-sm font-medium text-gray-600 mb-1">Name</label>
+            <input id="fullName" value="Krish Prajapati"
               class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none"
               oninput="updateName()">
           </div>
@@ -445,14 +445,14 @@
           <!-- Email -->
           <div>
             <label class="block text-sm font-medium text-gray-600 mb-1">Email</label>
-            <input id="email" value="john.doe@example.com" disabled
+            <input id="email" value="krishprajapati@gmail.com" disabled
               class="w-full border rounded-lg px-3 py-2 bg-gray-100 text-gray-500 cursor-not-allowed">
           </div>
 
           <!-- Phone -->
           <div>
             <label class="block text-sm font-medium text-gray-600 mb-1">Phone Number</label>
-            <input id="phone" value="+1 (555) 123-4567"
+            <input id="phone" value="+91 6353054338"
               class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
           </div>
 
