@@ -271,7 +271,7 @@
               <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
             </div>
             <div>
-              <p class="font-medium text-gray-700"><?php echo $full_name;?></p>
+              <p class="font-medium text-gray-700">Krish</p>
               <p class="text-sm text-gray-600">Online</p>
             </div>
           </div>
