@@ -26,7 +26,7 @@
       }
     </style>
   </head>
-  <body class="flex flex-col justify-start min-h-screen bg-[#C4DFDF]">
+  <body class="flex flex-col justify-start w-full min-h-screen bg-[#C4DFDF]">
     <?php 
       include("includes/header.php");
     ?>
@@ -125,7 +125,9 @@
         </p>
       </div>
     </div>
-
+    <?php
+      include("includes/footer.php");
+    ?>
     <script>
       const form = document.getElementById("subscription-form");
 
