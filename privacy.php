@@ -1,97 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gandiv - Privacy Policy</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: {
-                light: "#c4dfdf",
-                DEFAULT: "#94c4c4",
-                dark: "#648383",
-              },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gandiv - Privacy Policy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              light: "#c4dfdf",
+              DEFAULT: "#94c4c4",
+              dark: "#648383",
             },
           },
         },
-      };
-    </script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-      @import url("https://fonts.cdnfonts.com/css/samarkan");
-      .slogan {
-        font-family: "Samarkan";
-      }
-      body {
-        font-family: "Poppins", sans-serif;
-        background: #f8f9fa;
-        background-image: radial-gradient(
-            at 90% 10%,
-            #c4dfdf 0px,
-            transparent 50%
-          ),
-          radial-gradient(at 10% 90%, #94c4c4 0px, transparent 50%);
-        background-attachment: fixed;
-      }
+      },
+    };
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+    @import url("https://fonts.cdnfonts.com/css/samarkan");
 
-      .privacy-section {
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-        background: rgba(255, 255, 255, 0.9);
-      }
+    .slogan {
+      font-family: "Samarkan";
+    }
 
-      .privacy-section:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(196, 223, 223, 0.2);
-      }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f8f9fa;
+      background-image: radial-gradient(at 90% 10%,
+          #c4dfdf 0px,
+          transparent 50%),
+        radial-gradient(at 10% 90%, #94c4c4 0px, transparent 50%);
+      background-attachment: fixed;
+    }
 
-      .listen-btn {
-        transition: all 0.3s ease;
-      }
+    .privacy-section {
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.9);
+    }
 
-      .listen-btn:hover {
-        transform: scale(1.05);
-      }
+    .privacy-section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(196, 223, 223, 0.2);
+    }
 
-      .gradient-text {
-        background: linear-gradient(135deg, #94c4c4 0%, #648383 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+    .listen-btn {
+      transition: all 0.3s ease;
+    }
 
-      .gradient-border {
-        position: relative;
-        background: linear-gradient(
-              rgba(255, 255, 255, 0.9),
-              rgba(255, 255, 255, 0.9)
-            )
-            padding-box,
-          linear-gradient(135deg, #c4dfdf, #94c4c4) border-box;
-        border: 2px solid transparent;
-        border-radius: 1rem;
-      }
-    </style>
-  </head>
-  <body class="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-    <?php
+    .listen-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #94c4c4 0%, #648383 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gradient-border {
+      position: relative;
+      background: linear-gradient(rgba(255, 255, 255, 0.9),
+          rgba(255, 255, 255, 0.9)) padding-box,
+        linear-gradient(135deg, #c4dfdf, #94c4c4) border-box;
+      border: 2px solid transparent;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen">
+  <?php
         include("includes/header.php");
     ?>
-    <div
-      id="loader"
-      class="fixed inset-0 bg-white z-50 flex items-center justify-center"
-    >
+  <div class="min-h-screen py-10">
+    <div id="loader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
       <div class="text-center">
-        <i
-          class="fas fa-spinner fa-spin text-4xl text-primary-DEFAULT mb-4"
-        ></i>
+        <i class="fas fa-spinner fa-spin text-4xl text-primary-DEFAULT mb-4"></i>
         <p class="text-gray-600">Loading...</p>
       </div>
     </div>
@@ -110,23 +102,20 @@
         </p>
         <span class="block mt-2 text-gray-400 text-sm">
           <i class="fa-regular fa-clock mr-1"></i>Last Updated:
-          <span class="font-semibold">[Insert Date]</span>
+          <span class="font-semibold">07-09-2025</span>
         </span>
       </div>
 
       <div class="space-y-6">
         <div class="privacy-section gradient-border p-6">
           <div class="flex justify-between items-start mb-4">
-            <h2
-              class="text-xl font-semibold text-primary-dark flex items-center"
-            >
+            <h2 class="text-xl font-semibold text-primary-dark flex items-center">
               <i class="fas fa-database mr-2 text-primary-DEFAULT"></i>
               1. Information We Collect
             </h2>
             <button
               class="listen-btn bg-[#94c4c4] hover:bg-[#648383] text-white px-6 py-2.5 rounded-lg flex items-center gap-2 text-sm font-medium shadow-md transition-all duration-300 hover:shadow-lg"
-              onclick="toggleSpeech(this)"
-            >
+              onclick="toggleSpeech(this)">
               <i class="fas fa-play text-xs"></i>
               <span>Listen</span>
             </button>
@@ -152,16 +141,13 @@
 
         <div class="privacy-section gradient-border p-6">
           <div class="flex justify-between items-start mb-4">
-            <h2
-              class="text-xl font-semibold text-primary-dark flex items-center"
-            >
+            <h2 class="text-xl font-semibold text-primary-dark flex items-center">
               <i class="fas fa-bullseye mr-2 text-primary-DEFAULT"></i>
               2. How We Use Your Information
             </h2>
             <button
               class="listen-btn bg-[#94c4c4] hover:bg-[#648383] text-white px-6 py-2.5 rounded-lg flex items-center gap-2 text-sm font-medium shadow-md transition-all duration-300 hover:shadow-lg"
-              onclick="toggleSpeech(this)"
-            >
+              onclick="toggleSpeech(this)">
               <i class="fas fa-play text-xs"></i>
               <span>Listen</span>
             </button>
@@ -179,16 +165,13 @@
 
         <div class="privacy-section gradient-border p-6">
           <div class="flex justify-between items-start mb-4">
-            <h2
-              class="text-xl font-semibold text-primary-dark flex items-center"
-            >
+            <h2 class="text-xl font-semibold text-primary-dark flex items-center">
               <i class="fas fa-share-alt mr-2 text-primary-DEFAULT"></i>
               3. How We Share Your Information
             </h2>
             <button
               class="listen-btn bg-[#94c4c4] hover:bg-[#648383] text-white px-6 py-2.5 rounded-lg flex items-center gap-2 text-sm font-medium shadow-md transition-all duration-300 hover:shadow-lg"
-              onclick="toggleSpeech(this)"
-            >
+              onclick="toggleSpeech(this)">
               <i class="fas fa-play text-xs"></i>
               <span>Listen</span>
             </button>
@@ -210,16 +193,13 @@
 
         <div class="privacy-section gradient-border p-6">
           <div class="flex justify-between items-start mb-4">
-            <h2
-              class="text-xl font-semibold text-primary-dark flex items-center"
-            >
+            <h2 class="text-xl font-semibold text-primary-dark flex items-center">
               <i class="fas fa-cookie-bite mr-2 text-primary-DEFAULT"></i>
               4. Cookies & Tracking
             </h2>
             <button
               class="listen-btn bg-[#94c4c4] hover:bg-[#648383] text-white px-6 py-2.5 rounded-lg flex items-center gap-2 text-sm font-medium shadow-md transition-all duration-300 hover:shadow-lg"
-              onclick="toggleSpeech(this)"
-            >
+              onclick="toggleSpeech(this)">
               <i class="fas fa-play text-xs"></i>
               <span>Listen</span>
             </button>
@@ -237,16 +217,13 @@
 
         <div class="privacy-section gradient-border p-6">
           <div class="flex justify-between items-start mb-4">
-            <h2
-              class="text-xl font-semibold text-primary-dark flex items-center"
-            >
+            <h2 class="text-xl font-semibold text-primary-dark flex items-center">
               <i class="fas fa-shield-halved mr-2 text-primary-DEFAULT"></i>
               5. Data Security
             </h2>
             <button
               class="listen-btn bg-[#94c4c4] hover:bg-[#648383] text-white px-6 py-2.5 rounded-lg flex items-center gap-2 text-sm font-medium shadow-md transition-all duration-300 hover:shadow-lg"
-              onclick="toggleSpeech(this)"
-            >
+              onclick="toggleSpeech(this)">
               <i class="fas fa-play text-xs"></i>
               <span>Listen</span>
             </button>
@@ -260,16 +237,13 @@
 
         <div class="privacy-section gradient-border p-6">
           <div class="flex justify-between items-start mb-4">
-            <h2
-              class="text-xl font-semibold text-primary-dark flex items-center"
-            >
+            <h2 class="text-xl font-semibold text-primary-dark flex items-center">
               <i class="fas fa-child mr-2 text-primary-DEFAULT"></i>
               6. Children’s Privacy
             </h2>
             <button
               class="listen-btn bg-[#94c4c4] hover:bg-[#648383] text-white px-6 py-2.5 rounded-lg flex items-center gap-2 text-sm font-medium shadow-md transition-all duration-300 hover:shadow-lg"
-              onclick="toggleSpeech(this)"
-            >
+              onclick="toggleSpeech(this)">
               <i class="fas fa-play text-xs"></i>
               <span>Listen</span>
             </button>
@@ -283,16 +257,13 @@
 
         <div class="privacy-section gradient-border p-6">
           <div class="flex justify-between items-start mb-4">
-            <h2
-              class="text-xl font-semibold text-primary-dark flex items-center"
-            >
+            <h2 class="text-xl font-semibold text-primary-dark flex items-center">
               <i class="fas fa-link mr-2 text-primary-DEFAULT"></i>
               7. Third-Party Links
             </h2>
             <button
               class="listen-btn bg-[#94c4c4] hover:bg-[#648383] text-white px-6 py-2.5 rounded-lg flex items-center gap-2 text-sm font-medium shadow-md transition-all duration-300 hover:shadow-lg"
-              onclick="toggleSpeech(this)"
-            >
+              onclick="toggleSpeech(this)">
               <i class="fas fa-play text-xs"></i>
               <span>Listen</span>
             </button>
@@ -306,16 +277,13 @@
 
         <div class="privacy-section gradient-border p-6">
           <div class="flex justify-between items-start mb-4">
-            <h2
-              class="text-xl font-semibold text-primary-dark flex items-center"
-            >
+            <h2 class="text-xl font-semibold text-primary-dark flex items-center">
               <i class="fas fa-user-lock mr-2 text-primary-DEFAULT"></i>
               8. Your Rights
             </h2>
             <button
               class="listen-btn bg-[#94c4c4] hover:bg-[#648383] text-white px-6 py-2.5 rounded-lg flex items-center gap-2 text-sm font-medium shadow-md transition-all duration-300 hover:shadow-lg"
-              onclick="toggleSpeech(this)"
-            >
+              onclick="toggleSpeech(this)">
               <i class="fas fa-play text-xs"></i>
               <span>Listen</span>
             </button>
@@ -331,16 +299,13 @@
 
         <div class="privacy-section gradient-border p-6">
           <div class="flex justify-between items-start mb-4">
-            <h2
-              class="text-xl font-semibold text-primary-dark flex items-center"
-            >
+            <h2 class="text-xl font-semibold text-primary-dark flex items-center">
               <i class="fas fa-arrows-rotate mr-2 text-primary-DEFAULT"></i>
               9. Changes to This Policy
             </h2>
             <button
               class="listen-btn bg-[#94c4c4] hover:bg-[#648383] text-white px-6 py-2.5 rounded-lg flex items-center gap-2 text-sm font-medium shadow-md transition-all duration-300 hover:shadow-lg"
-              onclick="toggleSpeech(this)"
-            >
+              onclick="toggleSpeech(this)">
               <i class="fas fa-play text-xs"></i>
               <span>Listen</span>
             </button>
@@ -352,105 +317,94 @@
           </p>
         </div>
 
-        <div
-          class="privacy-section gradient-border p-6 bg-primary-light bg-opacity-20"
-        >
+        <div class="privacy-section gradient-border p-6 bg-primary-light bg-opacity-20">
           <div class="flex justify-between items-start mb-4">
-            <h2
-              class="text-xl font-semibold text-primary-dark flex items-center"
-            >
+            <h2 class="text-xl font-semibold text-primary-dark flex items-center">
               <i class="fas fa-envelope mr-2 text-primary-DEFAULT"></i>
               10. Contact Us
             </h2>
             <button
               class="listen-btn bg-[#94c4c4] hover:bg-[#648383] text-white px-6 py-2.5 rounded-lg flex items-center gap-2 text-sm font-medium shadow-md transition-all duration-300 hover:shadow-lg"
-              onclick="toggleSpeech(this)"
-            >
+              onclick="toggleSpeech(this)">
               <i class="fas fa-play text-xs"></i>
               <span>Listen</span>
             </button>
           </div>
           <ul class="ml-6 text-gray-600 leading-relaxed">
             <li>
-              <span class="font-medium"
-                >📍 Gandiv Office, Rajpipla, Gujarat</span
-              >
+              <span class="font-medium">📍 Gandiv Office, Rajpipla, Gujarat</span>
             </li>
             <li>
               <span class="font-medium">📧</span>
-              <a
-                href="mailto:privacy@gandivrajpipla.in"
-                class="text-primary-dark underline hover:text-primary-DEFAULT"
-                >privacy@gandivrajpipla.in</a
-              >
+              <a href="mailto:privacy@gandivrajpipla.in"
+                class="text-primary-dark underline hover:text-primary-DEFAULT">privacy@gandivrajpipla.in</a>
             </li>
             <li>
               <span class="font-medium">📞</span>
-              <a
-                href="tel:+919157431551"
-                class="text-primary-dark underline hover:text-primary-DEFAULT"
-                >+91-91574-31551</a
-              >
+              <a href="tel:+919157431551"
+                class="text-primary-dark underline hover:text-primary-DEFAULT">+91-91574-31551</a>
             </li>
           </ul>
         </div>
       </div>
-      <?php 
+    </div>
+  </div>
+  <?php 
         include("includes/footer.php");
       ?>
-    </div>
 
-    <script>
-      window.addEventListener("load", () => {
-        document.getElementById("loader").style.display = "none";
-      });
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+    });
 
-      const synth = window.speechSynthesis;
-      let currentUtterance = null;
+    const synth = window.speechSynthesis;
+    let currentUtterance = null;
 
-      function toggleSpeech(button) {
-        const text = button
-          .closest(".privacy-section")
-          .querySelector("p,ul").textContent;
+    function toggleSpeech(button) {
+      const text = button
+        .closest(".privacy-section")
+        .querySelector("p,ul").textContent;
 
-        if (currentUtterance && synth.speaking) {
-          synth.cancel();
-          resetButton(button);
-          return;
-        }
-
-        document
-          .querySelectorAll(".listen-btn")
-          .forEach((btn) => resetButton(btn));
-
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = "en-US";
-        utterance.rate = 1;
-        utterance.pitch = 1;
-
-        button.querySelector("i").classList.remove("fa-play");
-        button.querySelector("i").classList.add("fa-stop");
-        button.querySelector("span").textContent = "Stop";
-
-        utterance.onend = () => {
-          resetButton(button);
-        };
-
-        currentUtterance = utterance;
-        synth.speak(utterance);
+      if (currentUtterance && synth.speaking) {
+        synth.cancel();
+        resetButton(button);
+        return;
       }
 
-      function resetButton(button) {
-        button.querySelector("i").classList.remove("fa-stop");
-        button.querySelector("i").classList.add("fa-play");
-        button.querySelector("span").textContent = "Listen";
-      }
+      document
+        .querySelectorAll(".listen-btn")
+        .forEach((btn) => resetButton(btn));
 
-      window.addEventListener("beforeunload", () => {
-        if (synth.speaking) {
-          synth.cancel();
-        }
-      });
-    </script>
-  </body>
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "en-US";
+      utterance.rate = 1;
+      utterance.pitch = 1;
+
+      button.querySelector("i").classList.remove("fa-play");
+      button.querySelector("i").classList.add("fa-stop");
+      button.querySelector("span").textContent = "Stop";
+
+      utterance.onend = () => {
+        resetButton(button);
+      };
+
+      currentUtterance = utterance;
+      synth.speak(utterance);
+    }
+
+    function resetButton(button) {
+      button.querySelector("i").classList.remove("fa-stop");
+      button.querySelector("i").classList.add("fa-play");
+      button.querySelector("span").textContent = "Listen";
+    }
+
+    window.addEventListener("beforeunload", () => {
+      if (synth.speaking) {
+        synth.cancel();
+      }
+    });
+  </script>
+</body>
+
 </html>
