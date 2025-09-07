@@ -27,6 +27,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `business_master`
 --
 
+
+DROP DATABASE IF EXISTS `gandiv`;
+CREATE DATABASE `gandiv`;
+USE `gandiv`
+
 CREATE TABLE `business_master` (
   `business_id` int(11) NOT NULL,
   `business_name` varchar(200) DEFAULT NULL,

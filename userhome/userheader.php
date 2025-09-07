@@ -170,7 +170,7 @@
             <a href="./chatbot.php" class="px-2 py-2 hover:text-gray-800 transition-colors">AI Guide</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Events & Activities</a>
+            <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Ai Trip-Planner</a>
           </li>
           <li class="relative group hover-underline">
             <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Gallery</a>
@@ -179,7 +179,7 @@
             <a href="./map.html" class="px-2 py-2 hover:text-gray-800 transition-colors">Map</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Find Routes</a>
+            <a href="./busdetails" class="px-2 py-2 hover:text-gray-800 transition-colors">Find Routes</a>
           </li>
           <li class="relative group hover-underline">
             <a href="contact-us" class="px-2 py-2 hover:text-gray-800 transition-colors">Contact Us</a>
@@ -295,7 +295,7 @@
             </li>
             <li>
               <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                🎉 Events & Activities
+                🎉 AI Trip-planner
               </a>
             </li>
             <li>
@@ -309,7 +309,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+              <a href="./busdetails" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                 🛣️ Find Routes
               </a>
             </li>
