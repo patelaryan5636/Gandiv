@@ -52,7 +52,7 @@
         <p
           class="text-[#395b64] text-xs sm:text-sm font-medium mb-4 max-w-2xl mx-auto"
         >
-          Become a Local Business Owner and Grow with Rajpipla’s Tourism
+          Become a Local Business Owner and Grow with Jharkhand's Tourism
           Revolution. Showcase your local products, services, and cultural
           offerings to thousands of visitors.
         </p>

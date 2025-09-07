@@ -10,6 +10,10 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <style>
       @import url("https://fonts.cdnfonts.com/css/samarkan");
@@ -34,36 +38,39 @@
       .festival-animate {
         animation: fadeInUp 0.7s cubic-bezier(0.23, 1.07, 0.32, 1) both;
       }
+
+      body{
+        /* background: linear-gradient(#FFFFFF,#a1d4d17b); */
+        background-color: #f8f6f4;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='20' viewBox='0 0 24 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 18c0-1.105.887-2 1.998-2 1.104 0 2-.895 2.002-1.994V14v6h-4v-2zM0 13.998C0 12.895.888 12 2 12c1.105 0 2 .888 2 2 0 1.105.888 2 2 2 1.105 0 2 .888 2 2v2H0v-6.002zm16 4.004A1.994 1.994 0 0 1 14 20c-1.105 0-2-.887-2-1.998v-4.004A1.994 1.994 0 0 0 10 12c-1.105 0-2-.888-2-2 0-1.105-.888-2-2-2-1.105 0-2-.887-2-1.998V1.998A1.994 1.994 0 0 0 2 0a2 2 0 0 0-2 2V0h8v2c0 1.105.888 2 2 2 1.105 0 2 .888 2 2 0 1.105.888 2 2 2 1.105 0 2-.888 2-2 0-1.105.888-2 2-2 1.105 0 2-.888 2-2V0h4v6.002A1.994 1.994 0 0 1 22 8c-1.105 0-2 .888-2 2 0 1.105-.888 2-2 2-1.105 0-2 .887-2 1.998v4.004z' fill='%23c4dfdf' fill-opacity='0.31' fill-rule='evenodd'/%3E%3C/svg%3E");
+        
+      }
     </style>
   </head>
-  <body
-    class="bg-cover bg-center relative"
-    style="background-image: url('img/Btfly.jpg')"
-  >
-    <h1 class="absolute left-32 top-14 text-5xl font-bold text-white">
+  <body>
+    <h1 class="absolute left-32 top-14 text-5xl font-bold text-gray-800">
       Fairs & Festivals - The Life of Narmada
     </h1>
 
-    <button
-      class="absolute right-32 top-14 transparent text-white px-6 py-2 rounded-lg shadow-md border-2 border-gray-600 transition"
-    >
-      View All
-    </button>
+    <a href="./jobcard"
+          class="absolute right-32 top-14 px-6 py-3 bg-[#94cfcf] hover:bg-[#c4dfdf] hover:text-gray-700 font-bold font-serif rounded-lg text-white transition-all flex items-center gap-2"
+        >
+          View All <i class="fa-solid fa-right-to-bracket"></i>
+        </a>
 
     <div class="flex items-center justify-center h-screen">
       <div
-        class="max-w-5xl w-full h-[75vh] flex bg-white shadow-lg rounded-xl overflow-hidden mt-20"
+        class="max-w-5xl w-full h-[65vh] flex bg-white shadow-lg rounded-xl overflow-hidden mt-20"
       >
         <div class="w-[35%] p-8 flex flex-col justify-center">
           <div id="festival-text" class="transition-all duration-500">
             <p class="text-gray-500 uppercase">Festival</p>
             <h2 id="festival-title" class="text-3xl font-bold text-orange-500">
-              Narmada Festival
+              Sarhul
             </h2>
-            <p id="festival-date" class="text-gray-600 mt-2">10th March 2025</p>
+            <p id="festival-date" class="text-gray-600 mt-2">10th April</p>
             <p id="festival-desc" class="mt-4 text-gray-700">
-              Experience the vibrant culture of Narmada with music, dance, and
-              divine celebrations.
+              Celebrate the arrival of spring with tribal rituals, sal flowers, and traditional dances honoring nature.
             </p>
           </div>
           <div class="flex mt-6 space-x-4">
@@ -81,21 +88,28 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img
-                  src="img1.jpg"
+                  src="./img/Sarhul-Festival.png"
                   class="w-full h-full object-cover"
                   alt="Festival 1"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="img2.jpg"
+                  src="./img/karma_festival.jpg"
                   class="w-full h-full object-cover"
                   alt="Festival 2"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="img3.jpg"
+                  src="./img/tesu_festival.jpg"
+                  class="w-full h-full object-cover"
+                  alt="Festival 3"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./img/rath_yatra_festival.png"
                   class="w-full h-full object-cover"
                   alt="Festival 3"
                 />
@@ -109,19 +123,24 @@
     <script>
       const festivals = [
         {
-          title: "Narmada Festival",
-          date: "10th March 2025",
-          desc: "Experience the vibrant culture of Narmada with music, dance, and divine celebrations.",
+          title: "Sarhul",
+          date: "10th April",
+          desc: "Celebrate the arrival of spring with tribal rituals, sal flowers, and traditional dances honoring nature.",
         },
         {
-          title: "Garba Nights",
-          date: "5th October 2025",
-          desc: "Join the electrifying Garba Nights in Narmada and dance to the beats of tradition.",
+          title: "Karma",
+          date: "20th August",
+          desc: "Experience the sacred Karma Puja as devotees worship the Karma tree for prosperity, joy, and good harvests.",
         },
         {
-          title: "Makar Sankranti",
-          date: "14th January 2026",
-          desc: "Celebrate the festival of kites and harvest with joy in the heart of Gujarat.",
+          title: "Tusu Parab",
+          date: "15th January",
+          desc: "Enjoy the harvest festival with colorful songs, fairs, and decorated clay idols floating in rivers.",
+        },
+        {
+          title: "Rath Yatra",
+          date: "29th June",
+          desc: "Be part of the grand chariot procession of Lord Jagannath celebrated with devotion and folk performances.",
         },
       ];
 

@@ -113,11 +113,11 @@
     <iframe
       src="userhome/newsslider.php"
       width="100%"
-      height="670px"
-      style="border: none; display: block; margin: 0 auto"
+      height="630px"
+      style="border: none; display: block; margin: 0 auto;"
     ></iframe>
 
-    <div class="hello flex flex-col md:flex-row mt-1">
+    <div class="hello flex flex-col md:flex-row">
       <div class="w-full md:w-1/2 scroll-area p-8">
         <div class="mb-6">
           <span

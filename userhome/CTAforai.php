@@ -102,11 +102,11 @@
               class="text-xl font-semibold text-[#395b64] mb-2 flex items-center gap-2"
             >
               <i class="fa-solid fa-robot text-2xl text-[#527277]"></i>
-              Explore Rajpipla with AI
+              Explore Jharkhand with AI
             </h3>
             <p class="text-[#527277]">
               Use our AI-powered assistant to discover hidden gems, plan your
-              visit, and get instant answers about Rajpipla’s culture,
+              visit, and get instant answers about Jharkhand's culture,
               attractions, and businesses.
             </p>
           </div>

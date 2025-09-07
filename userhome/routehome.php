@@ -64,7 +64,7 @@
             Find Your Route
           </h1>
           <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto">
-            Easily discover the best way to reach Rajpipla from your current
+            Easily discover the best way to reach Jharkhand from your current
             location. Real-time updates, scenic suggestions, and safety tips
             included!
           </p>
@@ -136,7 +136,7 @@
               </div>
             </div>
 
-            <button
+            <a href="map.html"
               onclick="window.location.href='find-route.html'"
               class="w-full py-4 bg-[#06C2C2] hover:bg-[#06C4C4] text-white rounded-xl text-lg font-bold shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
               data-aos="fade-up"
@@ -144,7 +144,7 @@
             >
               <i class="fas fa-compass text-2xl"></i>
               Start Navigation
-            </button>
+            </a>
           </div>
 
           <div

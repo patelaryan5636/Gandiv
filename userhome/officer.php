@@ -56,21 +56,21 @@
               </div>
               <div class="swiper-slide">
                 <img
-                  src="../assets/img/Places/shibu-soren.png"
+                  src="./img/Vijaya_IAS.png"
                   class="w-full h-full object-cover"
                   alt="Festival 2"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="../assets/img/Places/madhu-koda.png"
+                  src="./img/Arun_kumar.png"
                   class="w-full h-full object-cover"
                   alt="Festival 3"
                 />
               </div>
               <div class="swiper-slide">
                 <img
-                  src="../assets/img/Places/Droupadi-Murmu.png"
+                  src="./img/Manoj_kumar.png"
                   class="w-full h-full object-cover"
                   alt="Festival 3"
                 />
@@ -89,20 +89,20 @@
           desc: "Shri Hemant Soren is an Indian politician and the current Chief Minister of Jharkhand. He is the leader of the Jharkhand Mukti Morcha (JMM), a political party in the state. He has been instrumental in leading various developmental and welfare initiatives for the people of Jharkhand.",
         },
         {
-          title: "SHIBU SOREN",
-          date: "Founding Member of Jharkhand Mukti Morcha (JMM)",
-          desc: "Shibu Soren is a veteran politician and a key figure in the struggle for the creation of Jharkhand. Often referred to as 'Guruji' by his followers, he spearheaded the movement that led to Jharkhand's statehood. He has served as the Chief Minister of the state multiple times and is a highly respected tribal leader.",
+          title: "SMT VIJAYA JADHAV, IAS",
+          date: "Director of Tourism, Department of Tourism, Arts, Culture, Sports & Youth Affairs",
+          desc: "As the current Director of Tourism, she plays a pivotal role in shaping Jharkhand’s tourism strategy. She has recently spearheaded initiatives to craft tailored tour packages, boost local engagement, and train guides to deeply connect visitors with the state’s natural beauty and cultural heritage.",
         },
         {
-          title: "MADHU KODA",
-          date: "Former Chief Minister of Jharkhand",
-          desc: "Madhu Koda is a former Chief Minister of Jharkhand who made history as the first independent legislator to hold the position. His tenure, though brief, was significant as it demonstrated the evolving political landscape of the state. He is a prominent figure in the state's political history.",
+          title: "SHRI ARUN KUMAR SINGH",
+          date: "Senior Manager, Jharkhand Tourism Development Corporation (JTDC)",
+          desc: "He is the in-charge and senior manager at Patratu Lake Resort, a prominent JTDC-run facility. His responsibilities include overseeing day-to-day operations, interfacing with private cruise operators, and ensuring the smooth functioning of resort activities.",
         },
         {
-          title: "DROUPADI MURMU",
-          date: "Former Governor of Jharkhand & President of India",
-          desc: "Droupadi Murmu is an Indian politician who served as the 9th Governor of Jharkhand from 2015 to 2021. Her tenure was significant as she was the first woman to hold this position. She went on to make history by becoming the 15th President of India, and the first person from a tribal community to hold the highest office in the country.",
-        },
+          title: "SHRI MANOJ KUMAR, IAS",
+          date: "Secretary – Department of Tourism, Arts, Culture, Sports & Youth Affairs",
+          desc: "As the administrative head of the tourism department, he oversees policy formulation, inter-departmental coordination, budget allocations, and implementation of major tourism initiatives.",
+        }
       ];
 
       let currentIndex = 0;

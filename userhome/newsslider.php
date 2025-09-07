@@ -33,7 +33,7 @@
 </head>
 
 <body>
-  <section class="relative py-16 px-12">
+  <section class="relative pt-[2rem] px-12">
     <div class="absolute inset-0">
       <img src="img/newscardbg.jpg" alt="Background" class="w-full h-[630px] object-cover" />
       <div class="absolute inset-0 h-[630px] bg-white/80"></div>
