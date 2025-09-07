@@ -25,8 +25,9 @@
      if ($result->num_rows > 0) {
       $stores = $result->fetch_assoc();
   } else {
-      header("location: stallcard");
-      exit; // Stop further execution if no guide found
+      // header("location: stallcard");
+      var_dump($id);
+      // Stop further execution if no guide found
   }
     
   $store_image1 = str_replace("../", "", $stores['store_image']);

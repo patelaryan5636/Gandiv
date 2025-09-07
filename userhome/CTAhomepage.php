@@ -78,7 +78,7 @@
           </span>
         </div>
         <a
-          href="#"
+          href="../business/business_login"
           class="inline-flex items-center justify-center px-7 py-3 text-base font-bold text-white bg-gradient-to-r from-[#527277] via-[#8ebebe] to-[#5eaaa8] rounded-lg shadow-lg hover:scale-105 hover:shadow-xl border-0 transition-all duration-300 group"
           style="box-shadow: 0 4px 20px 0 #8ebebe55"
         >

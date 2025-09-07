@@ -18,7 +18,7 @@
             <p class="text-[#527277] text-sm leading-relaxed text-justify">
               Discover Heritage, Culture & Adventure – All in One Place
               Empowering travelers and locals through a digital gateway to
-              Rajpipla’s history, nature, festivals, and economic growth.
+              Jharkhand's history, nature, festivals, and economic growth.
             </p>
             <div class="flex space-x-3 mt-2 items-center ml-2">
               <a
@@ -54,7 +54,7 @@
             <ul class="space-y-3">
               <li>
                 <a
-                  href="/"
+                  href="/gandiv"
                   class="flex items-center text-[#527277] hover:text-[#395b64] transition-all duration-300 hover:pl-2 group"
                 >
                   <i
@@ -87,7 +87,7 @@
               </li>
               <li>
                 <a
-                  href="/contact-us"
+                  href="contact-us"
                   class="flex items-center text-[#527277] hover:text-[#395b64] transition-all duration-300 hover:pl-2 group"
                 >
                   <i
@@ -98,7 +98,7 @@
               </li>
               <li>
                 <a
-                  href="/privacy-policy"
+                  href="privacy-policy"
                   class="flex items-center text-[#527277] hover:text-[#395b64] transition-all duration-300 hover:pl-2 group"
                 >
                   <i
@@ -132,7 +132,7 @@
                   class="fas fa-map-marker-alt mt-1 text-lg text-[#395b64] group-hover:text-gray-700"
                 ></i>
                 <span class="hover:text-gray-700"
-                  >Royal Square, Heritage Lane, Rajpipla, Gujarat, India –
+                  >Tribal Heritage Plaza, Morabadi, Ranchi, Jharkhand, India –
                   393145</span
                 >
               </li>
