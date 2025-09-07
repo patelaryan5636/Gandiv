@@ -26,12 +26,12 @@
       }
     </style>
   </head>
-  <body class="flex items-center justify-center min-h-screen bg-[#C4DFDF] p-4">
+  <body class="flex flex-col justify-start min-h-screen bg-[#C4DFDF]">
     <?php 
       include("includes/header.php");
     ?>
     <div
-      class="flex flex-col md:flex-row w-[90%] md:w-[85%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden"
+      class="flex flex-col mt-10 mb-10 md:flex-row w-[90%] md:w-[85%] h-auto bg-white shadow-2xl rounded-lg overflow-hidden"
     >
       
       <div
