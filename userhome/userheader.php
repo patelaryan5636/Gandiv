@@ -193,7 +193,7 @@
               class="px-2 py-2 hover:text-gray-800 transition-colors flex items-center justify-center gap-2">Login<img
                 style="height:21px;" src="userhome/img/login.svg" alt="Login"></a>
           </li>
-          <img src="userhome/krish.jpg" alt="Avatar" onclick="openModal()"
+          <!-- <img src="userhome/krish.jpg" alt="Avatar" onclick="openModal()"
             class="h-10 w-10 rounded-lg cursor-pointer border-2 border-white hover:border-gray-300 transition-colors" />
           <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
           <ul
@@ -210,7 +210,7 @@
             <li>
               <a href="#" class="block px-4 py-2 hover:bg-red-100 text-red-600 transition-colors">Logout →</a>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </nav>
