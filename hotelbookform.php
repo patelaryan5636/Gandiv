@@ -1,7 +1,17 @@
 <?php
   require_once './includes/scripts/connection.php';
 
-  $sql = "SELECT * FROM hotel_master where hotel_id = 1";
+  $encryptedId = $_GET['id'];
+
+  function decrypt($data) {
+      $key = "Yatra@5636";
+      $iv = "1234567891011121";
+      return openssl_decrypt(urldecode($data), "AES-256-CBC", $key, 0, $iv);
+  }
+
+  $id = decrypt($encryptedId);
+
+  $sql = "SELECT * FROM hotel_master where hotel_id = $id";
   $stmt = $conn->prepare($sql);
   $stmt->execute();
   $result = $stmt->get_result();
@@ -270,7 +280,8 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
       <h2 class="text-2xl font-bold text-center mb-4">Booking Receipt</h2>
-      <form action="makePayment.php" method="post" id="receiptForm">
+
+      <form action="makePayment.php?id=<?php echo $encryptedId?>" method="post" id="receiptForm">
         <table class="receipt-table">
           <tr>
             <th>Item</th>
@@ -319,7 +330,7 @@
           </tr>
           <tr>
             <td>Taxes</td>
-            <td>₹2000</td>
+            <td>₹2000+Deposite</td>
           </tr>
           <tr>
             <td>Payment Method</td>
@@ -368,6 +379,7 @@
         const paymentMethod = document.getElementById("paymentMethod").value;
         const roomPrice = parseInt(roomType.split("₹")[1]);
         const total = (roomPrice * countDays(checkinDate, checkoutDate)) + 2000;
+        console.log(total);
 
         // document.getElementById("receiptRoomType").innerText = roomType;
         // Now roomTypeName will contain just "Single", "Couple", "AC", etc.
