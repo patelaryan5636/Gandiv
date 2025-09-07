@@ -77,7 +77,7 @@
     <p class="text-gray-600 text-xl font-serif px-20">Bring your business to the digital world and connect with
       customers who
       appreciate heritage, craftsmanship, and tradition. Whether you specialize in handmade art, cultural treasures, or
-      timeless creations, showcase your shop online and let the world experience the essence of Rajpipla through your
+      timeless creations, showcase your shop online and let the world experience the essence of Jharkhand through your
       unique offerings.</p>
 
     <div class="flex justify-center items-center  gap-5  mb-16 font-serif">
