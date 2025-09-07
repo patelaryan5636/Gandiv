@@ -104,9 +104,9 @@
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td>Rajpipla Palace</td>
-                                                <td>Rajpipla, Narmada district, Gujarat, India</td>
-                                                <td>50</td>
+                                                <td>Parasnath Hill</td>
+                                                <td>Jharkhand, India</td>
+                                                <td>N/A</td>
                                             </tr>
                                         </tbody>
                                     </table>

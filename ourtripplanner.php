@@ -113,11 +113,12 @@
       color: #2c3e50;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
+
     @import url("https://fonts.cdnfonts.com/css/samarkan");
 
-      .title {
-        font-family: "Samarkan";
-      }
+    .title {
+      font-family: "Samarkan";
+    }
   </style>
 </head>
 
@@ -125,33 +126,33 @@
   <?php
         include("includes/header.php");
       ?>
-  <div class="mt-10 mb-[-2rem] max-w-7xl mx-auto">
+  <div class="mt-16 mb-[-0.7rem] max-w-7xl mx-auto">
     <h1 class="title font-bold text-gray-700 mb-2 text-5xl text-center">
-  🌏 Discover & Explore: Travel Experiences in Jharkhand
-</h1>
-<p class="text-gray-600 text-xl font-serif px-20 text-center">
-  Unlock the hidden gems of Jharkhand – from ancient temples and lush forests 
-  to vibrant festivals and adventure trails. Plan unforgettable journeys with 
-  expert-curated itineraries, local insights, and experiences that celebrate 
-  the rich culture and natural beauty of the state.
-</p>
+      🌏 Discover & Explore: Travel Experiences in Jharkhand
+    </h1>
+    <p class="text-gray-600 text-xl font-serif px-20 text-center">
+      Unlock the hidden gems of Jharkhand – from ancient temples and lush forests
+      to vibrant festivals and adventure trails. Plan unforgettable journeys with
+      expert-curated itineraries, local insights, and experiences that celebrate
+      the rich culture and natural beauty of the state.
+    </p>
 
     <div class="flex justify-center items-center gap-5 mb-16 font-serif">
       <div class="px-3 py-4 mt-3 bg-orange-100 h-6 text-gray-600 font-medium rounded-lg flex items-center">
-  🏞️ Explore Hidden Gems
-</div>
-<div class="px-3 py-4 mt-3 bg-purple-100 h-6 text-gray-600 font-medium rounded-lg flex items-center">
-  🎭 Celebrate Culture
-</div>
-<div class="px-3 py-4 mt-3 bg-green-100 h-6 text-gray-600 font-medium rounded-lg flex items-center">
-  🛶 Adventure Awaits
-</div>
+        🏞️ Explore Hidden Gems
+      </div>
+      <div class="px-3 py-4 mt-3 bg-purple-100 h-6 text-gray-600 font-medium rounded-lg flex items-center">
+        🎭 Celebrate Culture
+      </div>
+      <div class="px-3 py-4 mt-3 bg-green-100 h-6 text-gray-600 font-medium rounded-lg flex items-center">
+        🛶 Adventure Awaits
+      </div>
 
     </div>
   </div>
   <div class="cards-container mb-10">
     <!-- First Card -->
-    <div class="card">
+    <div class="card shadow-lg">
       <div class="p-4 bg-[#94cfcf]">
         <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-4">
           <div class="flex flex-col md:flex-row items-center gap-4">
@@ -277,7 +278,7 @@
 
     <!-- Second Card (Same structure as first card, different content) -->
     <!-- Add your second card here with the same structure but different content -->
-    <div class="card">
+    <div class="card shadow-lg">
       <div class="p-4 bg-[#94cfcf]">
         <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-4">
           <div class="flex flex-col md:flex-row items-center gap-4">

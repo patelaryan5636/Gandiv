@@ -75,7 +75,7 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            Rajvant Palace
+                                            Parasnath Hill
                                         </td>
                                         <td>
                                             Historical
@@ -84,13 +84,13 @@
                                             4.70
                                         </td>
                                         <td>
-                                            Rajpipla, Gujarat
+                                            Jharkhand, India
                                         </td>
                                         <td>
                                             08:00 AM - 07:00 PM
                                         </td>
                                         <td>
-                                            100
+                                            N/A
                                         </td>
                                         <td>
                                             +91-9978343950

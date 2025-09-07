@@ -22,7 +22,7 @@
             
             <ul class="nav user-menu">
                 <div>
-                    <span class="user-img"><img style="width: 100px; margin-top: -20px;" src="../assets/img/SSIP_logo.png" alt="img"></span>
+                    <span class="user-img"><img style="width: 100px; margin-top: 7px;" src="../userhome/sih-logo.png" alt="img"></span>
                 </div>
 
 
