@@ -167,7 +167,7 @@
             </ul>
           </li>
           <li class="relative group hover-underline">
-            <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Live Guide</a>
+            <a href="./chatbot.php" class="px-2 py-2 hover:text-gray-800 transition-colors">AI Guide</a>
           </li>
           <li class="relative group hover-underline">
             <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Events & Activities</a>
@@ -289,8 +289,8 @@
               </ul>
             </li>
             <li>
-              <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                📱 Live Guide
+              <a href="../chatbot" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                📱 AI Guide
               </a>
             </li>
             <li>

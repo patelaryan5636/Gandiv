@@ -281,13 +281,16 @@
   </head>
 
   <body class="min-h-screen">
+    <?php 
+      include("includes/header.php");
+    ?>
     <div class="container mx-auto px-4 py-4">
       <div class="text-center mb-8">
         <div class="flex justify-center items-center gap-6">
           <!-- First Logo -->
           <div class="logo-container">
             <img
-              src="/gandiv.png"
+              src="gandiv.png"
               alt="Logo 1"
               class="w-40 h-40 object-contain transform hover:scale-105 transition-transform duration-300"
             />
@@ -296,7 +299,7 @@
           <!-- Second Logo -->
           <div class="logo-container">
             <img
-              src="/yatra.png"
+              src="yatra.png"
               alt="Logo 2"
               class="w-32 h-32 object-contain transform hover:scale-105 transition-transform duration-300"
             />
