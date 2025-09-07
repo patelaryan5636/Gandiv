@@ -342,9 +342,16 @@
           class="absolute left-0 bottom-0 w-full h-1 bg-black scale-x-0 transition-transform duration-300 hover:scale-x-100"
         ></span>
       </button>
-
+      <?php
+      function encrypt($data) {
+                    $key = "Yatra@5636"; // Use a strong key
+                    $iv = "1234567891011121"; // 16-byte IV (same during encryption & decryption)
+                    return urlencode(openssl_encrypt($data, "AES-256-CBC", $key, 0, $iv));
+      }
+      $en_id = encrypt($id);
+?>
       <a
-        href="hotelbookform"
+        href="hotelbookform?id=<?php echo $en_id ?>"
         class="w-1/3 text-white text-center font-semibold text-lg py-3 px-6 rounded-lg bg-gradient-to-r from-green-400 to-green-600 shadow-lg hover:from-green-500 hover:to-green-700 transition-all duration-300 transform hover:scale-105"
       >
         Book Now →

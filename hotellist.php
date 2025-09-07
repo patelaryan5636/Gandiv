@@ -6,6 +6,11 @@
   $stmt->execute();
   $result = $stmt->get_result();
 
+  if (isset($_SESSION['booking_status'])) {
+    $bookingMsg = $_SESSION['booking_status'];
+    unset($_SESSION['booking_status']); // clear so it doesn't show again
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -406,6 +411,15 @@
 </style>
 
 <body>
+    <!-- //    temp design  -->
+
+    <?php if (!empty($bookingMsg)): ?>
+    <script>
+    window.onload = function() {
+        alert("<?= $bookingMsg ?>");
+    };
+    </script>
+<?php endif; ?>
     <?php
         include("includes/header.php");
     ?>
