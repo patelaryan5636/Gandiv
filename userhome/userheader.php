@@ -184,6 +184,9 @@
           <li class="relative group hover-underline">
             <a href="contact-us" class="px-2 py-2 hover:text-gray-800 transition-colors">Contact Us</a>
           </li>
+          <li class="relative group hover-underline">
+            <a href="newsletter" class="px-2 py-2 hover:text-gray-800 transition-colors">News Letter</a>
+          </li>
         </ul>
 
         <!-- Desktop User Avatar -->
