@@ -65,13 +65,13 @@
               </li>
               <li>
                 <a
-                  href="/schemes"
+                  href="./tripplannercard"
                   class="flex items-center text-[#527277] hover:text-[#395b64] transition-all duration-300 hover:pl-2 group"
                 >
                   <i
                     class="fas fa-chevron-right mr-2 transition-transform group-hover:translate-x-1"
                   ></i>
-                  Heritage Spots
+                  Tour & Packages
                 </a>
               </li>
               <li>

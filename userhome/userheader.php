@@ -158,7 +158,7 @@
       <div class="container mx-auto flex justify-between items-center px-6 py-2 uppercase font-medium">
         <ul class="flex space-x-4 lg:space-x-6">
           <li class="relative group hover-underline">
-            <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Home</a>
+            <a href="./index.php" class="px-2 py-2 hover:text-gray-800 transition-colors">Home</a>
           </li>
           <li class="relative group hover-underline">
             <a href="./jobcards" class="px-2 py-2 hover:text-gray-800 transition-colors">Job & Opp</a>
@@ -281,7 +281,7 @@
         <div class="flex-1 overflow-y-auto p-4">
           <ul class="space-y-2">
             <li>
-              <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+              <a href="./index.php" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                 🏠 Home
               </a>
             </li>

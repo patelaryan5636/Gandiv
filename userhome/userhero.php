@@ -388,15 +388,15 @@
         <div class="item">
           <img src="../assets/img/Places/Parasnath_Hill.png" />
           <div class="content">
-            <div class="title">Parasnath Hill</div>
-            <div class="description">Sammed Shikharji</div>
+            <div class="title" style="color: white;">Parasnath Hill</div>
+            <div class="description" style="color: white;">Sammed Shikharji</div>
           </div>
         </div>
         <div class="item">
           <img src="../assets/img/Places/Patratu_Valley.png" />
           <div class="content">
-            <div class="title">Patratu Valley</div>
-            <div class="description">Scenic Viewpoint</div>
+            <div class="title" style="color: white;">Patratu Valley</div>
+            <div class="description" style="color: white;">Scenic Viewpoint</div>
           </div>
         </div>
         <div class="item">
@@ -409,8 +409,8 @@
         <div class="item">
           <img src="../assets/img/Places/Hundru_Falls.png" />
           <div class="content">
-            <div class="title">Hundru Falls</div>
-            <div class="description">Waterfall</div>
+            <div class="title" style="color: white;">Hundru Falls</div>
+            <div class="description" style="color: white;">Waterfall</div>
           </div>
         </div>
       </div>
