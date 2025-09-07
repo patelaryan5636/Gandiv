@@ -231,7 +231,7 @@
 
         <!-- Mobile User Info -->
         <div class="p-4 bg-[#C4DFDF] border-b">
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-3" onclick="openModal()">
             <div class="relative">
               <img src="userhome/krish.jpg" alt="Avatar" class="h-12 w-12 rounded-lg border-2 border-white" />
               <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
@@ -371,7 +371,7 @@
   <div id="profileModal"
     class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
     <!-- Modal Card -->
-    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-xl animate-fadeIn">
+    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-xl animate-fadeIn m-3">
       <!-- Header -->
       <div class="flex justify-between items-center p-5 border-b">
         <h2 class="text-xl font-semibold text-gray-700">Profile Settings</h2>
@@ -443,13 +443,8 @@
                 class="fas fa-chevron-down absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none"></i>
             </div>
           </div>
-
-
-          <!-- Save -->
-          <button onclick="closeModal()"
-              class="px-4 py-2 border rounded-lg hover:bg-gray-100 transition">Cancel</button>
-              <input type="submit"
-                  class="px-6 py-2 bg-[#a4d8d8] text-white rounded-lg shadow hover:bg-[#6bbcbc] transition-all duration-150 cursor-pointer" value="Update"></input>
+          <button onclick="closeModal()" class="px-4 py-2 border rounded-lg hover:bg-gray-100 transition">Cancel</button>
+          <input type="submit" class="px-6 py-2 bg-[#a4d8d8] text-white rounded-lg shadow hover:bg-[#6bbcbc] transition-all duration-150 cursor-pointer" value="Update"></input>
         </div>
       </form>
     </div>
