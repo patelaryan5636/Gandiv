@@ -596,6 +596,9 @@ require 'includes/scripts/connection.php';
 </style>
 
 <body>
+    <?php
+        include("includes/header.php");
+    ?>
     <div class="main-container">
         <div class="main-head">
             <h1 class="main-title">
@@ -906,6 +909,9 @@ require 'includes/scripts/connection.php';
                 </div>
             </div>
         </div>
+        <?php
+            include("includes/footer.php");
+        ?>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
