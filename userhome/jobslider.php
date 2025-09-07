@@ -39,11 +39,11 @@
             ></div>
           </h2>
         </div>
-        <button
+        <a href="./jobcard"
           class="px-6 py-3 bg-[#94cfcf] hover:bg-[#c4dfdf] hover:text-gray-700 font-bold font-serif rounded-lg text-white transition-all flex items-center gap-2"
         >
           View All <i class="fa-solid fa-right-to-bracket"></i>
-        </button>
+        </a>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

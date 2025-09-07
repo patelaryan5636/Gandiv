@@ -221,42 +221,42 @@
         style="
           text-align: center;
           font-size: 2.5rem;
-          color: #f8f6f4;
+          color: #4b5563;
           margin-bottom: 2rem;
         "
       >
-        Explore Rajpipla – Stay, Experience & Shop Local
+        Explore Jharkhand – Stay, Experience & Shop Local
       </h1>
       <div class="card__container">
         <article class="card__article">
           <img src="img/place.png" alt="image" class="card__img" />
 
           <div class="card__data">
-            <span class="card__description"
-              >From City Skylines to Beachfront Bliss</span
-            >
-            <h2 class="card__title">Find Your Next Stay</h2>
-            <a href="#" class="card__button">Explore All Hotels</a>
-          </div>
+  <span class="card__description">Jonha Falls, Ranchi, Jharkhand</span>
+  <h2 class="card__title">Experience the Serenity of Jonha Falls</h2>
+  <a href="#" class="card__button">Explore Nature Trails</a>
+</div>
+
         </article>
 
         <article class="card__article">
           <img src="img/place2.png" alt="image" class="card__img" />
           <div class="card__data">
-            <span class="card__description">Rajpipla, Narmada</span>
-            <h2 class="card__title">Discover Rajpipla with an Expert Guide</h2>
-            <a href="#" class="card__button">Book Your Guide</a>
+            <span class="card__description">Deoghar, Jharkhand</span>
+            <h2 class="card__title">Discover Baidyanath Jyotirlinga - Land of Faith</h2>
+            <a href="#" class="card__button">Explore Pilgrimage Routes</a>
           </div>
         </article>
 
         <article class="card__article">
-          <img src="img/local.jpg" alt="image" class="card__img" />
+          <img src="img/place3.png" alt="image" class="card__img" />
 
           <div class="card__data">
-            <span class="card__description">Rajpipla, Narmada</span>
-            <h2 class="card__title">Discover Local Treasures</h2>
-            <a href="#" class="card__button">Explore Businesses</a>
+            <span class="card__description">Parasnath Hill, Giridih, Jharkhand</span>
+            <h2 class="card__title">Explore Parasnath - The Spiritual Peak</h2>
+            <a href="#" class="card__button">View Trails & Pilgrimages</a>
           </div>
+
         </article>
       </div>
     </div>
