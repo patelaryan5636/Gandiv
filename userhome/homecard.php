@@ -39,7 +39,7 @@
 
       body {
         font-family: var(--body-font);
-        background: url("otpbg.jpg") repeat scroll 0;
+        /* background: url("otpbg.jpg") repeat scroll 0; */
         color: var(--text-color);
         position: relative;
       }
@@ -225,7 +225,7 @@
           margin-bottom: 2rem;
         "
       >
-        Explore Jharkhand – Stay, Experience & Shop Local
+        Explore Jharkhand – Sacred Peaks, Waterfalls & Heritage
       </h1>
       <div class="card__container">
         <article class="card__article">

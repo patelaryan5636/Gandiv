@@ -89,17 +89,18 @@
       padding="0"
     ></iframe>
 
-    <!-- <iframe
-      src="userhome/fest.html"
+    <?php
+      include("userhome/mostvisited.php");
+    ?>
+    
+    <iframe
+      src="userhome/fest.php"
       width="100%"
       height="670px"
       style="border: none; display: block"
       padding="0"
-    ></iframe> -->
+    ></iframe>
 
-    <?php
-      include("userhome/mostvisited.php");
-    ?>
 
     <iframe
       src="userhome/homecard.php"
