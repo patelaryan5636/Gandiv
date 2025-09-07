@@ -145,7 +145,7 @@
             <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Home</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Explore</a>
+            <a href="./jobcards" class="px-2 py-2 hover:text-gray-800 transition-colors">Job & Opp</a>
           </li>
           <li class="relative group hover-underline">
             <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Bookings ▼</a>
@@ -252,7 +252,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+              <a href="./jobcards" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                 🔍 Explore
               </a>
             </li>
