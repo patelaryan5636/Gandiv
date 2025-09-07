@@ -17,6 +17,11 @@
             font-family: 'Inter', sans-serif;
         }
 
+        body{
+            background-color: #eeeef0;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='%2346a199' fill-opacity='0.22'%3E%3Cpath fill-rule='evenodd' d='M5 3.59L1.46.05.05 1.46 3.59 5 .05 8.54l1.41 1.41L5 6.41l3.54 3.54 1.41-1.41L6.41 5l3.54-3.54L8.54.05 5 3.59zM17 2h24v2H17V2zm0 4h24v2H17V6zM2 17h2v24H2V17zm4 0h2v24H6V17z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
         .hero-bg {
             background: url('assets/img/Places/Parasnath_Hill.png');
             background-size: cover;
@@ -30,7 +35,11 @@
         }
 
         .section-bg {
-            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%);
+            background: linear-gradient(185deg, #f0fdf4 0%, #ecfdf5ca 50%, #f0f9ff87 100%);
+        }
+
+        .section-bg2 {
+            background: #f0f9ff7a;
         }
 
         .card-hover {
@@ -160,15 +169,63 @@
         .btn-gradient:hover {
             background: linear-gradient(135deg, #3a7bc8, #5aa3ff);
         }
+
+        .destination-card {
+            transition: var(--transition-all);
+            box-shadow: 0 4px 6px -1px hsl(217 91% 60% / 0.1), 0 2px 4px -1px hsl(217 91% 60% / 0.06);
+        }
+
+        .destination-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px hsl(217 91% 60% / 0.1), 0 10px 10px -5px hsl(217 91% 60% / 0.04);
+        }
+
+        .destination-card img {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .destination-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .line-clamp-4 {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Arrow icon */
+        .arrow-icon {
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .maincard:hover {
+            .category {
+                opacity: 40%;
+            }
+        }
+
+        .bg-adventure{
+            background-color: darkgoldenrod;
+        }
     </style>
 </head>
 
 <body class="bg-gray-50">
 
-    
+    <?php
+        include("includes/header.php");
+    ?>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center justify-center relative">
+    <section id="home" class="hero-bg  min-h-[80vh] flex items-center p-2 justify-center relative">
         <div
             class="max-w-7xl mx-auto p-8 rounded-2xl border border bg-black/20 backdrop-blur-md text-center text-white">
             <div class="flex flex-col lg:flex-row items-center justify-between">
@@ -176,7 +233,7 @@
                     <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                         Hulley Village
                     </h1>
-                    <p class="text-lg md:text-xl mb-8 text-gray-200 max-w-4xl leading-relaxed">
+                    <p class="text-lg md:text-lg text-sm mb-8 text-gray-200 max-w-4xl leading-relaxed">
                         The key step up into the Rhododendron WonderLand. To explore the vast flora & fauna of the world
                         of flowers, especially of the wild Rhododendrons, which is native to the area. It's a wonderful
                         site
@@ -189,41 +246,37 @@
                     <div>
                         <table>
                             <tr>
-                                <th class="w-1/3">Address</th>
-                                <th class="w-1/3">Distance</th>
-                                <th class="w-1/3">Best Time</th>
+                                <th class="w-1/3 text-xs md:text-sm ">Address</th>
+                                <th class="w-1/3 text-xs md:text-sm ">Distance</th>
+                                <th class="w-1/3 text-xs md:text-sm ">Best Time</th>
                             </tr>
                             <tr>
-                                <td class="w-1/3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
+                                <td class="w-1/3 text-xs md:text-sm align-text-top">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
                                     consequuntur.</td>
-                                <td class="w-1/3">24km From Your Location</td>
-                                <td class="w-1/3">May - Mar</td>
+                                <td class="w-1/3 text-xs md:text-sm align-text-top">24km From Your Location</td>
+                                <td class="w-1/3 text-xs md:text-sm align-text-top">May - Mar</td>
                             </tr>
                         </table>
                     </div>
                 </div>
 
                 <div class="lg:w-1/3 flex justify-center">
-                    <div class="flex flex-col gap-4">
+                    <div class="flex flex-row md:flex-col gap-4">
                         <a href="#"
-                            class="nature-gradient text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                            class="nature-gradient text-white px-4 py-2 md:py-4 md:px-8 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                             <i class="fa-solid fa-share-nodes" style="color: #ffffff;"></i> Share
                         </a>
                         <a href="../map.html"
-                            class="blue-gradient text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                            class="blue-gradient text-white px-4 py-2 md:py-4 md:px-8 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                             <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Navigate Now
                         </a>
-                        <button
-                            class="orange-gradient text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                            <i class="fa-solid fa-clipboard-list" style="color: #ffffff;"></i> Facilities
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div class="absolute bottom-8 left-1/2 transform hidden md:block -translate-x-1/2 animate-bounce">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
                 </path>
@@ -236,7 +289,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 group">
                 <h2 class="text-4xl font-bold text-gray-900 mb-6">Gateway to the Rhododendron Wonderland</h2>
-                <div class="w-24 h-1 orange-gradient mx-auto mb-8 group-hover:w-64 transition-all"></div>
+                <div class="w-24 h-1 orange-gradient mx-auto mb-8 group-hover:w-64 transaction-all duration-300"></div>
                 <p class="text-lg text-gray-600 max-w-5xl mx-auto leading-relaxed">
                     Hulley Village stands as your perfect gateway to the magnificent Rhododendron Wonderland.
                     Nestled in the pristine mountains, our village offers unparalleled access to one of nature's most
@@ -248,22 +301,25 @@
                     treks, experience the breathtaking beauty that draws visitors from around the world to our untouched
                     wilderness paradise.
                 </p>
-                <div class="mt-5">
-                    <span class="border px-6 py-2 rounded-lg bg-[#6cddce4e]"><i class="fa-solid fa-mountain" style="color: #3f7aa6;"></i> Adventure</span>
-                    <span class="border px-6 py-2 rounded-lg bg-[#ddd46c53]"><i class="fa-solid fa-fire-burner" style="color: #907b2c;"></i> Heritage</span>
-                    <span class="border px-6 py-2 rounded-lg bg-[#dd6cd64b]"><i class="fa-solid fa-gopuram" style="color: #6c5b9f;"></i> temple</span>
+                <div class="mt-5 grid grid-cols-3 gap-5">
+                    <span class="border px-6 py-2 rounded-lg bg-[#6cddce4e]"><i class="fa-solid fa-mountain"
+                            style="color: #3f7aa6;"></i> Adventure</span>
+                    <span class="border px-6 py-2 rounded-lg bg-[#ddd46c53]"><i class="fa-solid fa-fire-burner"
+                            style="color: #907b2c;"></i> Heritage</span>
+                    <span class="border px-6 py-2 rounded-lg bg-[#dd6cd64b]"><i class="fa-solid fa-gopuram"
+                            style="color: #6c5b9f;"></i> temple</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-white">
+    <section id="gallery" class="py-20 section-bg2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 group lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-6">Explore <span class="text-green-600">Hulley
                         Village</span> Gallery</h2>
-                <div class="w-24 h-1 orange-gradient mx-auto mb-8 group-hover:w-64 transition-all"></div>
+                <div class="w-24 h-1 orange-gradient mx-auto mb-8 group-hover:w-64 transition-all duration-300"></div>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                     Discover the natural beauty that surrounds our village through these stunning captures of
                     rhododendron blooms,
@@ -314,81 +370,6 @@
                         </div>
                     </div>
                 </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Points of Interest -->
-    <section id="points" class="section-bg py-20">
-        <div class="max-w-7xl mx-auto px-4 group sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Explore <span class="text-green-600">Points of
-                        Interest</span></h2>
-                <div class="w-24 h-1 orange-gradient mx-auto mb-8 group-hover:w-64 transition-all"></div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="service-card w-full">
-                    <div class="flex flex-col items-start">
-                        <div class="w-full rounded-lg overflow-hidden flex-shrink-0"><img
-                                src="assets/img/Places/Betla_National_Park.png" alt=""
-                                class="rounded-lg max-h-[30vh] w-full"></div>
-                        <div class="p-4">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Rhododendron Sanctuary</h3>
-                            <p class="text-gray-600 mb-4 max-h-32 overflow-y-scroll scrollbar">
-                                This state protected wonderland offers amazing picturesque view of over 30 species of
-                                different wild
-                                rhododendrons & other trees. A walk through this sanctuary.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-card w-full">
-                    <div class="flex flex-col items-start">
-                        <div class="w-full rounded-lg overflow-hidden flex-shrink-0"><img
-                                src="assets/img/Places/Patratu_Valley.png" alt=""
-                                class="rounded-lg max-h-[30vh] w-full"></div>
-                        <div class="p-4 ">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Rhododendron Sanctuary</h3>
-                            <p class="text-gray-600 mb-4 max-h-32 overflow-y-scroll scrollbar">
-                                This state protected wonderland offers amazing picturesque view of over 30 species of
-                                different wild
-                                rhododendrons & other trees. A walk through this sanctuary Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit. Harum eum aliquam laudantium distinctio consectetur enim
-                                delectus velit recusandae necessitatibus magnam rerum a atque, quis vel eos iste,
-                                maiores, adipisci molestiae autem temporibus eaque doloremque eligendi dicta. Labore
-                                reiciendis mollitia tenetur nulla assumenda expedita porro odit officiis in, eaque,
-                                aliquam ipsum.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-card w-full">
-                    <div class="flex flex-col items-start">
-                        <div class="w-full rounded-lg overflow-hidden flex-shrink-0"><img
-                                src="assets/img/Places/Parasnath_Hill.png" alt=""
-                                class="rounded-lg max-h-[30vh] w-full"></div>
-                        <div class="p-4">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Rhododendron Sanctuary</h3>
-                            <p class="text-gray-600 mb-4 max-h-32 overflow-y-scroll scrollbar">
-                                This state protected wonderland offers amazing picturesque view of over 30 species of
-                                different wild
-                                rhododendrons & other trees. A walk through this sanctuary Lorem ipsum dolor sit, amet
-                                consectetur adipisicing elit. Eum asperiores distinctio cupiditate atque maxime enim
-                                commodi aspernatur! Harum, ab laboriosam cupiditate quibusdam dolorum placeat ea, odio
-                                impedit incidunt itaque voluptates soluta dicta neque inventore qui. Pariatur accusamus
-                                iste officiis dolorem, aliquid asperiores labore nemo, blanditiis natus reiciendis omnis
-                                tempore cumque cum at neque error aspernatur animi sunt itaque minus ut eos explicabo!
-                                Eveniet iusto neque atque modi deserunt necessitatibus officia vitae laudantium omnis
-                                rem similique aut, assumenda reiciendis, exercitationem ipsam iste accusantium obcaecati
-                                a sapiente ipsum temporibus aspernatur. Alias hic, sequi minima explicabo deleniti ea
-                                neque a quia harum iusto.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
 
             </div>
         </div>
@@ -521,17 +502,18 @@
     </section> -->
 
     <!-- Accommodation & Eateries -->
-    <section id="accommodation" class="py-20 bg-white">
+    <section id="accommodation" class="py-20 section-bg2">
         <div class="max-w-5xl mx-auto group px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-6">Accommodation & <span
                         class="text-green-600">Eateries</span></h2>
-                <div class="w-24 h-1 orange-gradient mx-auto mb-8 group-hover:w-64 transition-all"></div>
+                <div class="w-24 h-1 orange-gradient mx-auto mb-8 group-hover:w-64 transition-all duration-300"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-64"><img src="assets/img/Places/Betla_National_Park.png" alt="" class="h-full w-full"></div>
+                    <div class="h-64"><img src="assets/img/Places/Betla_National_Park.png" alt="" class="h-full w-full">
+                    </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Homestays</h3>
                         <p class="text-gray-600 mb-4">
@@ -629,11 +611,11 @@
     </div>
 
     <!-- How to Reach -->
-    <section id="reach" class="section-bg py-20">
+    <section id="reach" class="section-bg2 py-20">
         <div class="max-w-7xl mx-auto px-4 group sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-gray-900 mb-6">How to <span class="text-green-600">Reach</span></h2>
-                <div class="w-24 h-1 orange-gradient mx-auto mb-8 group-hover:w-64 transition-all"></div>
+                <div class="w-24 h-1 orange-gradient mx-auto mb-8 group-hover:w-64 transition-all duration-300"></div>
             </div>
 
             <!-- Mapbox Token Input -->
@@ -708,6 +690,192 @@
         </div>
     </section>
 
+    <!-- What's New -->
+    <section id="points" class="section-bg2 py-20">
+        <div class="max-w-7xl mx-auto px-4 group sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Explore<span class="text-green-600"> What’s
+                        Nearby</span></h2>
+                <div class="w-24 h-1 orange-gradient mx-auto mb-8 group-hover:w-64 transition-all duration-300"></div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-6 bg-gray-50">
+                <!-- Destination Card -->
+                <div class="destination-card card rounded-2xl overflow-hidden shadow-md bg-white transition-al duration-300">
+                    <div class="flex h-auto flex-col maincard">
+
+                        <!-- Left Image Section -->
+                        <div class="relative w-full max-h-64 flex-shrink-0 overflow-hidden">
+                            <img src="./assets/img/Places/Patratu_Valley.png" alt="Sample Destination"
+                                class="w-full h-full object-cover max-h-[29vh]" />
+
+                            <!-- Category Tag -->
+                            <div
+                                class="absolute category top-3 left-3 bg-green-500 px-3 py-1.5 rounded-lg text-xs font-semibold text-white shadow-md">
+                                Natural
+                            </div>
+                        </div>
+
+                        <!-- Right Content Section -->
+                        <div class="flex-1 p-3 flex flex-col justify-between">
+                            <!-- Title + Explore Button -->
+                            <div class="flex items-start justify-between mb-4">
+                                <h3 class="text-xl font-bold leading-tight hover:text-primary transition-colors">
+                                    Sample Place
+                                </h3>
+                                <button
+                                    class="flex items-center gap-2 px-2 py-1 rounded-lg text-sm font-semibold shadow-md flex-shrink-0 border-2 border-gray-300 hover:scale-105 transition-all duration-150 text-gray-800">
+                                    Explore
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12,5 19,12 12,19"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                                This is a sample description of the destination. It provides a quick
+                                overview of the place and what makes it special
+                            </p>
+
+                            <!-- Bottom Info -->
+                            <div class="space-y-1">
+                                <div
+                                    class="flex justify-between text-xs font-bold text-gray-500 uppercase tracking-wide">
+                                    <span class="w-1/3">Location</span>
+                                    <span class="w-1/3 text-center">Best Time</span>
+                                    <span class="w-1/3 text-right">Duration</span>
+                                </div>
+
+                                <div class="flex justify-between text-sm font-semibold text-gray-800">
+                                    <span class="w-1/3">Near Ranchi</span>
+                                    <span class="w-1/3 text-center">Mar - May</span>
+                                    <span class="w-1/3 text-right">2-4 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="destination-card card rounded-2xl overflow-hidden shadow-md bg-white transition-al duration-300">
+                    <div class="flex h-auto flex-col maincard">
+
+                        <!-- Left Image Section -->
+                        <div class="relative w-full max-h-64 flex-shrink-0 overflow-hidden">
+                            <img src="./assets/img/Places/Hundru_Falls.png" alt="Sample Destination"
+                                class="w-full h-full object-cover max-h-[29vh]" />
+
+                            <!-- Category Tag -->
+                            <div
+                                class="absolute category top-3 left-3 bg-green-500 px-3 py-1.5 rounded-lg text-xs font-semibold text-white shadow-md">
+                                Natural
+                            </div>
+                        </div>
+
+                        <!-- Right Content Section -->
+                        <div class="flex-1 p-3 flex flex-col justify-between">
+                            <!-- Title + Explore Button -->
+                            <div class="flex items-start justify-between mb-4">
+                                <h3 class="text-xl font-bold leading-tight hover:text-primary transition-colors">
+                                    Sample Place
+                                </h3>
+                                <button
+                                    class="flex items-center gap-2 px-2 py-1 rounded-lg text-sm font-semibold shadow-md flex-shrink-0 border-2 border-gray-300 hover:scale-105 transition-all duration-150 text-gray-800">
+                                    Explore
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12,5 19,12 12,19"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                                This is a sample description of the destination. It provides a quick
+                                overview of the place and what makes it special
+                            </p>
+
+                            <!-- Bottom Info -->
+                            <div class="space-y-1">
+                                <div
+                                    class="flex justify-between text-xs font-bold text-gray-500 uppercase tracking-wide">
+                                    <span class="w-1/3">Location</span>
+                                    <span class="w-1/3 text-center">Best Time</span>
+                                    <span class="w-1/3 text-right">Duration</span>
+                                </div>
+
+                                <div class="flex justify-between text-sm font-semibold text-gray-800">
+                                    <span class="w-1/3">Near Ranchi</span>
+                                    <span class="w-1/3 text-center">Mar - May</span>
+                                    <span class="w-1/3 text-right">2-4 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="destination-card card rounded-2xl overflow-hidden shadow-md bg-white transition-al duration-300">
+                    <div class="flex h-auto flex-col maincard">
+
+                        <!-- Left Image Section -->
+                        <div class="relative w-full max-h-64 flex-shrink-0 overflow-hidden">
+                            <img src="./assets/img/Places/Betla_National_Park.png" alt="Sample Destination"
+                                class="w-full h-full object-cover max-h-[29vh]" />
+
+                            <!-- Category Tag -->
+                            <div
+                                class="absolute category transition-all duration-150 top-3 left-3 bg-adventure px-3 py-1.5 rounded-lg text-xs font-semibold text-white shadow-md">
+                                Adventure
+                            </div>
+                        </div>
+
+                        <!-- Right Content Section -->
+                        <div class="flex-1 p-3 flex flex-col justify-between">
+                            <!-- Title + Explore Button -->
+                            <div class="flex items-start justify-between mb-4">
+                                <h3 class="text-xl font-bold leading-tight hover:text-primary transition-colors">
+                                    Sample Place
+                                </h3>
+                                <button
+                                    class="flex items-center gap-2 px-2 py-1 rounded-lg text-sm font-semibold shadow-md flex-shrink-0 border-2 border-gray-300 hover:scale-105 transition-all duration-150 text-gray-800">
+                                    Explore
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12,5 19,12 12,19"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
+                                This is a sample description of the destination. It provides a quick
+                                overview of the place and what makes it special
+                            </p>
+
+                            <!-- Bottom Info -->
+                            <div class="space-y-1">
+                                <div
+                                    class="flex justify-between text-xs font-bold text-gray-500 uppercase tracking-wide">
+                                    <span class="w-1/3">Location</span>
+                                    <span class="w-1/3 text-center">Best Time</span>
+                                    <span class="w-1/3 text-right">Duration</span>
+                                </div>
+
+                                <div class="flex justify-between text-sm font-semibold text-gray-800">
+                                    <span class="w-1/3">Near Ranchi</span>
+                                    <span class="w-1/3 text-center">Mar - May</span>
+                                    <span class="w-1/3 text-right">2-4 Days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <?php
+        include("includes/footer.php");
+    ?>
     <script>
         let map = null;
 

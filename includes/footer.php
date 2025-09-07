@@ -8,7 +8,7 @@
   </head>
   <body>
     <footer class="bg-[#c4dfdf] text-[#395b64] font-sans">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class=" mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="space-y-6">
             <div class="flex items-center space-x-2">

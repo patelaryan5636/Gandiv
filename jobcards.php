@@ -20,32 +20,40 @@
         transform: translateY(-5px);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       }
-      body {
-        background-color: #f8f6f4;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Cpath fill='%23c4dfdf' fill-opacity='0.28' d='M0 17.83V0h17.83a3 3 0 0 1-5.66 2H5.9A5 5 0 0 1 2 5.9v6.27a3 3 0 0 1-2 5.66zm0 18.34a3 3 0 0 1 2 5.66v6.27A5 5 0 0 1 5.9 52h6.27a3 3 0 0 1 5.66 0H0V36.17zM36.17 52a3 3 0 0 1 5.66 0h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 0 1 0-5.66V52H36.17zM0 31.93v-9.78a5 5 0 0 1 3.8.72l4.43-4.43a3 3 0 1 1 1.42 1.41L5.2 24.28a5 5 0 0 1 0 5.52l4.44 4.43a3 3 0 1 1-1.42 1.42L3.8 31.2a5 5 0 0 1-3.8.72zm52-14.1a3 3 0 0 1 0-5.66V5.9A5 5 0 0 1 48.1 2h-6.27a3 3 0 0 1-5.66-2H52v17.83zm0 14.1a4.97 4.97 0 0 1-1.72-.72l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1 0-5.52l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43c.53-.35 1.12-.6 1.72-.72v9.78zM22.15 0h9.78a5 5 0 0 1-.72 3.8l4.44 4.43a3 3 0 1 1-1.42 1.42L29.8 5.2a5 5 0 0 1-5.52 0l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1-.72-3.8zm0 52c.13-.6.37-1.19.72-1.72l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43a5 5 0 0 1 5.52 0l4.43-4.43a3 3 0 1 1 1.42 1.41l-4.44 4.43c.36.53.6 1.12.72 1.72h-9.78zm9.75-24a5 5 0 0 1-3.9 3.9v6.27a3 3 0 1 1-2 0V31.9a5 5 0 0 1-3.9-3.9h-6.27a3 3 0 1 1 0-2h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 1 1 2 0v6.27a5 5 0 0 1 3.9 3.9h6.27a3 3 0 1 1 0 2H31.9z'%3E%3C/path%3E%3C/svg%3E");
-      }
     </style>
   </head>
-  <body class="font-sans">
-    <div class="relative h-full mx-auto mt-20 px-10">
-      <div class="flex justify-between items-center mb-16 px-6">
-        <div class="relative">
-          <h2
-            class="title font-gloock text-5xl font-semibold md:text-5xl text-accent text-gray-600"
-          >
-            Latest Jobs - Business Opportunities in Rajpipla
-            <div
-              class="absolute -right-8 -top-8 w-16 h-16 bg-secondary/30 rounded-full blur-xl"
-            ></div>
-          </h2>
-        </div>
-        <a href="./jobcard"
-          class="px-6 py-3 bg-[#94cfcf] hover:bg-[#c4dfdf] hover:text-gray-700 font-bold font-serif rounded-lg text-white transition-all flex items-center gap-2"
-        >
-          View All <i class="fa-solid fa-right-to-bracket"></i>
-        </a>
-      </div>
+  <body class="bg-gray-50 font-sans">
+    <?php 
+        include("includes/header.php");
+    ?>
+    <div class="max-w-7xl mx-auto px-6 py-12">
+      <h1 class="title font-bold text-gray-700 mb-2 text-5xl text-center">
+        💼 Build & Thrive: Business Opportunities in Rajpipla
+      </h1>
+      <p class="text-gray-600 text-xl font-serif px-20 text-center">
+        Empowering local talent and entrepreneurs. Explore new paths to growth
+        through curated business opportunities, job openings, and skill-based
+        initiatives that uplift communities and celebrate the spirit of
+        Rajpipla's heritage and innovation.
+      </p>
 
+      <div class="flex justify-center items-center gap-5 mb-16 font-serif">
+        <div
+          class="px-3 py-4 mt-3 bg-orange-100 h-6 text-gray-600 font-medium rounded-lg flex items-center"
+        >
+          ✨ Support Local Talent
+        </div>
+        <div
+          class="px-3 py-4 mt-3 bg-purple-100 h-6 text-gray-600 font-medium rounded-lg flex items-center"
+        >
+          🌱 Create Opportunities
+        </div>
+        <div
+          class="px-3 py-4 mt-3 bg-green-100 h-6 text-gray-600 font-medium rounded-lg flex items-center"
+        >
+          🚀 Drive Growth
+        </div>
+      </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div
           class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 card"
@@ -178,6 +186,10 @@
           </div>
         </div>
       </div>
+      <?php 
+        include("includes/footer.php");
+      ?>  
     </div>
+
   </body>
 </html>

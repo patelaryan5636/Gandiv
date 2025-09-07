@@ -263,6 +263,11 @@
     </style>
   </head>
   <body class="bg-gray-100">
+
+  <?php 
+
+      include("includes/header.php");
+?>  
     <section
       class="relative h-screen w-full bg-cover bg-center"
       style="background-image: url('guidebg.jpg')"
@@ -278,7 +283,7 @@
             id="text"
             class="text-6xl md:text-8xl uppercase px-20 font-extrabold tracking-widest leading-tight text-gray-600"
           >
-            Discover Rajpipla with Expert Guides
+            Discover Jharkhand with Expert Guides
           </h1>
         </div>
         <p
