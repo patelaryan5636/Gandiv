@@ -43,14 +43,17 @@
     </style>
   </head>
   <body class="bg-gray-50 font-serif">
+    <?php
+        include("includes/header.php");
+    ?>
     <div class="max-w-7xl mx-auto px-6 py-12">
       <h1 class="title font-bold text-gray-700 mb-2 text-5xl text-center">
-        Discover Rajpipla: Your Gateway to Incredible Trips
+        Discover Jharkhand: Your Gateway to Incredible Trips
       </h1>
       <p class="text-gray-600 text-xl font-serif px-20 text-center">
         Embark on a journey of a lifetime in the picturesque Narmada district.
         Whether you're seeking adventure, culture, or relaxation, our curated
-        trips offer unforgettable experiences in Rajpipla and beyond.
+        trips offer unforgettable experiences in Jharkhand and beyond.
       </p>
 
       <div class="flex justify-center items-center gap-5 mb-16 font-serif">
@@ -82,14 +85,14 @@
         >
           <div class="tag"><i class="fas fa-tree"></i> Nature</div>
           <img
-            src="img3.jpg"
+            src="assets/img/places/Patratu_Valley.png"
             alt="Statue of Unity"
             class="w-full h-48 object-cover"
           />
 
           <div class="p-6">
             <h2 class="text-xl font-bold text-gray-800 mb-2 uppercase">
-              Statue of Unity, Narmada
+              BETLA NATIONAL PARK TOUR
             </h2>
             <p class="text-sm text-gray-500 mb-2">
               <i class="fas fa-clock text-[#92c4c4] mr-1"></i>
@@ -98,15 +101,14 @@
 
             <p class="text-sm text-gray-500 mb-2">
               <i class="fas fa-plane-departure text-[#92c4c4] mr-1"></i>
-              Start: <b>Ahmedabad</b> | End: <b>Ahmedabad</b>
+              Start: <b>Ranchi</b> | End: <b>Ranchi</b>
             </p>
             <p class="text-sm text-gray-500 mb-4">
               <i class="fas fa-map-marker-alt text-[#92c4c4] mr-1"></i>
-              Famous Places : Statue of Unity ● Sardar Sarovar Dam ● Valley of
-              Flowers
+              Famous Places: Betla National Park ● Palamu Fort ● Wildlife Safari
             </p>
             <p class="text-lg font-bold text-gray-800 mb-4">
-              Price: <span class="text-[#92c4c4]">$500</span> per person
+              Price: <span class="text-[#92c4c4]">₹700</span> per person
             </p>
             <a
               href="#"
@@ -120,16 +122,16 @@
         <div
           class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 card relative"
         >
-          <div class="tag"><i class="fas fa-tree"></i> River</div>
+          <div class="tag"><i class="fas fa-tree"></i> Nature</div>
           <img
-            src="img2.jpg"
+            src="assets/img/places/Parasnath_Hill.png"
             alt="Narmada River"
             class="w-full h-48 object-cover"
           />
 
           <div class="p-6">
             <h2 class="text-xl font-bold text-gray-800 mb-2 uppercase">
-              Narmada River Tour
+              DEOGHAR TEMPLE & TRIKUT TOUR
             </h2>
             <p class="text-sm text-gray-500 mb-2">
               <i class="fas fa-clock text-[#92c4c4] mr-1"></i>
@@ -137,15 +139,14 @@
             </p>
             <p class="text-sm text-gray-500 mb-2">
               <i class="fas fa-plane-departure text-[#92c4c4] mr-1"></i>
-              Start: <b>Surat</b> | End: <b>Surat</b>
+              Start: <b>Deoghar</b> | End: <b>Deoghar</b>
             </p>
             <p class="text-sm text-gray-500 mb-4">
               <i class="fas fa-map-marker-alt text-[#92c4c4] mr-1"></i>
-              Famous Places : Narmada River ● Shoolpaneshwar Temple ●
-              Eco-Tourism Camps
+              Famous Places: Baidyanath Jyotirlinga Temple ● Trikut Pahar ● Tapovan Caves
             </p>
             <p class="text-lg font-bold text-gray-800 mb-4">
-              Price: <span class="text-[#92c4c4]">$800</span> per person
+              Price: <span class="text-[#92c4c4]">₹950</span> per person
             </p>
             <a
               href="#"
@@ -162,14 +163,14 @@
           <div class="tag"><i class="fas fa-tree"></i> Heritage</div>
 
           <img
-            src="img1.jpg"
+            src="assets/img/places/NETARHAT HILL STATION TOUR.jpeg"
             alt="Rajpipla Palace"
             class="w-full h-48 object-cover"
           />
 
           <div class="p-6">
             <h2 class="text-xl font-bold text-gray-800 mb-2 uppercase">
-              Rajpipla Heritage Tour
+              NETARHAT HILL STATION TOUR
             </h2>
             <p class="text-sm text-gray-500 mb-2">
               <i class="fas fa-clock text-[#92c4c4] mr-1"></i>
@@ -177,15 +178,14 @@
             </p>
             <p class="text-sm text-gray-500 mb-2">
               <i class="fas fa-plane-departure text-[#92c4c4] mr-1"></i>
-              Start: <b>Vadodara</b> | End: <b>Vadodara</b>
+              Start: <b>Ranchi</b> | End: <b>Ranchi</b>
             </p>
             <p class="text-sm text-gray-500 mb-4">
               <i class="fas fa-map-marker-alt text-[#92c4c4] mr-1"></i>
-              Famous Places : Rajpipla Palace ● Zarwani Waterfalls ●
-              Shoolpaneshwar Wildlife
+              Famous Places: Netarhat Hills ● Magnolia Sunset Point ● Upper Ghaghri Falls ● Koel View Point
             </p>
             <p class="text-lg font-bold text-gray-800 mb-4">
-              Price: <span class="text-[#92c4c4]">$1,200</span> per person
+              Price: <span class="text-[#92c4c4]">₹1,300</span> per person
             </p>
             <a
               href="#"
@@ -196,6 +196,11 @@
           </div>
         </div>
       </div>
+      <?php 
+
+      include("includes/footer.php");
+    
+?>
     </div>
   </body>
 </html>

@@ -1,3 +1,19 @@
+<?php
+  require '../includes/scripts/connection.php';  
+  // include 'includes/scripts/config.php';
+  session_start();
+  if(isset($_SESSION['Yatra_logedin_user_id']) && (trim ($_SESSION['Yatra_logedin_user_id']) !== '')){
+      $user_id = $_SESSION['Yatra_logedin_user_id'];
+      $query = "SELECT * FROM user_master WHERE user_id = $user_id";
+      $result = mysqli_query($conn, $query);
+      $userdata = mysqli_fetch_assoc($result);
+      $user_role = $userdata["user_role"];
+      $full_name = $userdata['user_name'];
+      
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -161,9 +177,9 @@
                 <a href="./stallcard" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Explore Other
                   Business</a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Museum</a>
-              </li>
+              </li> -->
             </ul>
           </li>
           <li class="relative group hover-underline">
@@ -173,7 +189,7 @@
             <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Ai Trip-Planner</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Gallery</a>
+            <a href="tripplanercard" class="px-2 py-2 hover:text-gray-800 transition-colors">Tour & Packages</a>
           </li>
           <li class="relative group hover-underline">
             <a href="./map.html" class="px-2 py-2 hover:text-gray-800 transition-colors">Map</a>
@@ -191,12 +207,14 @@
 
         <!-- Desktop User Avatar -->
         <div class="relative group">
-          <li class="relative group hover-underline list-none">
-            <a href="userregister"
-              class="px-2 py-2 hover:text-gray-800 transition-colors flex items-center justify-center gap-2">Login<img
-                style="height:21px;" src="userhome/img/login.svg" alt="Login"></a>
-          </li>
-          <!-- <img src="userhome/krish.jpg" alt="Avatar" onclick="openModal()"
+          <?php
+  // for check user login or not 
+      $currentURL = $_SERVER['PHP_SELF'];
+       $currentPage = basename($currentURL);
+       if(isset($_SESSION['Yatra_logedin_user_id'])){
+           if($user_role == 3){
+            ?>
+            <img src="userhome/krish.jpg" alt="Avatar" onclick="openModal()"
             class="h-10 w-10 rounded-lg cursor-pointer border-2 border-white hover:border-gray-300 transition-colors" />
           <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
           <ul
@@ -211,9 +229,22 @@
               <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Payment History</a>
             </li>
             <li>
-              <a href="#" class="block px-4 py-2 hover:bg-red-100 text-red-600 transition-colors">Logout →</a>
+              <a href="./logout" class="block px-4 py-2 hover:bg-red-100 text-red-600 transition-colors">Logout →</a>
             </li>
-          </ul> -->
+          </ul>
+          <?php
+          } }else{
+                   ?>
+          <li class="relative group hover-underline list-none">
+            <a href="userregister"
+              class="px-2 py-2 hover:text-gray-800 transition-colors flex items-center justify-center gap-2">Login<img
+                style="height:21px;" src="userhome/img/login.svg" alt="Login"></a>
+          </li>
+          <?php 
+          }
+        
+          ?>
+          
         </div>
       </div>
     </nav>
@@ -240,7 +271,7 @@
               <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
             </div>
             <div>
-              <p class="font-medium text-gray-700">Krish</p>
+              <p class="font-medium text-gray-700"><?php echo $full_name;?></p>
               <p class="text-sm text-gray-600">Online</p>
             </div>
           </div>
@@ -271,24 +302,24 @@
               </button>
               <ul class="booking-submenu ml-6 mt-1 space-y-1 max-h-0 overflow-hidden transition-all duration-300">
                 <li>
-                  <a href="../Guidecard"
+                  <a href="./Guidecard"
                     class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors">Guide
                     Booking</a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="./hotellist"
                     class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors">Hotel
                     Booking</a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="./stallcard"
                     class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors">Explore
                     Other Business</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="#"
                     class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors">Museum</a>
-                </li>
+                </li> -->
               </ul>
             </li>
             <li>
@@ -302,13 +333,13 @@
               </a>
             </li>
             <li>
-              <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                🖼️ Gallery
+              <a href="./tripplanercard" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                🖼️ Tour & Packages
               </a>
             </li>
             <li>
-              <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
-                📚 History
+              <a href="./map.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                📚 map
               </a>
             </li>
             <li>
@@ -317,7 +348,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+              <a href="contact-us" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                 📞 Contact Us
               </a>
             </li>
