@@ -88,7 +88,7 @@
       </div>
     </div>
 
-    <div class="max-w-5xl mx-auto">
+    <div class="max-w-7xl mx-auto">
       <div class="text-center mb-10">
         <div class="floating mb-4 mr-4">
           <img src="gandiv.png" alt="Gandiv Logo" class="h-20 mx-auto" />
