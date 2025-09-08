@@ -148,7 +148,7 @@ require 'includes/scripts/connection.php';
     .card {
         text-decoration: none;
         color: black;
-        background-color: aliceblue;
+        background-color: white;
         width: 90%;
         border: 3px solid transparent;
         height: auto !important;
@@ -156,7 +156,7 @@ require 'includes/scripts/connection.php';
         border-radius: 15px;
         overflow: hidden;
         transition: all 0.5s ease;
-        box-shadow: 0 0 10px 2px rgba(158, 231, 217, 0.832);
+        box-shadow: 0 0 10px 2px rgba(236, 243, 242, 0.83);
     }
 
     .card:hover {
@@ -167,7 +167,7 @@ require 'includes/scripts/connection.php';
     .rail-card {
         text-decoration: none;
         color: black;
-        background-color: aliceblue;
+        background-color: white;
         width: 90%;
         border: 3px solid transparent;
         height: auto !important;
@@ -194,7 +194,7 @@ require 'includes/scripts/connection.php';
     .searchbar input,
     .searchbar button,
     .searchbar select {
-        background-color: aliceblue !important;
+        background-color: white !important;
         box-shadow: 0 0 10px 2px rgba(158, 231, 217, 0.832);
         border-radius: 10px;
         padding: 10px;
@@ -294,7 +294,7 @@ require 'includes/scripts/connection.php';
     }
 
     .select2-container .select2-selection--single {
-        background-color: aliceblue !important;
+        background-color: white !important;
         box-shadow: 0 0 10px 2px rgba(158, 231, 217, 0.832);
         border-radius: 10px !important;
         /* padding: 10px !important; */
@@ -314,7 +314,7 @@ require 'includes/scripts/connection.php';
 
     /* Style the dropdown menu */
     .select2-container .select2-dropdown {
-        background-color: aliceblue !important;
+        background-color: white !important;
         border-radius: 10px !important;
         box-shadow: 0 0 10px 2px rgba(158, 231, 217, 0.832);
     }

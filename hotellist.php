@@ -94,7 +94,7 @@
     }
 
     .main-container {
-        min-height: 99.8vh;
+        min-height: 100vh;
         width: 97.2vw;
         display: flex;
         flex-direction: column;
@@ -125,7 +125,7 @@
         background-color: aliceblue;
         width: 100%;
         border: 3px solid transparent;
-        height: 250px !important;
+        height: 270px !important;
         padding: 30px;
         display: flex;
         justify-content: space-between;

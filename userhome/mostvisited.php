@@ -296,6 +296,7 @@
             {
                 id: 1,
                 title: "Netarhat",
+                link: "./placedetail",
                 description: "Netarhat, nestled in West Jharkhand's Soreng District, is a charming destination famous for its vibrant rhododendron forests that burst into color during spring. Serving as the gateway to the iconic Sandakphu-Phalut trek, Hilley offers stunning mountain views and peaceful village life.",
                 image: "assets/img/places/Netarhat.png",
                 location: "From Gangtok: Approx 120km",
@@ -307,6 +308,7 @@
             {
                 id: 2,
                 title: "Patratu Valley",
+                link: "./placedetail",
                 description: "Patratu Valley also known as Tathagata Tsal was built to commemorate the 2550th birth anniversary of Gautam Buddha. The park is home to majestic statue depicting the Dhyana Chakra Mudra, offering a peaceful spiritual experience surrounded by beautiful landscaped gardens.",
                 image: "assets/img/places/Patratu_Valley.png",
                 location: "Approx 15 km from Ravangla",
@@ -318,6 +320,7 @@
             {
                 id: 3,
                 title: "Hundru Falls",
+                link: "./placedetail",
                 description: "Hundru Falls or Old Silk Route in East Jharkhand, lies on the historic Silk Route linking Tibet to India. Famous for its winding roads with 32 hairpin bends and scenic beauty, Zuluk offers breathtaking sunrise views over Kanchenjunga and a glimpse into ancient trade history.",
                 image: "assets/img/places/Hundru_Falls.png",
                 location: "From Gangtok: 95 km",
@@ -330,6 +333,7 @@
             {
                 id: 4,
                 title: "Parasnath Hill",
+                link: "./placedetail",
                 description: "Parasnath Hill in West Jharkhand famous not just for tallest statue of Guru Padmasambhava at 137 feet but also, it has become famous for the glass skywalk that leads visitors to the statue. This glass skywalk offers thrilling views of the valley below and panoramic mountain vistas.",
                 image: "assets/img/places/Parasnath_Hill.png",
                 location: "From Gangtok: Approx 115km",
@@ -381,13 +385,13 @@
                                 <h3 class="text-xl title font-bold leading-tight hover:text-primary transition-colors">
                                     ${destination.title}
                                 </h3>
-                                <button class="flex items-center gap-2 px-2 py-1 rounded-lg text-sm font-semibold shadow-md flex-shrink-0 border-2 border-${destination.categoryColor} btn-${destination.categoryColor} bg-gradient-to-r from-pink-300/20 via-yellow-300/20 to-green-300/20 text-gray-800 lg:bg-transparent lg:text-inherit animated-gradient" onclick="handleExplore('${destination.title}')">
+                                <a href="${destination.link}" class="flex items-center gap-2 px-2 py-1 rounded-lg text-sm font-semibold shadow-md flex-shrink-0 border-2 border-${destination.categoryColor} btn-${destination.categoryColor} bg-gradient-to-r from-pink-300/20 via-yellow-300/20 to-green-300/20 text-gray-800 lg:bg-transparent lg:text-inherit animated-gradient">
                                     Explore 
                                     <svg class="arrow-icon" viewBox="0 0 24 24">
                                         <line x1="5" y1="12" x2="19" y2="12"></line>
                                         <polyline points="12,5 19,12 12,19"></polyline>
                                     </svg>
-                                </button>
+                                </a>
                             </div>
 
                             <!-- Description -->
@@ -418,12 +422,6 @@
         }
 
         // Handle filter clicks
-
-
-        // Handle explore button clicks
-        function handleExplore(destinationTitle) {
-            alert(`Exploring ${destinationTitle}! Booking details would be shown here.`);
-        }
 
         // Initialize the app
         function init() {

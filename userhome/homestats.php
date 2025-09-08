@@ -78,7 +78,7 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-1 py-1">
+    <div class="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-4 gap-6 px-1 py-1">
       <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
         <div class="flex items-center justify-center w-16 h-16 rounded-full bg-yellow-100 mb-4">
           <i class="fas fa-bolt text-2xl text-yellow-500"></i>

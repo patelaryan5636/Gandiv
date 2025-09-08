@@ -70,21 +70,21 @@
     <iframe
       src="userhome/userhero.php"
       width="100%"
-      height="670px"
+      height="750px"
       style="border: none"
     ></iframe>
 
     <iframe
       src="userhome/Map.php"
       width="100%"
-      height="670px"
+      height="650px"
       style="border: none"
     ></iframe>
 
     <iframe
       src="userhome/imgslider.php"
       width="100%"
-      height="670px"
+      height="750px"
       style="border: none; display: block"
       padding="0"
     ></iframe>
@@ -96,7 +96,7 @@
     <iframe
       src="userhome/fest.php"
       width="100%"
-      height="670px"
+      height="750px"
       style="border: none; display: block"
       padding="0"
     ></iframe>
@@ -105,7 +105,7 @@
     <iframe
       src="userhome/homecard.php"
       width="100%"
-      height="670px"
+      height="750px"
       style="border: none; display: block"
       padding="0"
     ></iframe>
@@ -113,7 +113,7 @@
     <iframe
       src="userhome/newsslider.php"
       width="100%"
-      height="630px"
+      height="700px"
       style="border: none; display: block; margin: 0 auto;"
     ></iframe>
 
@@ -208,7 +208,7 @@
     <iframe
       src="userhome/jobslider.php"
       width="100%"
-      height="600px"
+      height="630px"
       style="border: none; display: block; margin: 0 auto"
     ></iframe>
 

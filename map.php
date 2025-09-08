@@ -15,7 +15,7 @@
       href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
       type="text/css"
     />
-    <title>Captain Map</title>
+    <title>Gandiv Map</title>
     <style>
       body {
         margin: 0;

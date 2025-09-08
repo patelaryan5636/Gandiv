@@ -25,7 +25,7 @@
         animation: gradient 15s ease infinite;
       }
       body {
-        background: url("img/chatbotbg.jpg") no-repeat center center fixed;
+        background: url("./userhome/img/chatbotbg.jpg") no-repeat center center fixed;
         background-size: cover;
         position: relative;
       }
@@ -36,7 +36,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background: rgba(255, 255, 255, 0.8);
         z-index: -1;
       }
@@ -127,7 +127,7 @@
         text-align: left;
         border-left: 5px solid #115d5d;
         transition: all 0.4s ease-in-out;
-        margin: 20px auto;
+        margin: 20px auto 60px auto; /* Added 60px bottom margin */
         max-width: 1200px;
       }
 
@@ -247,14 +247,19 @@
       .voice-output-btn.speaking {
         animation: speakingPulse 1.5s infinite;
       }
+
+      /* Additional container padding for better spacing */
+      .container {
+        padding-bottom: 80px; /* Extra bottom padding for the entire container */
+      }
     </style>
   </head>
 
-  <body class="min-h-screen">
+  <body class="min-h-screen pb-10">
     <?php
       include("includes/header.php");
     ?>
-    <div class="container mx-auto px-4 py-4">
+    <div class="container mx-auto h-auto px-4 py-4"> <!-- Changed h-[650px] to h-auto -->
       <div class="text-center mb-8">
         <div class="flex justify-center items-center gap-6">
           <div class="logo-container">
@@ -304,7 +309,7 @@
         </div>
       </div>
 
-      <div class="search-container mb-8">
+      <div class="search-container mb-8 mt-24">
         <button class="voice-btn" id="voiceBtn">
           <i class="fas fa-microphone"></i>
         </button>
@@ -329,9 +334,7 @@
         </div>
       </div>
     </div>
-    <?php
-      include("includes/footer.php");
-    ?>
+  
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
       const apiKey = "AIzaSyCaqqNhFuvZtAmfrKQ8ilsFi1VgZQ2eR4E";
@@ -448,8 +451,24 @@
       }
 
       function displayResponse(text) {
-        responseBox.innerHTML = marked.parse(text);
+        responseBox.innerHTML = `
+        <button class="voice-output-btn" id="voiceOutputBtn" onclick="toggleVoiceOutput()">
+            <i class="fas fa-volume-up"></i>
+            <span>Listen</span>
+        </button>
+        <div class="response-content">
+            ${marked.parse(text)}
+        </div>
+    `;
         responseBox.classList.remove("hidden");
+        
+        // Smooth scroll to response box with offset
+        setTimeout(() => {
+          responseBox.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 100);
       }
 
       function displayError(message) {
@@ -474,19 +493,6 @@
         updateTime();
         mainLoader.style.display = "none";
       });
-
-      function displayResponse(text) {
-        responseBox.innerHTML = `
-        <button class="voice-output-btn" id="voiceOutputBtn" onclick="toggleVoiceOutput()">
-            <i class="fas fa-volume-up"></i>
-            <span>Listen</span>
-        </button>
-        <div class="response-content">
-            ${marked.parse(text)}
-        </div>
-    `;
-        responseBox.classList.remove("hidden");
-      }
 
       let isReading = false;
       let utterance = null;

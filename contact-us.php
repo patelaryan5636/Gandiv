@@ -73,7 +73,7 @@
     <?php 
       include("includes/header.php");
     ?>
-    <div class="max-w-6xl mx-auto my-16">
+    <div class="max-w-8xl mx-10 my-16 ">
       <!-- Header Section -->
       <div class="text-center mb-8">
         <h1 class="text-4xl md:text-5xl font-bold text-[#648383] mb-4">

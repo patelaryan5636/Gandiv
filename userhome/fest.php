@@ -49,7 +49,7 @@
   </head>
   <body>
     <h1 class="absolute left-32 top-14 text-5xl font-bold text-gray-800">
-      Fairs & Festivals - The Life of Narmada
+      Fairs & Festivals - The Life of Jharkhand
     </h1>
 
     <a href="./jobcard"
@@ -58,7 +58,7 @@
           View All <i class="fa-solid fa-right-to-bracket"></i>
         </a>
 
-    <div class="flex items-center justify-center h-screen">
+    <div class="flex items-center justify-center h-screen">   
       <div
         class="max-w-5xl w-full h-[65vh] flex bg-white shadow-lg rounded-xl overflow-hidden mt-20"
       >

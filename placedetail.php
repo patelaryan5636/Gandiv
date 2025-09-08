@@ -231,30 +231,22 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
             <div class="flex flex-col lg:flex-row items-center justify-between">
                 <div class="lg:w-2/3 mb-8 lg:mb-0 text-left lg:pr-12">
                     <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                        Hulley Village
+                        Parasnath Hill
                     </h1>
                     <p class="text-lg md:text-lg text-sm mb-8 text-gray-200 max-w-4xl leading-relaxed">
-                        The key step up into the Rhododendron WonderLand. To explore the vast flora & fauna of the world
-                        of flowers, especially of the wild Rhododendrons, which is native to the area. It's a wonderful
-                        site
-                        for the people to enjoy various species of Rhododendrons. Various trekking routes around the
-                        village
-                        makes one to admire the amazing natural gift of the area. People from various walks of life,
-                        visit the
-                        village to explore & enjoy the beauty the virgin nature.
+                        Parasnath Hill in West Jharkhand famous not just for tallest statue of Guru Padmasambhava at 137 feet but also, it has become famous for the glass skywalk that leads visitors to the statue. This glass skywalk offers thrilling views of the valley below and panoramic mountain vistas.
                     </p>
                     <div>
                         <table>
                             <tr>
-                                <th class="w-1/3 text-xs md:text-sm ">Address</th>
-                                <th class="w-1/3 text-xs md:text-sm ">Distance</th>
-                                <th class="w-1/3 text-xs md:text-sm ">Best Time</th>
+                                <th class="w-1/4 text-xs md:text-sm ">Address</th>
+                                <th class="w-1/4 text-xs md:text-sm ">Distance</th>
+                                <th class="w-1/4 text-xs md:text-sm ">Best Time</th>
                             </tr>
                             <tr>
-                                <td class="w-1/3 text-xs md:text-sm align-text-top">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
-                                    consequuntur.</td>
-                                <td class="w-1/3 text-xs md:text-sm align-text-top">24km From Your Location</td>
-                                <td class="w-1/3 text-xs md:text-sm align-text-top">May - Mar</td>
+                                <td class="w-1/4 text-xs md:text-sm align-text-top">Giridih district, Jharkhand, India</td>
+                                <td class="w-1/4 text-xs md:text-sm align-text-top">24km From Your Location</td>
+                                <td class="w-1/4 text-xs md:text-sm align-text-top">May - Mar</td>
                             </tr>
                         </table>
                     </div>

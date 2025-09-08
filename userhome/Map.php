@@ -161,10 +161,11 @@
   <body>
     <div class="left-container">
       <div class="card">
-        <h2>Narmada</h2>
+        <h2>Jharkhand</h2>
         <p>
-            Looking for a breathtaking natural destination in Gujarat? The Narmada District is home to stunning waterfalls, lush forests, and iconic landmarks like the Statue of Unity. Explore the Zarvani Waterfalls, trek through the Shoolpaneshwar Wildlife Sanctuary, or admire the Sardar Sarovar Dam. Whether you seek adventure or tranquility, Narmada offers a perfect escape into nature.
-        </p>
+    Looking for a unique travel experience in Jharkhand? Discover hidden gems like Hundru and Dassam Falls, the sacred Baidyanath Dham Temple, and the lush forests of Netarhat. From vibrant tribal culture to breathtaking landscapes, Jharkhand offers the perfect blend of adventure, heritage, and natural beauty.
+</p>
+
 
         <div class="weather">
           <img
@@ -177,16 +178,16 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="img1.jpg" alt="Place 1" />
-              <div class="place-name">Beautiful Garden</div>
+              <img src="../assets/img/Places/Betla_National_Park.png" alt="Place 1" />
+              <div class="place-name">Betla National Park</div>
             </div>
             <div class="swiper-slide">
-              <img src="img2.jpg" alt="Place 2" />
-              <div class="place-name">Modern Architecture</div>
+              <img src="../assets/img/Places/Patratu_Valley.png" alt="Place 2" />
+              <div class="place-name">Patratu Valley</div>
             </div>
             <div class="swiper-slide">
-              <img src="img3.jpg" alt="Place 3" />
-              <div class="place-name">Scenic Landscape</div>
+              <img src="../assets/img/Places/Jonha_Falls.png" alt="Place 3" />
+              <div class="place-name">Jonha Falls</div>
             </div>
           </div>
 
