@@ -67,7 +67,7 @@
         </div>
         <h3 class="text-lg font-bold mb-2">Ticket Booking Experience</h3>
         <p class="text-sm text-gray-700 mb-3">
-          Step into the world of literature and excitement with the Rajpipla
+          Step into the world of literature and excitement with the Jharkhand
           Book Festivals—immerse yourself in books, author sessions, and
           literary discussions that ignite creativity and knowledge.
         </p>
