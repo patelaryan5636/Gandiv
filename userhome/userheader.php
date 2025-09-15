@@ -106,6 +106,81 @@
         height: 2.5rem;
       }
     }
+
+    /* Navigation fixes for proper alignment */
+    .nav-container {
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Ensure navigation items stay in single line */
+    .nav-items {
+      white-space: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+
+    /* Hide scrollbar for webkit browsers */
+    .nav-items::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Responsive navigation spacing */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .nav-items li {
+        margin: 0 0.25rem;
+      }
+      .nav-items a {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1200px) {
+      .nav-items li {
+        margin: 0 0.3rem;
+      }
+      .nav-items a {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1400px) {
+      .nav-items li {
+        margin: 0 0.4rem;
+      }
+      .nav-items a {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .nav-items li {
+        margin: 0 0.5rem;
+      }
+      .nav-items a {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+      }
+    }
+
+    /* Ensure proper flex behavior */
+    .nav-container {
+      max-width: 100%;
+    }
   </style>
 </head>
 
@@ -155,16 +230,16 @@
 
     <!-- Desktop Navigation -->
     <nav class="bg-[#C4DFDF] text-gray-600 hidden md:block">
-      <div class="container mx-auto flex justify-between items-center px-6 py-2 uppercase font-medium">
-        <ul class="flex space-x-4 lg:space-x-6">
+      <div class="nav-container container mx-auto flex justify-between items-center px-4 py-2 uppercase font-medium">
+        <ul class="nav-items flex items-center">
           <li class="relative group hover-underline">
-            <a href="./index.php" class="px-2 py-2 hover:text-gray-800 transition-colors">Home</a>
+            <a href="./index.php" class="block hover:text-gray-800 transition-colors">Home</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="./jobcards" class="px-2 py-2 hover:text-gray-800 transition-colors">Job & Opp</a>
+            <a href="./jobcards" class="block hover:text-gray-800 transition-colors">Job & Opp</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="#" class="px-2 py-2 hover:text-gray-800 transition-colors">Bookings ▼</a>
+            <a href="#" class="block hover:text-gray-800 transition-colors">Bookings ▼</a>
             <ul
               class="absolute left-0 w-48 bg-[#C4DFDF] text-gray-600 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all duration-300 shadow-lg z-50">
               <li>
@@ -177,36 +252,33 @@
                 <a href="./stallcard" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Explore Other
                   Business</a>
               </li>
-              <!-- <li>
-                <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Museum</a>
-              </li> -->
             </ul>
           </li>
           <li class="relative group hover-underline">
-            <a href="./chatbot.php" class="px-2 py-2 hover:text-gray-800 transition-colors">AI Guide</a>
+            <a href="./chatbot.php" class="block hover:text-gray-800 transition-colors">AI Guide</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="./aitrip-planner" class="px-2 py-2 hover:text-gray-800 transition-colors">Ai Trip-Planner</a>
+            <a href="./aitrip-planner" class="block hover:text-gray-800 transition-colors">AI Trip-Planner</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="tripplanercard" class="px-2 py-2 hover:text-gray-800 transition-colors">Tour & Packages</a>
+            <a href="tripplanercard" class="block hover:text-gray-800 transition-colors">Tour & Packages</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="./map" class="px-2 py-2 hover:text-gray-800 transition-colors">Map</a>
+            <a href="./map" class="block hover:text-gray-800 transition-colors">Map</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="./busdetails" class="px-2 py-2 hover:text-gray-800 transition-colors">Find Routes</a>
+            <a href="./busdetails" class="block hover:text-gray-800 transition-colors">Find Routes</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="ourtripplanner" class="px-2 py-2 hover:text-gray-800 transition-colors">Travel Experts</a>
+            <a href="ourtripplanner" class="block hover:text-gray-800 transition-colors">Travel Experts</a>
           </li>
           <li class="relative group hover-underline">
-            <a href="contact-us" class="px-2 py-2 hover:text-gray-800 transition-colors">Contact Us</a>
+            <a href="contact-us" class="block hover:text-gray-800 transition-colors">Contact Us</a>
           </li>
         </ul>
 
         <!-- Desktop User Avatar -->
-        <div class="relative group">
+        <div class="relative group flex-shrink-0">
           <?php
   // for check user login or not 
       $currentURL = $_SERVER['PHP_SELF'];
@@ -237,7 +309,7 @@
                    ?>
           <li class="relative group hover-underline list-none">
             <a href="userregister"
-              class="px-2 py-2 hover:text-gray-800 transition-colors flex items-center justify-center gap-2">Login<img
+              class="flex items-center justify-center gap-2 hover:text-gray-800 transition-colors">Login<img
                 style="height:21px;" src="userhome/img/login.svg" alt="Login"></a>
           </li>
           <?php 
@@ -316,10 +388,6 @@
                     class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors">Explore
                     Other Business</a>
                 </li>
-                <!-- <li>
-                  <a href="#"
-                    class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors">Museum</a>
-                </li> -->
               </ul>
             </li>
             <li>
