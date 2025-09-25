@@ -6,10 +6,12 @@
     <title>Jharkhand Tourist Map - Component</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
-    />
+    /> -->
+
+    <link rel="stylesheet" href="leaflet.css">
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
