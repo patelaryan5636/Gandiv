@@ -1,6 +1,4 @@
 <?php
-// Last Updated: 07-09-2025
-// Author: Mihir Amin
 
 session_start();
 require_once './includes/scripts/connection.php';

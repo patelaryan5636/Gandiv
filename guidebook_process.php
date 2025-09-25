@@ -1,3 +1,5 @@
+<!-- no need of this code all done makeGuidePayment -->
+
 <?php
 require 'includes/scripts/connection.php';
 

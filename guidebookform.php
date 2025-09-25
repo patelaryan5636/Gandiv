@@ -40,7 +40,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Hotel Booking</title>
+    <title>Guide Booking</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -272,7 +272,7 @@
     <div id="receiptModal" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
-        <form method="POST" id="receiptForm" action="guidebook_process.php?id=<?php echo $encryptedId;?>"  >
+        <form method="POST" id="receiptForm" action="makeGuidePayment.php?id=<?php echo $encryptedId;?>"  >
         <h2 class="text-2xl font-bold text-center mb-4">Booking Receipt</h2>
         <table class="receipt-table">
           <tr>

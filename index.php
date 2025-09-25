@@ -246,7 +246,7 @@
       height="520px"
       class="bg-gray-50"
       style="border: none; display: block; margin: 0 auto"
-    ></iframe>
+      ></iframe>
 
     <?php 
       include("includes/footer.php");
