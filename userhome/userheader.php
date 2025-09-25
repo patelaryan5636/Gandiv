@@ -117,7 +117,7 @@
     /* Ensure navigation items stay in single line */
     .nav-items {
       white-space: nowrap;
-      overflow-x: auto;
+      /* overflow-x: auto; */
       scrollbar-width: none; /* Firefox */
       -ms-overflow-style: none; /* Internet Explorer 10+ */
     }
@@ -241,15 +241,15 @@
           <li class="relative group hover-underline">
             <a href="#" class="block hover:text-gray-800 transition-colors">Bookings ▼</a>
             <ul
-              class="absolute left-0 w-48 bg-[#C4DFDF] text-gray-600 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all duration-300 shadow-lg z-50">
+              class="absolute left-0 w-auto pb-2 bg-[#C4DFDF] text-gray-600 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all duration-300 shadow-lg z-50">
               <li>
-                <a href="./Guidecard" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Guide Booking</a>
+                <a href="./Guidecard" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Guide Booking</a>
               </li>
               <li>
-                <a href="./hotellist" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Hotel Booking</a>
+                <a href="./hotellist" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Hotel Booking</a>
               </li>
               <li>
-                <a href="./stallcard" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Explore Other
+                <a href="./stallcard" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Explore Other
                   Business</a>
               </li>
             </ul>
