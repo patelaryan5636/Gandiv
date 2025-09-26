@@ -30,21 +30,50 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $total        = (float) ($_POST['receiptTotal'] ?? 0);
     $paymentMethod= $_POST['payment_method'] ?? null;
 
-    // Store in session until payment success
-    $_SESSION['guide_data'] = [
-        'guide_id'      => $guide_id,
-        'tourType'      => $tourType,
-        'language'      => $language,
-        'date'          => $date,
-        'firstName'     => $firstName,
-        'lastName'      => $lastName,
-        'email'         => $email,
-        'mobileNumber'  => $mobileNumber,
-        'total'         => $total,
-        'paymentMethod' => $paymentMethod
-    ];
-    $allowPayment = true;
+    $check_sql = "SELECT COUNT(*) as num FROM guide_booking 
+                  WHERE guide_id = ? AND booking_date = ? AND is_confirm = 1";
+    $stmt = $conn->prepare($check_sql);
+    $stmt->bind_param("is", $guide_id, $date);
+    $stmt->execute();
+    $check = $stmt->get_result()->fetch_assoc();
+
+    if ($check['num'] > 0) {
+        // Guide already busy on this date
+        $errorMessage = "We Apologize to Say that <br> Guide Not Available On $date";
+    } else {
+        // Free → proceed with payment
+        $_SESSION['guide_data'] = [
+            'guide_id'      => $guide_id,
+            'tourType'      => $tourType,
+            'language'      => $language,
+            'date'          => $date,
+            'firstName'     => $firstName,
+            'lastName'      => $lastName,
+            'email'         => $email,
+            'mobileNumber'  => $mobileNumber,
+            'total'         => $total,
+            'paymentMethod' => $paymentMethod
+        ];
+        $allowPayment = true;
+    }
+    // Store in session until payment success  --->  prev. version 
+    // $_SESSION['guide_data'] = [
+    //     'guide_id'      => $guide_id,
+    //     'tourType'      => $tourType,
+    //     'language'      => $language,
+    //     'date'          => $date,
+    //     'firstName'     => $firstName,
+    //     'lastName'      => $lastName,
+    //     'email'         => $email,
+    //     'mobileNumber'  => $mobileNumber,
+    //     'total'         => $total,
+    //     'paymentMethod' => $paymentMethod
+    // ];
+    // $allowPayment = true;
+
 }
+
+
 
 // --- After payment success
 if (isset($_GET['payment_id']) && isset($_SESSION['guide_data'])) {
@@ -82,6 +111,11 @@ if (isset($_GET['payment_id']) && isset($_SESSION['guide_data'])) {
     }
 }
 ?>
+
+<!--                Show error for UNavailability -->
+<?php if ($errorMessage): ?>
+    <script>alert("<?= $errorMessage ?>"); window.location.href="Guidecard";</script>
+<?php endif; ?>
 
 <!-- Razorpay Script -->
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>

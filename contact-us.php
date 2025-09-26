@@ -253,7 +253,7 @@
             <i class="fas fa-paper-plane"></i>
             Plan Your Jharkhand Journey
           </h2>
-          <form class="space-y-6" id="contactForm">
+          <form action="contactus_process.php" method="post" class="space-y-6" id="contactForm">
             <div>
               <label
                 class="block text-gray-600 text-sm font-medium mb-2"
@@ -264,6 +264,7 @@
               <input
                 type="text"
                 id="name"
+                name="name"
                 class="input-field w-full px-4 py-3 rounded-xl focus:outline-none"
                 placeholder="Enter your name"
                 required
@@ -281,6 +282,7 @@
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   class="input-field w-full px-4 py-3 rounded-xl focus:outline-none"
                   placeholder="Enter your email"
                   required
@@ -296,6 +298,7 @@
                 <input
                   type="tel"
                   id="phone"
+                  name="phone"
                   class="input-field w-full px-4 py-3 rounded-xl focus:outline-none"
                   placeholder="Enter your phone"
                   required
@@ -312,6 +315,7 @@
               </label>
               <select
                 id="subject"
+                name="subject"
                 class="input-field w-full px-4 py-3 rounded-xl focus:outline-none"
                 required
               >
@@ -340,6 +344,7 @@
                 </label>
                 <input
                   type="date"
+                  name="travelDate"
                   id="travelDate"
                   class="input-field w-full px-4 py-3 rounded-xl focus:outline-none"
                 />
@@ -353,6 +358,7 @@
                 </label>
                 <select
                   id="groupSize"
+                  name="groupSize"
                   class="input-field w-full px-4 py-3 rounded-xl focus:outline-none"
                 >
                   <option value="">Select group size</option>
@@ -374,6 +380,7 @@
               </label>
               <textarea
                 id="message"
+                name="message"
                 rows="5"
                 class="input-field w-full px-4 py-3 rounded-xl focus:outline-none resize-none"
                 placeholder="What destinations interest you? Any specific activities or experiences you're looking for? Budget preferences?"
@@ -459,11 +466,11 @@
       <?php 
           include("includes/footer.php");
       ?>
-    <script>
+    <!-- <script>
       document
         .getElementById("contactForm")
         .addEventListener("submit", function (e) {
-          e.preventDefault();
+          // e.preventDefault();
 
           // Show success message
           const successMessage = document.getElementById("successMessage");
@@ -478,6 +485,6 @@
             successMessage.style.display = "none";
           }, 5000);
         });
-    </script>
+    </script> -->
   </body>
 </html>
