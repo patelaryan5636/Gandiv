@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2025 at 08:53 AM
+-- Generation Time: Sep 26, 2025 at 07:05 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -26,11 +26,6 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `business_master`
 --
-
-
-DROP DATABASE IF EXISTS `gandiv`;
-CREATE DATABASE `gandiv`;
-USE `gandiv`
 
 CREATE TABLE `business_master` (
   `business_id` int(11) NOT NULL,
@@ -147,6 +142,30 @@ INSERT INTO `bus_master` (`bus_id`, `source`, `destination`, `departure`, `arriv
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact_us`
+--
+
+CREATE TABLE `contact_us` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `mobile_no` int(10) NOT NULL,
+  `type` text NOT NULL,
+  `Travel_Date` date NOT NULL,
+  `Group_Size` varchar(100) NOT NULL,
+  `travel_plans` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contact_us`
+--
+
+INSERT INTO `contact_us` (`id`, `name`, `email`, `mobile_no`, `type`, `Travel_Date`, `Group_Size`, `travel_plans`) VALUES
+(2, 'sdfhjhj', 'adsfgg@fd.com', 1234567890, 'guide', '2025-09-27', 'family', 'fghj,');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `feedback_master`
 --
 
@@ -214,7 +233,8 @@ CREATE TABLE `guide_booking` (
 --
 
 INSERT INTO `guide_booking` (`booking_id`, `user_id`, `user_email`, `guide_id`, `f_name`, `l_name`, `mobile_no`, `booking_date`, `tour_type`, `price`, `is_confirm`) VALUES
-(7, 0, 'rangatprajapati@gmail.com', 50, 'htrmmgjmhgh', 'bfhjyfdtf', 2147483647, '2025-04-29', 'Solo Tour - ₹1000.00', 1020, 0);
+(9, 1, 'dfg@dsf.com', 50, 'fgh', 'dfg', 1234567890, '2025-09-30', 'Solo Tour - ₹1000.00', 1020, 1),
+(11, 1, 'zx@dgf.com', 50, 'zdfhj', 'xzx', 1234567890, '2025-10-11', 'Solo Tour - ₹1000.00', 1020, 1);
 
 -- --------------------------------------------------------
 
@@ -278,6 +298,16 @@ CREATE TABLE `hotel_bookings` (
   `room_number` varchar(50) DEFAULT NULL COMMENT 'Assigned room number(s) for the booking'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `hotel_bookings`
+--
+
+INSERT INTO `hotel_bookings` (`booking_id`, `user_id`, `hotel_id`, `check_in_date`, `check_out_date`, `num_rooms`, `room_types`, `payment_method`, `total_amount`, `booking_status`, `qr_path`, `room_number`) VALUES
+(3, 1, 1, '2025-09-26', '2025-09-27', 5, 'single', 'UPI', 10500.00, 'confirmed', '', '24,3,45,14,39'),
+(4, 1, 1, '2025-09-25', '2025-09-30', 5, 'single', 'UPI', 12500.00, 'confirmed', '', '48,34,19,27,38'),
+(5, 1, 1, '2025-09-25', '2025-09-27', 5, 'single', 'UPI', 11000.00, 'confirmed', '', '47,36,10,7,11'),
+(6, 1, 1, '2025-09-30', '2025-10-07', 2, 'single', 'UPI', 5400.00, 'confirmed', '', '6,17');
+
 -- --------------------------------------------------------
 
 --
@@ -325,9 +355,9 @@ CREATE TABLE `hotel_master` (
 --
 
 INSERT INTO `hotel_master` (`hotel_id`, `hotel_name`, `owner_name`, `num_rooms`, `avail_rooms`, `contact_number`, `email`, `hotel_address`, `license_number`, `owner_aadhar`, `owner_pan`, `room_types`, `facilities`, `payment_method`, `single_room_price`, `couple_room_price`, `ac_room_price`, `vip_room_price`, `luxury_room_price`, `deluxe_room_price`, `hotel_license_doc`, `owner_aadhar_doc`, `owner_pan_doc`, `owner_photo`, `hotel_image1`, `hotel_image2`, `hotel_image3`, `hotel_image4`, `hotel_image5`, `is_confirmed`, `added_by`, `created_at`, `updated_at`) VALUES
-(1, 'HOTEL TEST1', 'HOTEL OWNER1', 50, 50, '6353054228', 'sachaniaryan675@gmail.com', 'hotel1 near sanad circle , sarkhej, ahemdabad', '563656365636', '123456789011', 'RGHTY5636G', 'Single,Couple,AC,VIP', 'WiFi,Parking,Restaurant,Air Conditioning,Swimming Pool,24/7 Security,Room Service,Conference Hall', 'UPI,Online Banking,Credit or Debit Card,Cash', 100.00, 200.00, 300.00, 400.00, 500.00, 600.00, '67ea55b15f57b_hotel license', '67ea55b15fd4c_adhar card.png', '67ea55b1601d3_pancard.jpeg', '67ea55b160570_passport photo.jpeg', '67ea55b160d6b_1.jpeg', '67ea55b1615b5_4.jpeg', '67ea55b161a38_5.jpeg', '67ea55b161d21_download.jpeg', '67ea55b16228c_images.jpeg', 1, 22, '2025-03-31 08:43:29', '2025-03-31 11:46:22'),
+(1, 'HOTEL TEST1', 'HOTEL OWNER1', 50, 33, '6353054228', 'sachaniaryan675@gmail.com', 'hotel1 near sanad circle , sarkhej, ahemdabad', '563656365636', '123456789011', 'RGHTY5636G', 'Single,Couple,AC,VIP', 'WiFi,Parking,Restaurant,Air Conditioning,Swimming Pool,24/7 Security,Room Service,Conference Hall', 'UPI,Online Banking,Credit or Debit Card,Cash', 100.00, 200.00, 300.00, 400.00, 500.00, 600.00, '67ea55b15f57b_hotel license', '67ea55b15fd4c_adhar card.png', '67ea55b1601d3_pancard.jpeg', '67ea55b160570_passport photo.jpeg', '67ea55b160d6b_1.jpeg', '67ea55b1615b5_4.jpeg', '67ea55b161a38_5.jpeg', '67ea55b161d21_download.jpeg', '67ea55b16228c_images.jpeg', 1, 22, '2025-03-31 08:43:29', '2025-09-13 11:33:12'),
 (2, 'HOTEL TEST2', 'HOTEL OWNER2', 30, 30, '8989898989', 'patelaryan5636@gmail.com', 'hotel2 near GH-5 circle , sarkhej Sector-15, Gandhinagar', '7895462130', '563656361256', 'RGGHY5636Y', 'Single,Couple,AC,VIP,Luxury,Deluxe', 'WiFi,Parking,Restaurant,Air Conditioning,Swimming Pool,24/7 Security,Room Service,Conference Hall', 'UPI,Online Banking,Credit or Debit Card,Cash', 1000.00, 2000.00, 2500.00, 2700.00, 3000.00, 4000.00, '67ea56b8b7056_hotel license', '67ea56b8b7a25_adhar card.png', '67ea56b8b82f1_pancard.jpeg', '67ea56b8b88fc_passport photo.jpeg', '67ea56b8b8f07_1.jpeg', '67ea56b8b93a2_2.jpeg', '67ea56b8b975c_3.jpeg', '67ea56b8b9fe1_4.jpeg', '67ea56b8ba78b_5.jpeg', 1, 21, '2025-03-31 08:47:52', '2025-03-31 11:42:02'),
-(3, 'HOTEL TEST3', 'HOTEL OWNER3', 40, 40, '8526451230', 'sachaniarya675@gmail.com', 'a/1 hotel pardise near nikol, ahemdabad', '6566335636', '123456789014', 'RGGYY5636K', 'Couple,AC,VIP,Deluxe', 'WiFi,Parking,Restaurant,Air Conditioning,Swimming Pool,24/7 Security,Room Service,Conference Hall', 'UPI,Online Banking,Credit or Debit Card,Cash', 500.00, 1000.00, 2000.00, 7000.00, 0.00, 7000.00, '67ea5796a74b8_hotel license', '67ea5796a7b0f_adhar card.png', '67ea5796a802a_pancard.jpeg', '67ea5796a8462_passport photo.jpeg', '67ea5796a94e6_1.jpeg', '67ea5796a9bca_2.jpeg', '67ea5796aa0da_3.jpeg', '67ea5796aa98a_4.jpeg', '67ea5796ab0da_5.jpeg', 0, 27, '2025-03-31 08:51:34', '2025-03-31 11:50:25'),
+(3, 'HOTEL TEST3', 'HOTEL OWNER3', 40, 40, '8526451230', 'sachaniarya675@gmail.com', 'a/1 hotel pardise near nikol, ahemdabad', '6566335636', '123456789014', 'RGGYY5636K', 'Couple,AC,VIP,Deluxe', 'WiFi,Parking,Restaurant,Air Conditioning,Swimming Pool,24/7 Security,Room Service,Conference Hall', 'UPI,Online Banking,Credit or Debit Card,Cash', 500.00, 1000.00, 2000.00, 7000.00, 0.00, 7000.00, '67ea5796a74b8_hotel license', '67ea5796a7b0f_adhar card.png', '67ea5796a802a_pancard.jpeg', '67ea5796a8462_passport photo.jpeg', '67ea5796a94e6_1.jpeg', '67ea5796a9bca_2.jpeg', '67ea5796aa0da_3.jpeg', '67ea5796aa98a_4.jpeg', '67ea5796ab0da_5.jpeg', 1, 27, '2025-03-31 08:51:34', '2025-09-07 07:27:07'),
 (4, 'HOTEL TEST4', 'HOTEL OWNER4', 55, 55, '7896541235', '21012250410087@ljku.edu.in', 'hotel taj near sbr, ahemdabad', '789654123', '555556666612', 'RGHTY5636N', 'Couple,AC,Luxury,Deluxe', 'WiFi,Parking,Swimming Pool,Conference Hall', 'UPI,Online Banking,Credit or Debit Card,Cash', 200.00, 300.00, 400.00, 500.00, 600.00, 700.00, '67ea58680ac13_hotel license', '67ea58680bf8b_adhar card.png', '67ea58680ca37_pancard.jpeg', '67ea58680f0f1_passport photo.jpeg', '67ea5868101fd_1.jpeg', '67ea586811349_2.jpeg', '67ea586811932_3.jpeg', '67ea586812014_4.jpeg', '67ea586812f51_5.jpeg', 0, 31, '2025-03-31 08:55:04', '2025-03-31 11:50:28');
 
 -- --------------------------------------------------------
@@ -6764,6 +6794,12 @@ ALTER TABLE `bus_master`
   ADD PRIMARY KEY (`bus_id`);
 
 --
+-- Indexes for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `feedback_master`
 --
 ALTER TABLE `feedback_master`
@@ -6879,6 +6915,12 @@ ALTER TABLE `bus_master`
   MODIFY `bus_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
 
 --
+-- AUTO_INCREMENT for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `feedback_master`
 --
 ALTER TABLE `feedback_master`
@@ -6894,7 +6936,7 @@ ALTER TABLE `forget_password_master`
 -- AUTO_INCREMENT for table `guide_booking`
 --
 ALTER TABLE `guide_booking`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `guide_master`
@@ -6906,7 +6948,7 @@ ALTER TABLE `guide_master`
 -- AUTO_INCREMENT for table `hotel_bookings`
 --
 ALTER TABLE `hotel_bookings`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Unique booking identifier', AUTO_INCREMENT=3;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Unique booking identifier', AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `hotel_master`
