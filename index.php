@@ -77,7 +77,7 @@
     <iframe
       src="userhome/Map.php"
       width="100%"
-      height="1100px"
+      height="950px"
       style="border: none"
     ></iframe>
 

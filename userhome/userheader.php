@@ -118,8 +118,10 @@
     .nav-items {
       white-space: nowrap;
       /* overflow-x: auto; */
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* Internet Explorer 10+ */
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* Internet Explorer 10+ */
     }
 
     /* Hide scrollbar for webkit browsers */
@@ -141,6 +143,7 @@
       .nav-items li {
         margin: 0 0.25rem;
       }
+
       .nav-items a {
         padding: 0.5rem 0.5rem;
         font-size: 0.8rem;
@@ -151,6 +154,7 @@
       .nav-items li {
         margin: 0 0.3rem;
       }
+
       .nav-items a {
         padding: 0.5rem 0.7rem;
         font-size: 0.85rem;
@@ -161,6 +165,7 @@
       .nav-items li {
         margin: 0 0.4rem;
       }
+
       .nav-items a {
         padding: 0.5rem 0.9rem;
         font-size: 0.9rem;
@@ -171,6 +176,7 @@
       .nav-items li {
         margin: 0 0.5rem;
       }
+
       .nav-items a {
         padding: 0.5rem 1rem;
         font-size: 1rem;
@@ -182,6 +188,31 @@
       max-width: 100%;
     }
   </style>
+  <style>
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: #8ebebe #c4dfdf;
+  }
+
+  /* For Chrome, Safari, and other WebKit browsers */
+  ::-webkit-scrollbar {
+    width: 8px; /* Adjust the width as you like */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #c4dfdf;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #8ebebe 0%, #527277 100%);
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #a1dcdc 0%, #628a8f 100%);
+  }
+</style>
 </head>
 
 <body class="bg-gray-100">
@@ -230,93 +261,95 @@
 
     <!-- Desktop Navigation -->
     <nav class="bg-[#C4DFDF] text-gray-600 hidden md:block">
-      <div class="nav-container container mx-auto flex justify-between items-center px-4 py-2 uppercase font-medium">
-        <ul class="nav-items flex items-center">
-          <li class="relative group hover-underline">
-            <a href="./index.php" class="block hover:text-gray-800 transition-colors">Home</a>
-          </li>
-          <li class="relative group hover-underline">
-            <a href="./jobcards" class="block hover:text-gray-800 transition-colors">Job & Opp</a>
-          </li>
-          <li class="relative group hover-underline">
-            <a href="#" class="block hover:text-gray-800 transition-colors">Bookings ▼</a>
-            <ul
-              class="absolute left-0 w-auto pb-2 bg-[#C4DFDF] text-gray-600 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all duration-300 shadow-lg z-50">
-              <li>
-                <a href="./Guidecard" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Guide Booking</a>
-              </li>
-              <li>
-                <a href="./hotellist" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Hotel Booking</a>
-              </li>
-              <li>
-                <a href="./stallcard" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Explore Other
-                  Business</a>
-              </li>
-            </ul>
-          </li>
-          <li class="relative group hover-underline">
-            <a href="./chatbot.php" class="block hover:text-gray-800 transition-colors">AI Guide</a>
-          </li>
-          <li class="relative group hover-underline">
-            <a href="./aitrip-planner" class="block hover:text-gray-800 transition-colors">AI Trip-Planner</a>
-          </li>
-          <li class="relative group hover-underline">
-            <a href="tripplanercard" class="block hover:text-gray-800 transition-colors">Tour & Packages</a>
-          </li>
-          <li class="relative group hover-underline">
-            <a href="./map" class="block hover:text-gray-800 transition-colors">Map</a>
-          </li>
-          <li class="relative group hover-underline">
-            <a href="./busdetails" class="block hover:text-gray-800 transition-colors">Find Routes</a>
-          </li>
-          <li class="relative group hover-underline">
-            <a href="ourtripplanner" class="block hover:text-gray-800 transition-colors">Travel Experts</a>
-          </li>
-          <li class="relative group hover-underline">
-            <a href="contact-us" class="block hover:text-gray-800 transition-colors">Contact Us</a>
-          </li>
-        </ul>
+      <div class="nav-container container mx-auto flex items-center px-2 py-2 uppercase font-medium">
 
-        <!-- Desktop User Avatar -->
-        <div class="relative group flex-shrink-0">
-          <?php
-  // for check user login or not 
-      $currentURL = $_SERVER['PHP_SELF'];
-       $currentPage = basename($currentURL);
-       if(isset($_SESSION['Yatra_logedin_user_id'])){
-           if($user_role == 3){
-            ?>
-            <img src="userhome/krish.jpg" alt="Avatar" onclick="openModal()"
-            class="h-10 w-10 rounded-lg cursor-pointer border-2 border-white hover:border-gray-300 transition-colors" />
-          <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
-          <ul
-            class="absolute right-0 w-48 bg-[#C4DFDF] text-gray-600 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg z-50">
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Dashboard</a>
+        <div class="w-full overflow-x-auto scrollbar-hide pb-40 -mb-40">
+          <ul class="nav-items flex items-center">
+            <li class="relative group hover-underline">
+              <a href="./index.php" class="block hover:text-gray-800 transition-colors">Home</a>
             </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">My Bookings</a>
+            <li class="relative group hover-underline">
+              <a href="./jobcards" class="block hover:text-gray-800 transition-colors">Job & Opp</a>
             </li>
-            <li>
-              <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Payment History</a>
+            <li class="relative group hover-underline">
+              <a href="#" class="block hover:text-gray-800 transition-colors">Bookings ▼</a>
+              <ul
+                class="absolute left-0 w-auto pb-2 bg-[#C4DFDF] text-gray-600 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all duration-300 shadow-lg z-50">
+                <li>
+                  <a href="./Guidecard" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Guide
+                    Booking</a>
+                </li>
+                <li>
+                  <a href="./hotellist" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Hotel
+                    Booking</a>
+                </li>
+                <li>
+                  <a href="./stallcard" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Explore
+                    Other Business</a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a href="./logout" class="block px-4 py-2 hover:bg-red-100 text-red-600 transition-colors">Logout →</a>
+            <li class="relative group hover-underline">
+              <a href="./chatbot.php" class="block hover:text-gray-800 transition-colors">AI Guide</a>
+            </li>
+            <li class="relative group hover-underline">
+              <a href="./aitrip-planner" class="block hover:text-gray-800 transition-colors">AI Trip-Planner</a>
+            </li>
+            <li class="relative group hover-underline">
+              <a href="tripplanercard" class="block hover:text-gray-800 transition-colors">Tour & Packages</a>
+            </li>
+            <li class="relative group hover-underline">
+              <a href="./map" class="block hover:text-gray-800 transition-colors">Map</a>
+            </li>
+            <li class="relative group hover-underline">
+              <a href="./busdetails" class="block hover:text-gray-800 transition-colors">Find Routes</a>
+            </li>
+            <li class="relative group hover-underline">
+              <a href="ourtripplanner" class="block hover:text-gray-800 transition-colors">Travel Experts</a>
+            </li>
+            <li class="relative group hover-underline">
+              <a href="contact-us" class="block transition-colors">Contact Us</a>
+            </li>
+
+            <li class="relative group ml-auto flex-shrink-0">
+              <?php
+                    // for check user login or not 
+                    $currentURL = $_SERVER['PHP_SELF'];
+                    $currentPage = basename($currentURL);
+                    if (isset($_SESSION['Yatra_logedin_user_id'])) {
+                        if ($user_role == 3) {
+                    ?>
+              <img src="userhome/krish.jpg" alt="Avatar" onclick="openModal()"
+                class="h-10 w-10 rounded-lg cursor-pointer border-2 border-white hover:border-gray-300 transition-colors" />
+              <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+              <ul
+                class="absolute right-0 w-48 bg-[#C4DFDF] text-gray-600 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg z-50">
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">My Bookings</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Payment History</a>
+                </li>
+                <li>
+                  <a href="./logout" class="block px-4 py-2 hover:bg-red-100 text-red-600 transition-colors">Logout
+                    →</a>
+                </li>
+              </ul>
+              <?php
+                        }
+                    } else {
+                        ?>
+              <a href="userregister"
+                class="flex items-center justify-center gap-2 hover:text-gray-800 transition-colors hover-underline">Login<img
+                  style="height:21px;" src="userhome/img/login.svg" alt="Login"></a>
+              <?php
+                    }
+                    ?>
             </li>
           </ul>
-          <?php
-          } }else{
-                   ?>
-          <li class="relative group hover-underline list-none">
-            <a href="userregister"
-              class="flex items-center justify-center gap-2 hover:text-gray-800 transition-colors">Login<img
-                style="height:21px;" src="userhome/img/login.svg" alt="Login"></a>
-          </li>
-          <?php 
-          }
-        
-          ?>
-          
         </div>
       </div>
     </nav>
@@ -353,7 +386,8 @@
         <div class="flex-1 overflow-y-auto p-4">
           <ul class="space-y-2">
             <li>
-              <a href="./index.php" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+              <a href="./index.php"
+                class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                 🏠 Home
               </a>
             </li>
@@ -396,12 +430,14 @@
               </a>
             </li>
             <li>
-              <a href="./aitrip-planner" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+              <a href="./aitrip-planner"
+                class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                 🎉 AI Trip-planner
               </a>
             </li>
             <li>
-              <a href="./tripplanercard" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+              <a href="./tripplanercard"
+                class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                 🖼️ Tour & Packages
               </a>
             </li>
@@ -411,7 +447,8 @@
               </a>
             </li>
             <li>
-              <a href="./busdetails" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+              <a href="./busdetails"
+                class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                 🛣️ Find Routes
               </a>
             </li>
@@ -487,8 +524,7 @@
         <!-- Profile Photo + Name/Email -->
         <div class="flex items-center space-x-4">
           <div class="relative">
-            <img id="profileImage"
-              src="userhome/krish.jpg" alt="Profile"
+            <img id="profileImage" src="userhome/krish.jpg" alt="Profile"
               class="w-24 h-24 rounded-full object-cover cursor-pointer border-4 border-[#57a1a1] shadow-md hover:opacity-80"
               onclick="triggerFileInput()">
             <input type="file" id="fileInput" class="hidden" accept="image/*" onchange="handleImageUpload(event)">
@@ -545,8 +581,11 @@
                 class="fas fa-chevron-down absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none"></i>
             </div>
           </div>
-          <button onclick="closeModal()" class="px-4 py-2 border rounded-lg hover:bg-gray-100 transition">Cancel</button>
-          <input type="submit" class="px-6 py-2 bg-[#a4d8d8] text-white rounded-lg shadow hover:bg-[#6bbcbc] transition-all duration-150 cursor-pointer" value="Update"></input>
+          <button onclick="closeModal()"
+            class="px-4 py-2 border rounded-lg hover:bg-gray-100 transition">Cancel</button>
+          <input type="submit"
+            class="px-6 py-2 bg-[#a4d8d8] text-white rounded-lg shadow hover:bg-[#6bbcbc] transition-all duration-150 cursor-pointer"
+            value="Update"></input>
         </div>
       </form>
     </div>
