@@ -261,98 +261,89 @@
 
     <!-- Desktop Navigation -->
     <nav class="bg-[#C4DFDF] text-gray-600 hidden md:block">
-      <div class="nav-container container mx-auto flex items-center px-2 py-2 uppercase font-medium">
+    <div class="nav-container container mx-auto flex justify-between items-center gap-4 px-4 py-2 uppercase font-medium">
 
-        <div class="w-full overflow-x-auto scrollbar-hide pb-40 -mb-40">
-          <ul class="nav-items flex items-center">
-            <li class="relative group hover-underline">
-              <a href="./index.php" class="block hover:text-gray-800 transition-colors">Home</a>
-            </li>
-            <li class="relative group hover-underline">
-              <a href="./jobcards" class="block hover:text-gray-800 transition-colors">Job & Opp</a>
-            </li>
-            <li class="relative group hover-underline">
-              <a href="#" class="block hover:text-gray-800 transition-colors">Bookings ▼</a>
-              <ul
-                class="absolute left-0 w-auto pb-2 bg-[#C4DFDF] text-gray-600 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all duration-300 shadow-lg z-50">
-                <li>
-                  <a href="./Guidecard" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Guide
-                    Booking</a>
+        <div class="flex-1 min-w-0 overflow-x-auto scrollbar-hide pb-40 -mb-40">
+            <ul class="nav-items flex items-center">
+                <li class="relative group hover-underline">
+                    <a href="./index.php" class="block hover:text-gray-800 transition-colors">Home</a>
                 </li>
-                <li>
-                  <a href="./hotellist" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Hotel
-                    Booking</a>
+                <li class="relative group hover-underline">
+                    <a href="./jobcards" class="block hover:text-gray-800 transition-colors">Job & Opp</a>
                 </li>
-                <li>
-                  <a href="./stallcard" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Explore
-                    Other Business</a>
+                <li class="relative group hover-underline">
+                    <a href="#" class="block hover:text-gray-800 transition-colors">Bookings ▼</a>
+                    <ul class="absolute left-0 w-auto pb-2 bg-[#C4DFDF] text-gray-600 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-2 transition-all duration-300 shadow-lg z-50">
+                        <li>
+                            <a href="./Guidecard" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Guide Booking</a>
+                        </li>
+                        <li>
+                            <a href="./hotellist" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Hotel Booking</a>
+                        </li>
+                        <li>
+                            <a href="./stallcard" class="block px-4 py-2 rounded-lg hover:bg-[#E3F4F4] transition-colors">Explore Other Business</a>
+                        </li>
+                    </ul>
                 </li>
-              </ul>
-            </li>
-            <li class="relative group hover-underline">
-              <a href="./chatbot.php" class="block hover:text-gray-800 transition-colors">AI Guide</a>
-            </li>
-            <li class="relative group hover-underline">
-              <a href="./aitrip-planner" class="block hover:text-gray-800 transition-colors">AI Trip-Planner</a>
-            </li>
-            <li class="relative group hover-underline">
-              <a href="tripplanercard" class="block hover:text-gray-800 transition-colors">Tour & Packages</a>
-            </li>
-            <li class="relative group hover-underline">
-              <a href="./map" class="block hover:text-gray-800 transition-colors">Map</a>
-            </li>
-            <li class="relative group hover-underline">
-              <a href="./busdetails" class="block hover:text-gray-800 transition-colors">Find Routes</a>
-            </li>
-            <li class="relative group hover-underline">
-              <a href="ourtripplanner" class="block hover:text-gray-800 transition-colors">Travel Experts</a>
-            </li>
-            <li class="relative group hover-underline">
-              <a href="contact-us" class="block transition-colors">Contact Us</a>
-            </li>
-
-            <li class="relative group ml-auto flex-shrink-0">
-              <?php
-                    // for check user login or not 
-                    $currentURL = $_SERVER['PHP_SELF'];
-                    $currentPage = basename($currentURL);
-                    if (isset($_SESSION['Yatra_logedin_user_id'])) {
-                        if ($user_role == 3) {
-                    ?>
-              <img src="userhome/krish.jpg" alt="Avatar" onclick="openModal()"
-                class="h-10 w-10 rounded-lg cursor-pointer border-2 border-white hover:border-gray-300 transition-colors" />
-              <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
-              <ul
-                class="absolute right-0 w-48 bg-[#C4DFDF] text-gray-600 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg z-50">
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Dashboard</a>
+                <li class="relative group hover-underline">
+                    <a href="./chatbot.php" class="block hover:text-gray-800 transition-colors">AI Guide</a>
                 </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">My Bookings</a>
+                <li class="relative group hover-underline">
+                    <a href="./aitrip-planner" class="block hover:text-gray-800 transition-colors">AI Trip-Planner</a>
                 </li>
-                <li>
-                  <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Payment History</a>
+                <li class="relative group hover-underline">
+                    <a href="tripplanercard" class="block hover:text-gray-800 transition-colors">Tour & Packages</a>
                 </li>
-                <li>
-                  <a href="./logout" class="block px-4 py-2 hover:bg-red-100 text-red-600 transition-colors">Logout
-                    →</a>
+                <li class="relative group hover-underline">
+                    <a href="./map" class="block hover:text-gray-800 transition-colors">Map</a>
                 </li>
-              </ul>
-              <?php
-                        }
-                    } else {
-                        ?>
-              <a href="userregister"
-                class="flex items-center justify-center gap-2 hover:text-gray-800 transition-colors hover-underline">Login<img
-                  style="height:21px;" src="userhome/img/login.svg" alt="Login"></a>
-              <?php
-                    }
-                    ?>
-            </li>
-          </ul>
+                <li class="relative group hover-underline">
+                    <a href="./busdetails" class="block hover:text-gray-800 transition-colors">Find Routes</a>
+                </li>
+                <li class="relative group hover-underline">
+                    <a href="ourtripplanner" class="block hover:text-gray-800 transition-colors">Travel Experts</a>
+                </li>
+                <li class="relative group hover-underline">
+                    <a href="contact-us" class="block hover:text-gray-800 transition-colors">Contact Us</a>
+                </li>
+            </ul>
         </div>
-      </div>
-    </nav>
+
+        <div class="relative group flex-shrink-0">
+            <?php
+            // for check user login or not 
+            $currentURL = $_SERVER['PHP_SELF'];
+            $currentPage = basename($currentURL);
+            if (isset($_SESSION['Yatra_logedin_user_id'])) {
+                if ($user_role == 3) {
+            ?>
+                    <img src="userhome/krish.jpg" alt="Avatar" onclick="openModal()" class="h-10 w-10 rounded-lg cursor-pointer border-2 border-white hover:border-gray-300 transition-colors" />
+                    <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+                    <ul class="absolute right-0 w-48 bg-[#C4DFDF] text-gray-600 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg z-50">
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">My Bookings</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-[#E3F4F4] transition-colors">Payment History</a>
+                        </li>
+                        <li>
+                            <a href="./logout" class="block px-4 py-2 hover:bg-red-100 text-red-600 transition-colors">Logout →</a>
+                        </li>
+                    </ul>
+                <?php
+                }
+            } else {
+                ?>
+                <a href="userregister" class="flex items-center justify-center gap-2 hover:text-gray-800 transition-colors hover-underline">Login<img style="height:21px;" src="userhome/img/login.svg" alt="Login"></a>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+</nav>
 
     <!-- Mobile Navigation -->
     <nav id="mobile-menu"

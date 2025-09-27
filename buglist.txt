@@ -13,13 +13,16 @@ Quick links at footer : first 3 link is not reachable(Set path)
  
 start your business button not working correctly
 
-tour and package page : misaligned header 
-
-same in contact-us page
-
 login page is not loading
 
 Explore Jharkhand section : 1st pic is not load(AI GENERATED ImAGES)
+
+
+
+
+Backend:
+
+userregister page not working (Showing error)
 
 
  
