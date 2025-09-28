@@ -22,25 +22,25 @@
             </p>
             <div class="flex space-x-3 mt-2 items-center ml-2">
               <a
-                href="#"
+                href="https://www.facebook.com/share/17Dm7We8DT/"
                 class="bg-[#8ebebe] h-10 w-10 flex items-center justify-center hover:bg-blue-600 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg text-[#395b64] hover:text-white"
               >
                 <i class="fab fa-facebook-f text-lg"></i>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/jharkhandtourism?igsh=ODZwdm90am96N3k0"
                 class="bg-[#8ebebe] h-10 w-10 flex items-center justify-center hover:bg-pink-500 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg text-[#395b64] hover:text-white"
               >
                 <i class="fab fa-instagram text-lg"></i>
               </a>
               <a
-                href="#"
+                href="https://x.com/jharkhandturism"
                 class="bg-[#8ebebe] h-10 w-10 flex items-center justify-center hover:bg-sky-500 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg text-[#395b64] hover:text-white"
               >
                 <i class="fab fa-twitter text-lg"></i>
               </a>
               <a
-                href="https://www.youtube.com/channel/UCjtCbnkIaiCJgj13sEZ9iqw"
+                href="https://www.instagram.com/jharkhandtourism?igsh=ODZwdm90am96N3k0"
                 class="bg-[#8ebebe] h-10 w-10 flex items-center justify-center hover:bg-red-600 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg text-[#395b64] hover:text-white"
               >
                 <i class="fab fa-youtube text-lg"></i>
@@ -142,7 +142,7 @@
                 <i
                   class="fas fa-phone-alt text-lg text-[#395b64] group-hover:text-gray-700"
                 ></i>
-                <span class="hover:text-gray-700">+91 91574 31551</span>
+                <span class="hover:text-gray-700">+91 91024 03884</span>
               </li>
               <li
                 class="flex items-center space-x-3 group hover:text-[#395b64] transition-all duration-300"
@@ -176,6 +176,7 @@
                   type="email"
                   placeholder="Enter your email"
                   class="bg-[#e3f4f4] border border-[#8ebebe] rounded-lg px-4 py-2 text-[#395b64] focus:outline-none focus:ring-2 focus:ring-[#527277] transition-all"
+                  required
                 />
                 <button
                   type="submit"

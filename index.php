@@ -90,6 +90,10 @@
     ></iframe>
 
     <?php
+      include("userhome/videofeed.php");
+    ?> 
+
+    <?php
       include("userhome/mostvisited.php");
     ?>
     
