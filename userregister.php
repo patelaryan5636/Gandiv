@@ -1,6 +1,6 @@
 <?php
-require_once 'google-config.php';
-$google_login_url = $client->createAuthUrl();
+// require_once 'google-config.php';
+// $google_login_url = $client->createAuthUrl();
 ?>
 <!DOCTYPE html>
 <html lang="en">

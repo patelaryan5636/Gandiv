@@ -17,12 +17,13 @@ login page is not loading
 
 Explore Jharkhand section : 1st pic is not load(AI GENERATED ImAGES)
 
+28-9-25
+
+change default user pic in profile, also set details dynamicly
+
+remove google login option in userregister
 
 
-
-Backend:
-
-userregister page not working (Showing error)
 
 
  

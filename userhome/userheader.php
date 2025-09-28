@@ -8,8 +8,10 @@
       $result = mysqli_query($conn, $query);
       $userdata = mysqli_fetch_assoc($result);
       $user_role = $userdata["user_role"];
-      $full_name = $userdata['user_name'];
-      
+      $user_name = $userdata['user_name'];
+      $user_email = $userdata['email'];
+      $user_gender = $userdata['gender'];
+      $user_phone = $userdata['phone'];
   }
 
 ?>
@@ -317,7 +319,7 @@
             if (isset($_SESSION['Yatra_logedin_user_id'])) {
                 if ($user_role == 3) {
             ?>
-                    <img src="userhome/krish.jpg" alt="Avatar" onclick="openModal()" class="h-10 w-10 rounded-lg cursor-pointer border-2 border-white hover:border-gray-300 transition-colors" />
+                    <img src="userhome/user_icon.png" alt="Avatar" onclick="openModal()" class="h-10 w-10 rounded-lg cursor-pointer border-2 border-white hover:border-gray-300 transition-colors" />
                     <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
                     <ul class="absolute right-0 w-48 bg-[#C4DFDF] text-gray-600 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-lg z-50">
                         <li>
@@ -363,11 +365,11 @@
         <div class="p-4 bg-[#C4DFDF] border-b">
           <div class="flex items-center gap-3" onclick="openModal()">
             <div class="relative">
-              <img src="userhome/krish.jpg" alt="Avatar" class="h-12 w-12 rounded-lg border-2 border-white" />
+              <img src="userhome/user_icon.png" alt="Avatar" class="h-12 w-12 rounded-lg border-2 border-white" />
               <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
             </div>
             <div>
-              <p class="font-medium text-gray-700">Krish</p>
+              <p class="font-medium text-gray-700"><?php echo $user_name; ?></p>
               <p class="text-sm text-gray-600">Online</p>
             </div>
           </div>
@@ -515,14 +517,14 @@
         <!-- Profile Photo + Name/Email -->
         <div class="flex items-center space-x-4">
           <div class="relative">
-            <img id="profileImage" src="userhome/krish.jpg" alt="Profile"
+            <img id="profileImage" src="userhome/user_icon.png" alt="Profile"
               class="w-24 h-24 rounded-full object-cover cursor-pointer border-4 border-[#57a1a1] shadow-md hover:opacity-80"
               onclick="triggerFileInput()">
             <input type="file" id="fileInput" class="hidden" accept="image/*" onchange="handleImageUpload(event)">
           </div>
           <div>
-            <h3 id="displayName" class="text-lg font-bold text-gray-800">Krish Prajapati</h3>
-            <p id="displayEmail" class="text-sm text-gray-500">krishprajapti@gmail.com</p>
+            <h3 id="displayName" class="text-lg font-bold text-gray-800"><?php echo $user_name; ?></h3>
+            <p id="displayEmail" class="text-sm text-gray-500"><?php echo $user_email; ?></p>
             <a href="forget_password" class="text-sm text-blue-500">Change Password</a>
           </div>
         </div>
@@ -532,7 +534,7 @@
           <!-- Name -->
           <div>
             <label class="block text-sm font-medium text-gray-600 mb-1">Name</label>
-            <input id="fullName" value="Krish Prajapati"
+            <input id="fullName" value=<?php echo $user_name; ?>
               class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none"
               oninput="updateName()">
           </div>
@@ -540,14 +542,14 @@
           <!-- Email -->
           <div>
             <label class="block text-sm font-medium text-gray-600 mb-1">Email</label>
-            <input id="email" value="krishprajapati@gmail.com" disabled
+            <input id="email" value="<?php echo $user_email; ?>" disabled
               class="w-full border rounded-lg px-3 py-2 bg-gray-100 text-gray-500 cursor-not-allowed">
           </div>
 
           <!-- Phone -->
           <div>
             <label class="block text-sm font-medium text-gray-600 mb-1">Phone Number</label>
-            <input id="phone" value="+91 6353054338"
+            <input id="phone" value="<?php echo $user_phone; ?>"
               class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
           </div>
 
