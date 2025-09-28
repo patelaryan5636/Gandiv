@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TravelMate AI Guide</title>
+    <title>Jharkhand TravelMate AI Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
@@ -25,7 +25,7 @@
         animation: gradient 15s ease infinite;
       }
       body {
-        background: url("./userhome/img/chatbotbg.jpg") no-repeat center center fixed;
+        background: url("img/chatbotbg.jpg") no-repeat center center fixed;
         background-size: cover;
         position: relative;
       }
@@ -36,7 +36,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background: rgba(255, 255, 255, 0.8);
         z-index: -1;
       }
@@ -127,7 +127,7 @@
         text-align: left;
         border-left: 5px solid #115d5d;
         transition: all 0.4s ease-in-out;
-        margin: 20px auto 60px auto; /* Added 60px bottom margin */
+        margin: 20px auto;
         max-width: 1200px;
       }
 
@@ -189,7 +189,7 @@
 
       .send-btn:hover {
         background: #2980b9;
-        /* transform: translateY(-50%) scale(1.1); */
+        transform: translateY(-50%) scale(1.1);
       }
 
       .time-display {
@@ -248,32 +248,61 @@
         animation: speakingPulse 1.5s infinite;
       }
 
-      /* Additional container padding for better spacing */
-      .container {
-        padding-bottom: 80px; /* Extra bottom padding for the entire container */
+      .quick-suggestions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin: 20px 0;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .suggestion-chip {
+        background: rgba(255, 255, 255, 0.8);
+        color: #075555;
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: 2px solid rgba(7, 85, 85, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .suggestion-chip:hover {
+        background: #075555;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(7, 85, 85, 0.3);
       }
     </style>
   </head>
 
-  <body class="min-h-screen pb-10">
-    <?php
-      include("includes/header.php");
+  <body class="min-h-screen">
+    <?php 
+
+    include("includes/header.php");
+
     ?>
-    <div class="container mx-auto h-auto px-4 py-4"> <!-- Changed h-[650px] to h-auto -->
+    <div class="container mx-auto px-4 py-4">
       <div class="text-center mb-8">
         <div class="flex justify-center items-center gap-6">
+          <!-- First Logo -->
           <div class="logo-container">
             <img
               src="gandiv.png"
-              alt="gandiv logo"
-              class="w-44 h-40 object-contain transform hover:scale-105 transition-transform duration-300"
+              alt="Logo 1"
+              class="w-40 h-40 object-contain transform hover:scale-105 transition-transform duration-300"
             />
           </div>
 
+          <!-- Second Logo -->
           <div class="logo-container">
             <img
               src="yatra.png"
-              alt="yatra Logo"
+              alt="Logo 2"
               class="w-32 h-32 object-contain transform hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -283,33 +312,72 @@
           <span
             class="slogan bg-clip-text text-transparent bg-[#115d5d] drop-shadow-lg"
           >
-            Jharkhand
+            JHARKHAND
           </span>
         </h1>
-
         <p
           class="text-gray-800 text-xl px-18 py-2 max-w-4xl mx-auto leading-relaxed font-serif"
         >
-          Explore Jharkhand like never before with our AI-Powered Guide! Get
-          instant recommendations, historical insights, and personalized travel
-          tips all at your fingertips. Ask anything, from must-visit heritage
-          sites to the best local crafts, and let AI enhance your journey! ✨
+          Explore the Land of Forests and Waterfalls like never before with our
+          AI-Powered Guide! Get instant recommendations for tribal heritage
+          sites, magnificent waterfalls, wildlife sanctuaries, and cultural
+          treasures. Ask anything, from Hundru Falls to Betla National Park, and
+          let AI enhance your Jharkhand journey! ✨
         </p>
 
         <div class="flex space-x-2 mt-2 justify-center">
           <span class="bg-red-100 px-2 py-1 rounded text-xs md:text-sm"
-            >🤖 Smart Suggestions</span
+            >🏔️ Mountain Adventures</span
           >
           <span class="bg-yellow-100 px-2 py-1 rounded text-xs md:text-sm"
-            >🌍 Personalized Travel</span
+            >🌊 Waterfall Tours</span
           >
           <span class="bg-green-100 px-2 py-1 rounded text-xs md:text-sm"
-            >🗺️ AI-Powered Exploration</span
+            >🎭 Tribal Heritage</span
           >
         </div>
       </div>
 
-      <div class="search-container mb-8 mt-24">
+      <div class="quick-suggestions">
+        <div
+          class="suggestion-chip"
+          onclick="askQuestion('Best waterfalls in Jharkhand')"
+        >
+          🌊 Famous Waterfalls
+        </div>
+        <div
+          class="suggestion-chip"
+          onclick="askQuestion('Tribal culture and heritage sites in Jharkhand')"
+        >
+          🎭 Tribal Heritage
+        </div>
+        <div
+          class="suggestion-chip"
+          onclick="askQuestion('Ranchi tourist attractions')"
+        >
+          🏙️ Ranchi Tourism
+        </div>
+        <div
+          class="suggestion-chip"
+          onclick="askQuestion('Wildlife sanctuaries in Jharkhand')"
+        >
+          🐅 Wildlife Parks
+        </div>
+        <div
+          class="suggestion-chip"
+          onclick="askQuestion('Adventure activities in Jharkhand')"
+        >
+          🏔️ Adventure Sports
+        </div>
+        <div
+          class="suggestion-chip"
+          onclick="askQuestion('Traditional Jharkhand cuisine')"
+        >
+          🍛 Local Food
+        </div>
+      </div>
+
+      <div class="search-container mb-8">
         <button class="voice-btn" id="voiceBtn">
           <i class="fas fa-microphone"></i>
         </button>
@@ -317,7 +385,7 @@
           type="text"
           class="search-input"
           id="searchInput"
-          placeholder="Ask me anything about travel..."
+          placeholder="Ask me anything about Jharkhand travel..."
         />
         <button class="send-btn" id="sendBtn">
           <i class="fas fa-paper-plane"></i>
@@ -329,16 +397,20 @@
       <div class="main-loader-container" id="mainLoader">
         <div class="fancy-loader"></div>
         <div class="text-white text-center mt-4">
-          <h3 class="text-xl font-bold">Finding Amazing Places...</h3>
-          <p class="mt-2">Just a moment while I prepare your travel guide</p>
+          <h3 class="text-xl font-bold">
+            Discovering Jharkhand's Treasures...
+          </h3>
+          <p class="mt-2">
+            Just a moment while I prepare your Jharkhand travel guide
+          </p>
         </div>
       </div>
     </div>
-  
+
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-      const apiKey = "AIzaSyCaqqNhFuvZtAmfrKQ8ilsFi1VgZQ2eR4E";
-      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+      const apiKey = "AIzaSyDye6u0kFWWZty0WlNZDCBNS37vj28fLys";
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
       let isListening = false;
 
       const voiceBtn = document.getElementById("voiceBtn");
@@ -346,12 +418,19 @@
       const sendBtn = document.getElementById("sendBtn");
       const mainLoader = document.getElementById("mainLoader");
       const responseBox = document.getElementById("responseBox");
-      const timeDisplay = document.getElementById("timeDisplay");
 
-      const recognition = new (window.SpeechRecognition ||
-        window.webkitSpeechRecognition)();
-      recognition.continuous = false;
-      recognition.lang = "en-US";
+      // Voice recognition setup with error handling
+      let recognition = null;
+      if (
+        "webkitSpeechRecognition" in window ||
+        "SpeechRecognition" in window
+      ) {
+        recognition = new (window.SpeechRecognition ||
+          window.webkitSpeechRecognition)();
+        recognition.continuous = false;
+        recognition.lang = "en-US";
+        recognition.interimResults = false;
+      }
 
       voiceBtn.addEventListener("click", toggleVoiceInput);
       sendBtn.addEventListener("click", handleSearch);
@@ -360,24 +439,43 @@
       });
 
       function toggleVoiceInput() {
+        if (!recognition) {
+          console.warn("Voice recognition not supported");
+          return;
+        }
+
         if (isListening) {
           recognition.stop();
         } else {
           recognition.start();
           voiceBtn.classList.add("listening");
+          isListening = true;
         }
       }
 
-      recognition.onresult = (event) => {
-        const transcript = event.results[0][0].transcript;
-        searchInput.value = transcript;
-        handleSearch();
-      };
+      if (recognition) {
+        recognition.onresult = (event) => {
+          const transcript = event.results[0][0].transcript;
+          searchInput.value = transcript;
+          handleSearch();
+        };
 
-      recognition.onend = () => {
-        isListening = false;
-        voiceBtn.classList.remove("listening");
-      };
+        recognition.onend = () => {
+          isListening = false;
+          voiceBtn.classList.remove("listening");
+        };
+
+        recognition.onerror = (event) => {
+          console.error("Voice recognition error:", event.error);
+          isListening = false;
+          voiceBtn.classList.remove("listening");
+        };
+      }
+
+      function askQuestion(question) {
+        searchInput.value = question;
+        handleSearch();
+      }
 
       async function handleSearch() {
         const query = searchInput.value.trim();
@@ -401,52 +499,133 @@
 
         const promptTemplate = `
                 Time: ${currentTime}
-                User: Krishprajapati15
+                User: TravelExplorer
+                Location: Jharkhand, India
                 Query: ${query}
 
-                Please provide a comprehensive travel guide with the following sections:
+                Please provide a comprehensive Jharkhand travel guide with the following sections:
                 📜 Historical Background
                 🏛️ Cultural Significance
                 🎉 Local Traditions and Festivals
-                🏰 Must-See Places
+                🏰 Must-See Places in Jharkhand
                 🌟 Nearby Attractions
-                🌟 Visitor Reviews
+                🌟 Visitor Reviews and Experiences
                 📅 Best Time to Visit
-                🍴 Local Cuisine
+                🍴 Traditional Jharkhand Cuisine
                 🛏️ Accommodation Options
                 🚌 Accessibility and Transportation
-                💡 Travel Tips
+                💡 Jharkhand Travel Tips
                 🛡️ Safety Tips
-                🌿 Environmental Impact
-                🗣️ Language and Communication
-                💱 Currency and Exchange Rates
-                ⚖️ Local Laws and Etiquette
+                🌿 Environmental Impact and Conservation
+                🗣️ Language and Communication (Hindi, Santhali, Ho, Mundari)
+                💱 Currency and Local Markets
+                ⚖️ Local Laws and Tribal Etiquette
                 📞 Emergency Contacts
                 🛎️ Tourist Services and Facilities
-                🗺️ Interactive Maps and Guides
+                🗺️ Maps and Route Planning
                 
-                Keep the information concise and well-structured.
+                Focus specifically on Jharkhand's unique attractions:
+                - Waterfalls: Hundru Falls, Dassam Falls, Jonha Falls, Hirni Falls
+                - Wildlife: Betla National Park, Palamau Tiger Reserve, Hazaribagh Wildlife Sanctuary
+                - Religious Sites: Baidyanath Dham (Deoghar), Rajrappa Temple, Parasnath Hills
+                - Tribal Heritage: Santhali culture, Ho tribe, Mundari traditions
+                - Cities: Ranchi, Jamshedpur, Dhanbad, Bokaro
+                - Adventure: Trekking, rock climbing, water sports
+                - Industrial Tourism: Tata Steel Plant, coal mines
+                - Handicrafts: Dokra art, tribal paintings, bamboo crafts
+
+                Keep the information concise, accurate, and well-structured for Jharkhand tourism.
             `;
+
+        const requestBody = {
+          contents: [
+            {
+              parts: [
+                {
+                  text: promptTemplate,
+                },
+              ],
+            },
+          ],
+          generationConfig: {
+            temperature: 0.7,
+            topK: 40,
+            topP: 0.95,
+            maxOutputTokens: 1024,
+          },
+          safetySettings: [
+            {
+              category: "HARM_CATEGORY_HARASSMENT",
+              threshold: "BLOCK_MEDIUM_AND_ABOVE",
+            },
+            {
+              category: "HARM_CATEGORY_HATE_SPEECH",
+              threshold: "BLOCK_MEDIUM_AND_ABOVE",
+            },
+            {
+              category: "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+              threshold: "BLOCK_MEDIUM_AND_ABOVE",
+            },
+            {
+              category: "HARM_CATEGORY_DANGEROUS_CONTENT",
+              threshold: "BLOCK_MEDIUM_AND_ABOVE",
+            },
+          ],
+        };
 
         try {
           const response = await fetch(endpoint, {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              contents: [
-                {
-                  parts: [{ text: promptTemplate }],
-                },
-              ],
-            }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(requestBody),
           });
 
-          if (!response.ok) throw new Error("API request failed");
+          if (!response.ok) {
+            const errorData = await response.text();
+            console.error("API Error:", response.status, errorData);
+
+            if (response.status === 400) {
+              throw new Error(
+                "Invalid request. Please check your API key and try again."
+              );
+            } else if (response.status === 403) {
+              throw new Error(
+                "API access denied. Please enable Generative Language API in Google Cloud Console and verify your API key permissions."
+              );
+            } else if (response.status === 429) {
+              throw new Error(
+                "Too many requests. Please wait a moment and try again."
+              );
+            } else if (response.status === 404) {
+              throw new Error(
+                "Model not found. The API endpoint may have changed."
+              );
+            } else {
+              throw new Error(`API Error: ${response.status}`);
+            }
+          }
 
           const data = await response.json();
+
+          if (
+            !data.candidates ||
+            !data.candidates[0] ||
+            !data.candidates[0].content
+          ) {
+            throw new Error("Invalid response format from API");
+          }
+
           return data.candidates[0].content.parts[0].text;
         } catch (error) {
-          throw new Error("Failed to fetch travel information");
+          console.error("Fetch error:", error);
+          if (error.name === "TypeError" && error.message.includes("fetch")) {
+            throw new Error(
+              "Network error. Please check your internet connection."
+            );
+          }
+          throw error;
         }
       }
 
@@ -461,14 +640,6 @@
         </div>
     `;
         responseBox.classList.remove("hidden");
-        
-        // Smooth scroll to response box with offset
-        setTimeout(() => {
-          responseBox.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }, 100);
       }
 
       function displayError(message) {
@@ -476,23 +647,19 @@
                 <div class="bg-red-100 text-red-700 p-4 rounded-lg">
                     <h3 class="font-bold">Error</h3>
                     <p>${message}</p>
+                    <div class="mt-3 text-sm">
+                        <p><strong>Troubleshooting:</strong></p>
+                        <ul class="list-disc ml-5 mt-1">
+                            <li>Enable Generative Language API in Google Cloud Console</li>
+                            <li>Check your internet connection</li>
+                            <li>Wait a few minutes and try again</li>
+                            <li>Verify your API key is active</li>
+                        </ul>
+                    </div>
                 </div>
             `;
         responseBox.classList.remove("hidden");
       }
-
-      function updateTime() {
-        const now = new Date();
-        const timeString = now.toISOString().replace("T", " ").substr(0, 19);
-        document.getElementById("currentTime").textContent = timeString;
-      }
-
-      setInterval(updateTime, 1000);
-
-      document.addEventListener("DOMContentLoaded", () => {
-        updateTime();
-        mainLoader.style.display = "none";
-      });
 
       let isReading = false;
       let utterance = null;
@@ -546,7 +713,11 @@
         if (!window.speechSynthesis) {
           console.warn("Speech synthesis not supported");
         }
+        mainLoader.style.display = "none";
       });
     </script>
+    <?php 
+      include("includes/footer.php");
+    ?>
   </body>
 </html>
