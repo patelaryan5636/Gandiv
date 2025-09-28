@@ -1,6 +1,12 @@
 <?php
   require_once './includes/scripts/connection.php';
 
+  //                     Login required
+    if (!isset($_SESSION['Yatra_logedin_user_id'])){
+    header("location: /gandiv/userregister.php");
+    exit;
+}
+
   $encryptedId = $_GET['id'];
 
   function decrypt($data) {

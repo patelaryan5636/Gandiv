@@ -2,6 +2,13 @@
   require '../includes/scripts/connection.php';  
   // include 'includes/scripts/config.php';
   session_start();
+
+  function encrypt($data) {
+                    $key = "Yatra@5636"; // Use a strong key
+                    $iv = "1234567891011121"; // 16-byte IV (same during encryption & decryption)
+                    return urlencode(openssl_encrypt($data, "AES-256-CBC", $key, 0, $iv));
+                }
+
   if(isset($_SESSION['Yatra_logedin_user_id']) && (trim ($_SESSION['Yatra_logedin_user_id']) !== '')){
       $user_id = $_SESSION['Yatra_logedin_user_id'];
       $query = "SELECT * FROM user_master WHERE user_id = $user_id";
@@ -12,6 +19,8 @@
       $user_email = $userdata['email'];
       $user_gender = $userdata['gender'];
       $user_phone = $userdata['phone'];
+
+      $encrypt_id = encrypt($user_id);
   }
 
 ?>
@@ -513,7 +522,7 @@
       </div>
 
       <!-- Body -->
-      <form class="p-6 space-y-6">
+      <form action="userhome/update_profile.php?id=<?php echo $encrypt_id; ?>" method="post" class="p-6 space-y-6">
         <!-- Profile Photo + Name/Email -->
         <div class="flex items-center space-x-4">
           <div class="relative">
@@ -534,9 +543,9 @@
           <!-- Name -->
           <div>
             <label class="block text-sm font-medium text-gray-600 mb-1">Name</label>
-            <input id="fullName" value=<?php echo $user_name; ?>
+            <input id="fullName" value=<?php echo $user_name; ?> name="name"
               class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none"
-              oninput="updateName()">
+              >
           </div>
 
           <!-- Email -->
@@ -549,7 +558,7 @@
           <!-- Phone -->
           <div>
             <label class="block text-sm font-medium text-gray-600 mb-1">Phone Number</label>
-            <input id="phone" value="<?php echo $user_phone; ?>"
+            <input id="phone" value="<?php echo $user_phone; ?>" name="phone" type="number"
               class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
           </div>
 
@@ -558,6 +567,7 @@
             <label class="block text-sm font-medium text-gray-600 mb-1">Gender</label>
             <div class="relative">
               <select
+                name="gender"
                 class="w-full appearance-none flex items-center justify-between border rounded-lg px-3 py-2 text-gray-700 bg-white shadow-sm hover:border-blue-500 focus:ring-2 focus:ring-blue-400 transition cursor-pointer">
                 <option value="Male" class="flex items-center">
                   <i class="fa-solid fa-mars" style="color: #74C0FC;"></i> Male
