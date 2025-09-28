@@ -535,7 +535,7 @@
         // 3. POST CARD & RENDERING LOGIC
         function createPostCard(post) {
             return `
-            <div class="post-card rounded-custom p-5 fade-in" data-post-id="${post.id}">
+            <div class="post-card flex flex-col justify-between rounded-custom p-5 fade-in" data-post-id="${post.id}">
                 <div class="relative mb-4 overflow-hidden rounded-custom">
                     <img src="${post.image}" alt="Post image by ${post.username}" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
                 </div>
