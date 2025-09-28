@@ -153,10 +153,7 @@
         <a href="userlogin" class="text-blue-500">Sign in →</a>
       </p>
       <br>
-      <!-- <a href="<?php echo $google_login_url; ?>"
-        class="w-full mt-4 bg-red-500 text-white py-2 rounded-lg text-sm md:text-base text-center block">
-        <i class="fa fa-google"></i> Sign up with Google
-      </a> -->
+     
     </div>
   </div>
 </body>

@@ -2,21 +2,27 @@
 session_start();
 require_once '../includes/scripts/connection.php';
 
+
+//              total Users
 $sql_user = "SELECT COUNT(*) AS total_users FROM user_master";
 $result_user = $conn->query($sql_user); 
 $row_user = $result_user->fetch_assoc();
 $total_users = $row_user['total_users'];
 
+//              total Guides
 $sql_guide = "SELECT COUNT(*) AS total_guides FROM guide_master";
 $result_guide = $conn->query($sql_guide);
 $row_guide = $result_guide->fetch_assoc();
 $total_guides = $row_guide['total_guides'];
 
+
+//              total Hotels
 $sql_hotel = "SELECT COUNT(*) AS total_hotels FROM hotel_master";
 $result_hotel = $conn->query($sql_hotel);
 $row_hotel = $result_hotel->fetch_assoc();
 $total_hotels = $row_hotel['total_hotels'];
 
+//              total Revenue
 $sql_revenue = "SELECT SUM(total_amount) AS total_revenue FROM hotel_bookings";
 $result_revenue = $conn->query($sql_revenue);
 $row_revenue = $result_revenue->fetch_assoc();

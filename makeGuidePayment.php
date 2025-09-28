@@ -113,9 +113,7 @@ if (isset($_GET['payment_id']) && isset($_SESSION['guide_data'])) {
 ?>
 
 <!--                Show error for UNavailability -->
-<?php if ($errorMessage): ?>
-    <script>alert("<?= $errorMessage ?>"); window.location.href="Guidecard";</script>
-<?php endif; ?>
+
 
 <!-- Razorpay Script -->
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
