@@ -48,6 +48,7 @@
     />
     <title>Guide Booking</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="icon" type="image/png" href="Logo_Title.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       .bg-image {

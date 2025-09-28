@@ -6,6 +6,7 @@ session_start();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="Logo_Title.png">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -131,7 +132,7 @@ session_start();
           </div>
 
           <button
-            class="w-full mt-4 bg-[#C4DFDF] text-white py-2 rounded-lg text-sm md:text-base"
+            class="w-full mt-4 bg-[#a5d0d0] hover:bg-[#83b7b7] transition-all text-white py-2 rounded-lg text-sm md:text-base"
           >
             Sign in →
           </button>

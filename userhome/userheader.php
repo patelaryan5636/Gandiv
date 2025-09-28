@@ -31,7 +31,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navbar</title>
+  <link rel="icon" type="image/png" href="Logo_Title.png">
+  <title>Yatra</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url("https://fonts.cdnfonts.com/css/samarkan");

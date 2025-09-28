@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail</title>
+    <link rel="icon" type="image/png" href="Logo_Title.png">
     <meta name="description"
         content="Discover Hulley Village, your gateway to the stunning Rhododendron Wonderland. Explore beautiful trails, accommodations, and natural wonders.">
     <script src="https://cdn.tailwindcss.com"></script>

@@ -18,6 +18,7 @@ while ($row = mysqli_fetch_assoc($PlaceResult)) {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="Logo_Title.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Safari Booking</title>
     <script
