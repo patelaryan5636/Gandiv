@@ -1,3 +1,33 @@
+<?php 
+session_start();
+require_once '../includes/scripts/connection.php';
+
+$sql_user = "SELECT COUNT(*) AS total_users FROM user_master";
+$result_user = $conn->query($sql_user); 
+$row_user = $result_user->fetch_assoc();
+$total_users = $row_user['total_users'];
+
+$sql_guide = "SELECT COUNT(*) AS total_guides FROM guide_master";
+$result_guide = $conn->query($sql_guide);
+$row_guide = $result_guide->fetch_assoc();
+$total_guides = $row_guide['total_guides'];
+
+$sql_hotel = "SELECT COUNT(*) AS total_hotels FROM hotel_master";
+$result_hotel = $conn->query($sql_hotel);
+$row_hotel = $result_hotel->fetch_assoc();
+$total_hotels = $row_hotel['total_hotels'];
+
+$sql_revenue = "SELECT SUM(total_amount) AS total_revenue FROM hotel_bookings";
+$result_revenue = $conn->query($sql_revenue);
+$row_revenue = $result_revenue->fetch_assoc();
+$total_revenue = $row_revenue['total_revenue'];
+
+$sql_revenue2 = "SELECT SUM(price) AS total_revenue FROM guide_booking";
+$result_revenue2 = $conn->query($sql_revenue2);
+$row_revenue2 = $result_revenue2->fetch_assoc();
+$total_revenue += $row_revenue2['total_revenue'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +61,7 @@
                     <div class="col-lg-3 col-sm-6 col-12 d-flex">
                         <div class="dash-count">
                             <div class="dash-counts">
-                                <h4>10000</h4>
+                                <h4><?php echo $total_users; ?></h4>
                                 <h5 class="gray">Users</h5>
                             </div>
                             <div class="dash-imgs">
@@ -42,7 +72,7 @@
                     <div class="col-lg-3 col-sm-6 col-12 d-flex">
                         <div class="dash-count das1">
                             <div class="dash-counts">
-                                <h4>20</h4>
+                                <h4><?php echo $total_guides ?></h4>
                                 <h5 class="gray">Guides</h5>
                             </div>
                             <div class="dash-imgs">
@@ -53,8 +83,8 @@
                     <div class="col-lg-3 col-sm-6 col-12 d-flex">
                         <div class="dash-count das2">
                             <div class="dash-counts">
-                                <h4>1000</h4>
-                                <h5 class="gray">Stalls</h5>
+                                <h4><?php echo $total_hotels ?></h4>
+                                <h5 class="gray">Hotels</h5>
                             </div>
                             <div class="dash-imgs">
                                 <i data-feather="user"></i>
@@ -64,7 +94,7 @@
                     <div class="col-lg-3 col-sm-6 col-12 d-flex">
                         <div class="dash-count das3">
                             <div class="dash-counts">
-                                <h4>₹ 1,75,520</h4>
+                                <h4><?php echo $total_revenue; ?></h4>
                                 <h5 class="gray">Total Revenue</h5>
                             </div>
                             <div class="dash-imgs">
