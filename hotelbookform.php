@@ -1,6 +1,8 @@
 <?php
   require_once './includes/scripts/connection.php';
 
+  session_start();
+
   //                     Login required
     if (!isset($_SESSION['Yatra_logedin_user_id'])){
     header("location: /gandiv/userregister.php");
