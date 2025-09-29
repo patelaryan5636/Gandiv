@@ -298,10 +298,13 @@
                     </ul>
                 </li>
                 <li class="relative group hover-underline">
-                    <a href="./userpost.php" class="block hover:text-gray-800 transition-colors">Posts</a>
+                    <a href="./business/business_login" class="block hover:text-gray-800 transition-colors">Business</a>
                 </li>
                 <li class="relative group hover-underline">
-                    <a href="./chatbot.php" class="block hover:text-gray-800 transition-colors">AI Guide</a>
+                    <a href="./userpost" class="block hover:text-gray-800 transition-colors">Posts</a>
+                </li>
+                <li class="relative group hover-underline">
+                    <a href="./chatbot" class="block hover:text-gray-800 transition-colors">AI Guide</a>
                 </li>
                 <li class="relative group hover-underline">
                     <a href="./aitrip-planner" class="block hover:text-gray-800 transition-colors">AI Trip-Planner</a>
@@ -429,6 +432,16 @@
                     Other Business</a>
                 </li>
               </ul>
+            </li>
+            <li>
+              <a href="./business/business_login" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                🏭 BUSINESS
+              </a>
+            </li>
+            <li>
+              <a href="./userpost" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                📽️ POSTS
+              </a>
             </li>
             <li>
               <a href="../chatbot" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
