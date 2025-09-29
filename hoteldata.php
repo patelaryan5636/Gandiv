@@ -157,7 +157,7 @@
       .animated-text {
         font-size: 20px;
         color: #333;
-        max-width: 1000px;
+        max-width: 90%;
         margin: 0 auto;
         line-height: 1.6;
         font-weight: 500;

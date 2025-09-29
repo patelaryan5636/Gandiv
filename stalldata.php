@@ -162,7 +162,7 @@
           <div class="relative">
             <div class="h-[380px] rounded-tr-[150px] overflow-hidden">
               <img
-                src="local.jpg"
+                src="./userhome/img/local.png"
                 alt="Tourism Scene"
                 class="w-full h-full object-cover object-center filter sepia-[0.2] grayscale-[0.3]"
               />
