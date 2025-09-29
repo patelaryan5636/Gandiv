@@ -1,3 +1,9 @@
+<?php 
+  
+    session_start();
+    require_once '../includes/scripts/connection.php'; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,17 +78,26 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
+                            <?php 
+                            $sql = "SELECT * FROM post_master ORDER BY post_id DESC";
+                                $result = $conn->query($sql); 
+                                if ($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        $userId = $row['post_upload_by'];
+                                        $userResult = $conn->query("SELECT user_name FROM user_master WHERE user_id = '$userId' ");
+                                        $userRow = $userResult->fetch_assoc();
 
+                                        $row['username'] = $userRow ? $userRow['user_name'] : "Unknown User";
+                            ?>
                             <div class="col-12 col-md-6 col-lg-4 d-flex">
                                 <div class="card flex-fill br" style="background-color: #f8f8f8;">
                                     <img alt="../assets/img/notfound.png"
-                                        src="../assets/img/Places/Betla_National_Park.png" class="card-img-top">
+                                        src="../<?php echo htmlspecialchars($row['post_img']); ?>" class="card-img-top">
                                     <div class="card-body"
                                         style="display: flex; flex-direction: column; justify-content: space-between; background-color: #f8f8f8;">
-                                        <h6>User Name</h6>
+                                        <h6><?php echo $row['username']; ?></h6>
                                         <p class="card-text truncate-3-lines" style="color: black;">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum maxime libero
-                                            totam architecto ex dolorem nulla labore dolorum iusto ad?
+                                            <?php echo $row['post_desc']; ?>
                                         </p>
                                         <div class="aed">
                                             <a href="editpost" class="card-link">
@@ -94,8 +109,11 @@
                                         </div>
                                     </div>
                                 </div>
-
                         </div>
+                        <?php
+                        }
+    }
+                        ?>
                     </div>
                 </div>
 
