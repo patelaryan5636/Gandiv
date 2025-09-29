@@ -16,6 +16,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $tag2 = $_POST['tag2'] ?? '';
     $tag3 = $_POST['tag3'] ?? '';
 
+
+    $post_image = $_FILES['post_image'] ?? null;
+
+    echo "<pre>";
+    print_r($_POST);
+    print_r($_FILES);
+
+    if(empty($post_content) && empty($post_image)) {
+        die("Post content or image is required.");
+    }
+
     // ---- Upload Handling ----
     $uploadDir = "uploads/user_posts/";
     if (!is_dir($uploadDir)) {

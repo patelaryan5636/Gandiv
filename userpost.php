@@ -19,14 +19,14 @@ if ($result->num_rows > 0) {
         unset($row['user_id']); // remove user_id if you don’t want it in JSON
 
         // Convert tags string → array
-        $row['tags'] = explode(",", $row['tags']);
+        $row['tags'] = array_filter([$row['post_tag1'], $row['post_tag2'], $row['post_tag3']]);
         $row['isLiked'] = false; // later you can add logic here
 
         $posts[] = [
             "id" => $row['post_id'],
             "username" => $row['username'],
-            "image" => $row['post_image_path'],
-            "description" => $row['post_content'],
+            "image" => $row['post_img'],
+            "description" => $row['post_desc'],
             "tags" => $row['tags'], 
             "likes" => $row['post_like'],
             "isLiked" => false // default, can update if user liked it
@@ -431,8 +431,8 @@ if ($result->num_rows > 0) {
                 </button>
             </div>
             
-
-            <form method="post" action="userpost_process.php" id="postForm" class="p-6 space-y-6">
+            
+            <form method="post" action="userpost_process.php" id="postForm" class="p-6 space-y-6" enctype='multipart/form-data'>
                 <div>
                     <label class="block text-sm font-medium mb-2 text-foreground">Upload Image</label>
                     <label for="imageUpload" id="imageDropzone"
@@ -450,13 +450,13 @@ if ($result->num_rows > 0) {
                                     class="font-semibold">Click to upload</span> or drag and drop</p>
                             <p id="fileName" class="text-xs text-green-600 font-semibold text-center"></p>
                         </div>
-                        <input id="imageUpload" name="post_image"  type="file" class="hidden" accept="image/*" required />
+                        <input id="imageUpload" name="post_image"  type="file" class="hidden" accept="image/jpeg, image/jpg, image/png" required />
                     </label>
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium mb-2 text-foreground">Description</label>
-                    <textarea id="description" input="content"
+                    <textarea id="description" input="content" name="post_content"
                         class="form-input w-full px-4 py-2.5 rounded-lg resize-none focus:outline-none" rows="4"
                         placeholder="Write your post description..." required></textarea>
                 </div>
@@ -577,34 +577,34 @@ if ($result->num_rows > 0) {
         }
 
         // 3. POST CARD & RENDERING LOGIC
-        function createPostCard(posts) {
+        function createPostCard(post) {
             return `
             <div class="post-card flex flex-col justify-between rounded-custom p-5 fade-in" data-post-id="${post.id}">
                 <div class="relative mb-4 overflow-hidden rounded-custom">
-                    <img src="${posts.image}" alt="Post image by ${posts.username}" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
+                    <img src="${post.image}" alt="Post image by ${post.username}" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
                 </div>
                 <div class="flex items-center mb-4">
                     <div class="w-10 h-10 rounded-full flex items-center justify-center mr-3" style="background: linear-gradient(135deg, hsl(235 89% 60%), hsl(235 89% 70%));">
                         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                     </div>
-                    <div><h3 class="font-semibold" style="color: hsl(214 31% 18%);">${posts.username}</h3></div>
+                    <div><h3 class="font-semibold" style="color: hsl(214 31% 18%);">${post.username}</h3></div>
                 </div>
                 <p class="mb-4 leading-relaxed truncate-3-lines" style="color: hsl(220 14% 55%);">${post.description}</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                    ${posts.tags.map(tag => `<span class="post-tag px-3 py-1 rounded-full text-sm font-medium">#${tag}</span>`).join('')}
+                    ${post.tags.map(tag => `<span class="post-tag px-3 py-1 rounded-full text-sm font-medium">#${tag}</span>`).join('')}
                 </div>
                 <div class="flex items-center justify-between">
                     <div class="flex items-center space-x-4">
-                        <button onclick="handleLike('${posts.id}')" class="like-button ${posts.isLiked ? 'liked' : ''} flex items-center space-x-2">
-                            <svg class="w-5 h-5 ${posts.isLiked ? 'heart-fill' : ''}" fill="${posts.isLiked ? 'hsl(349 89% 60%)' : 'none'}" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                            <span class="text-sm font-medium">${posts.likes}</span>
+                        <button onclick="handleLike('${post.id}')" class="like-button ${post.isLiked ? 'liked' : ''} flex items-center space-x-2">
+                            <svg class="w-5 h-5 ${post.isLiked ? 'heart-fill' : ''}" fill="${post.isLiked ? 'hsl(349 89% 60%)' : 'none'}" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            <span class="text-sm font-medium">${post.likes}</span>
                         </button>
-                        <button onclick="handleShare('${posts.id}')" class="share-button flex items-center space-x-2">
+                        <button onclick="handleShare('${post.id}')" class="share-button flex items-center space-x-2">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path></svg>
                             <span class="text-sm font-medium">Share</span>
                         </button>
                     </div>
-                    <button onclick="handleReadPost('${posts.id}')" class="read-post-button px-4 py-2 rounded-custom text-sm font-medium">Read Post</button>
+                    <button onclick="handleReadPost('${post.id}')" class="read-post-button px-4 py-2 rounded-custom text-sm font-medium">Read Post</button>
                 </div>
             </div>
         `;
@@ -709,18 +709,25 @@ if ($result->num_rows > 0) {
         document.addEventListener('DOMContentLoaded', function () {
             // Form Submission Logic
             document.getElementById('postForm').addEventListener('submit', function (e) {
-                // e.preventDefault();
-                const imageFile = document.getElementById('imageUpload').files[0];
-                const description = document.getElementById('description').value;
-                const tag1 = document.getElementById('tag1').value.trim();
-                const tag2 = document.getElementById('tag2').value.trim();
-                const tag3 = document.getElementById('tag3').value.trim();
-                if (tag1 === '' && tag2 === '' && tag3 === '') {
-                    showToast('Incomplete Form', 'Please add at least one tag to your post.');
-                    return;
-                }
-                closeAddModal();
-                showToast('Post Submitted!', 'Your request has been sent to the admin. It will be visible after approval.');
+                e.preventDefault(); // ⬅️ stop full page reload, keep JS in control
+
+                const formData = new FormData(this); 
+                // ⬅️ collects *all form inputs automatically* (description, tags, AND post_image)
+
+                fetch('userpost_process.php', {
+                    method: 'POST',
+                    body: formData  // ⬅️ sends the actual file + fields to PHP
+                })
+                .then(res => res.text())
+                .then(data => {
+                    console.log(data); 
+                    closeAddModal(); // ⬅️ only close after server responds
+                    showToast('Post Submitted!'); // ⬅️ message comes from PHP result
+                })
+                .catch(err => {
+                    console.error('Upload error:', err);
+                    showToast('Error', 'Something went wrong while uploading.');
+                });
             });
 
             // --- NEW: File Upload UI and Preview Logic ---
