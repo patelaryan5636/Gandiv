@@ -50,6 +50,7 @@ $currentPage = basename($currentURL);
                                     User</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="userlist" <?php if($currentPage == "userlist.php" || $currentPage == "userdetails.php"){echo 'class="active"';}?>>Users list</a></li>
+                                <li><a href="userposts" <?php if($currentPage == "userposts.php" || $currentPage == "addpost.php" || $currentPage == "editpost.php"){echo 'class="active"';}?>>Posts</a></li>
                             </ul>
                         </li>
                         <li class="submenu">
