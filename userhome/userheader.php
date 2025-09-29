@@ -298,6 +298,9 @@
                     </ul>
                 </li>
                 <li class="relative group hover-underline">
+                    <a href="./userpost.php" class="block hover:text-gray-800 transition-colors">Posts</a>
+                </li>
+                <li class="relative group hover-underline">
                     <a href="./chatbot.php" class="block hover:text-gray-800 transition-colors">AI Guide</a>
                 </li>
                 <li class="relative group hover-underline">
@@ -349,7 +352,7 @@
                 }
             } else {
                 ?>
-                <a href="userregister" class="flex items-center justify-center gap-2 hover:text-gray-800 transition-colors hover-underline">Login<img style="height:21px;" src="userhome/img/login.svg" alt="Login"></a>
+                <a href="userlogin" class="flex items-center justify-center gap-2 hover:text-gray-800 transition-colors hover-underline">Login<img style="height:21px;" src="userhome/img/login.svg" alt="Login"></a>
             <?php
             }
             ?>

@@ -722,7 +722,7 @@ if ($result->num_rows > 0) {
                 .then(data => {
                     console.log(data); 
                     closeAddModal(); // ⬅️ only close after server responds
-                    showToast('Post Submitted!'); // ⬅️ message comes from PHP result
+                    showToast('Post Submitted!','Please Refresh The Page To See Your Post'); // ⬅️ message comes from PHP result
                 })
                 .catch(err => {
                     console.error('Upload error:', err);
